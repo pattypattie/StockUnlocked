@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.Lesson3Activity">
 
+    <ImageButton
+        android:id="@+id/lesson3back"
+        android:layout_width="75dp"
+        android:layout_height="58dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/backicon2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp" />
+
 </android.support.constraint.ConstraintLayout>
