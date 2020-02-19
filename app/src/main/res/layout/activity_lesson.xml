@@ -6,11 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.LessonActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/lesson1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Niceescute"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="205dp" />
+        android:text="Lesson 1"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <Button
+        android:id="@+id/lesson2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 2"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="196dp" />
+
+    <Button
+        android:id="@+id/lesson3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 3"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="259dp" />
+
+    <Button
+        android:id="@+id/lesson4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 4"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="319dp" />
+
+    <Button
+        android:id="@+id/lesson5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 5"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="379dp" />
 </android.support.constraint.ConstraintLayout>

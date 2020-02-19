@@ -2,6 +2,7 @@ package com.example.chayanit.stockunlocked;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 
 public class LessonActivity extends AppCompatActivity {
 
@@ -9,5 +10,19 @@ public class LessonActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
+
+        Button lesson1_bt = findViewById(R.id.lesson1);
+        Button lesson2_bt = findViewById(R.id.lesson2);
+        Button lesson3_bt = findViewById(R.id.lesson3);
+        Button lesson4_bt = findViewById(R.id.lesson4);
+        Button lesson5_bt = findViewById(R.id.lesson5);
+
+        lesson5_bt.setEnabled(false);
+        lesson2_bt.setEnabled(false);
+        lesson3_bt.setEnabled(false);
+        lesson4_bt.setEnabled(false);
+
+
     }
+
 }
