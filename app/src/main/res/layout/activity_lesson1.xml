@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.Lesson1Activity">
 
+    <Button
+        android:id="@+id/unlockls2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlock Lesson 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="120dp" />
 </android.support.constraint.ConstraintLayout>
