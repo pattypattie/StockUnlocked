@@ -1,7 +1,9 @@
 package com.example.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 public class LessonActivity extends AppCompatActivity {
@@ -21,6 +23,44 @@ public class LessonActivity extends AppCompatActivity {
         lesson2_bt.setEnabled(false);
         lesson3_bt.setEnabled(false);
         lesson4_bt.setEnabled(false);
+
+        lesson1_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,Lesson1Activity.class));
+            }
+        });
+
+        lesson2_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,Lesson2Activity.class));
+            }
+        });
+
+        lesson3_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,Lesson3Activity.class));
+            }
+        });
+
+        lesson4_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,Lesson4Activity.class));
+            }
+        });
+
+        lesson5_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,Lesson5Activity.class));
+            }
+        });
+
+
+
 
 
     }
