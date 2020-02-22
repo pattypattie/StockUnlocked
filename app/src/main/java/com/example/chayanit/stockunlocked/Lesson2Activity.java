@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class Lesson2Activity extends AppCompatActivity {
 
@@ -16,6 +19,7 @@ public class Lesson2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson2);
 
+        final TextView accountInfo = findViewById(R.id.textView3);
 
         Button unlockls3_bt = findViewById(R.id.unlockls3);
         Button take_quiz2 = findViewById(R.id.takequiz2);
@@ -53,5 +57,29 @@ public class Lesson2Activity extends AppCompatActivity {
         });
 
 
+        RadioGroup rGroup = (RadioGroup)findViewById(R.id.radiogroupaccount);
+        RadioButton checkedRadioButton = (RadioButton)rGroup.findViewById(rGroup.getCheckedRadioButtonId());
+
+        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        {
+            public void onCheckedChanged(RadioGroup group, int checkedId)
+            {
+                switch (checkedId) {
+                    case -1:
+                        break;
+                    case R.id.account1:
+                        accountInfo.setText("account 1");
+                        break;
+                    case R.id.account2:
+                        accountInfo.setText("account 2");
+                        break;
+                    case R.id.account3:
+                        accountInfo.setText("account 3");
+                        break;
+                }
+            }
+        });
+
     }
+
 }
