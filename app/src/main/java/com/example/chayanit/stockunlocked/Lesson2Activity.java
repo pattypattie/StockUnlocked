@@ -60,26 +60,6 @@ public class Lesson2Activity extends AppCompatActivity {
         RadioGroup rGroup = (RadioGroup)findViewById(R.id.radiogroupaccount);
         RadioButton checkedRadioButton = (RadioButton)rGroup.findViewById(rGroup.getCheckedRadioButtonId());
 
-//        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-//        {
-//            public void onCheckedChanged(RadioGroup group, int checkedId)
-//            {
-//                switch (checkedId) {
-//                    case -1:
-//                        break;
-//                    case R.id.account1:
-//                        accountInfo.setText("account 1");
-//                        break;
-//                    case R.id.account2:
-//                        accountInfo.setText("account 2");
-//                        break;
-//                    case R.id.account3:
-//                        accountInfo.setText("account 3");
-//                        break;
-//                }
-//            }
-//        });
-
         rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId)
