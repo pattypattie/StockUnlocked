@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.ExamActivity">
 
+    <ImageButton
+        android:id="@+id/examback"
+        android:layout_width="75dp"
+        android:layout_height="58dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/backicon2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
