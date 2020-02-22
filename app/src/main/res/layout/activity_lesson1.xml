@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.Lesson1Activity">
-
-
-    <Button
-        android:id="@+id/unlockls2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Unlock Lesson 2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="120dp" />
-
 
     <ImageButton
         android:id="@+id/lesson1back"
@@ -26,6 +24,106 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp" />
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Lesson 1 : What is the Stock Trading?"
+        android:textColor="#000"
+        android:textSize="18dp"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lesson1back" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="28dp"
+        android:text="Back in the day, people traded goods in order to get what they needed by giving up what they had. But not all products and services are tradable. For instance, you wouldn’t trade wheat for electricity. So, we turn to "
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8" />
+
+    <TextView
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="monospace"
+        android:text="MONEY"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/moneypic"
+        app:layout_constraintTop_toBottomOf="@id/textView9" />
+
+    <ImageView
+        android:id="@+id/moneypic"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        app:layout_constraintLeft_toRightOf="@id/money"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView9"
+        app:srcCompat="@drawable/money" />
+
+    <TextView
+        android:id="@+id/middleman"
+        android:layout_width="355dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="12dp"
+        android:text="Money is the middleman between buyers and sellers"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moneypic" />
+
+    <ImageView
+        android:id="@+id/buyer"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        app:layout_constraintLeft_toRightOf="@id/money"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleman"
+        app:srcCompat="@drawable/order"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/moneypic"
+        />
+    <ImageView
+        android:id="@+id/seller"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middleman"
+        app:srcCompat="@drawable/seller"
+        app:layout_constraintLeft_toRightOf="@id/buyer"
+        />
+
+    <TextView
+        android:id="@+id/blank"
+        android:layout_width="355dp"
+        android:layout_height="64dp"
+        android:text=""
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buyer" />
+
+    <Button
+        android:id="@+id/unlockls2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlock Lesson 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="120dp"
+        android:layout_marginTop="40dp"
+        />
+
     <Button
         android:id="@+id/takequiz1"
         android:layout_width="wrap_content"
@@ -36,4 +134,8 @@
         tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="470dp" />
 
+
+
+
 </android.support.constraint.ConstraintLayout>
+</ScrollView>
