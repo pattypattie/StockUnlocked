@@ -7,6 +7,15 @@
     tools:context="com.example.chayanit.stockunlocked.Lesson1Activity">
 
 
+    <Button
+        android:id="@+id/unlockls2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unlock Lesson 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="120dp" />
+
+
     <ImageButton
         android:id="@+id/lesson1back"
         android:layout_width="75dp"
@@ -16,4 +25,5 @@
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp" />
+
 </android.support.constraint.ConstraintLayout>
