@@ -16,4 +16,21 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 2 naja"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <Button
+        android:id="@+id/unlockls3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unlock lesson 3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="287dp" />
+
 </android.support.constraint.ConstraintLayout>
