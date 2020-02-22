@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.LessonActivity">
 
+    <ImageButton
+        android:id="@+id/lessonback"
+        android:layout_width="75dp"
+        android:layout_height="58dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/backicon2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp"
+        />
     <Button
         android:id="@+id/lesson1"
         android:layout_width="wrap_content"
@@ -15,6 +25,7 @@
         tools:layout_editor_absoluteY="140dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lessonback"
         />
 
     <Button

@@ -20,5 +20,7 @@ public class Lesson2Activity extends AppCompatActivity {
                 startActivity(new Intent(Lesson2Activity.this,LessonActivity.class));
             }
         });
+
+
     }
 }

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class LessonActivity extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class LessonActivity extends AppCompatActivity {
         Button lesson5_bt = findViewById(R.id.lesson5);
 
         lesson5_bt.setEnabled(false);
-        lesson2_bt.setEnabled(false);
+        //lesson2_bt.setEnabled(false);
         lesson3_bt.setEnabled(false);
         lesson4_bt.setEnabled(false);
 
@@ -59,7 +60,13 @@ public class LessonActivity extends AppCompatActivity {
             }
         });
 
-
+        ImageButton lesson_back = findViewById(R.id.lessonback);
+        lesson_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,TitleActivity.class));
+            }
+        });
 
 
 
