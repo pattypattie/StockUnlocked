@@ -18,6 +18,8 @@ public class Lesson2Activity extends AppCompatActivity {
 
 
         Button unlockls3_bt = findViewById(R.id.unlockls3);
+        Button take_quiz2 = findViewById(R.id.takequiz2);
+
 
         unlockls3_bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,6 +31,18 @@ public class Lesson2Activity extends AppCompatActivity {
                 startActivity(new Intent(Lesson2Activity.this,Lesson3Activity.class));
 
             }});
+
+        take_quiz2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+                editor.putBoolean("qz2_enable",true);
+                editor.commit();
+                startActivity(new Intent(Lesson2Activity.this,Quiz2Activity.class));
+
+            }
+        });
 
         ImageButton lesson2_back = findViewById(R.id.lesson2back);
         lesson2_back.setOnClickListener(new View.OnClickListener() {

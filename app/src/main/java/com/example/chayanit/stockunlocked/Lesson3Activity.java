@@ -17,6 +17,8 @@ public class Lesson3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_lesson3);
 
         Button unlockls4_bt = findViewById(R.id.unlockls4);
+        Button take_quiz3 = findViewById(R.id.takequiz3);
+
 
         unlockls4_bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,17 @@ public class Lesson3Activity extends AppCompatActivity {
                 startActivity(new Intent(Lesson3Activity.this,Lesson4Activity.class));
 
             }});
+        take_quiz3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+                editor.putBoolean("qz3_enable",true);
+                editor.commit();
+                startActivity(new Intent(Lesson3Activity.this,Quiz3Activity.class));
+
+            }
+        });
 
 
         ImageButton lesson3_back = findViewById(R.id.lesson3back);

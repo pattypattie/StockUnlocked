@@ -6,11 +6,57 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.QuizActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/quiz1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quiz page"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="274dp" />
+        android:text="Quiz lesson 1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <Button
+        android:id="@+id/quiz2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz lesson 2"
+        app:layout_constraintTop_toBottomOf="@id/quiz1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <Button
+        android:id="@+id/quiz3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Lesson 3"
+        app:layout_constraintTop_toBottomOf="@id/quiz2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="233dp" />
+
+    <Button
+        android:id="@+id/quiz4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz lesson 4"
+        app:layout_constraintTop_toBottomOf="@id/quiz3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <Button
+        android:id="@+id/quiz5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="quiz lesson 5"
+        app:layout_constraintTop_toBottomOf="@id/quiz4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="394dp" />
 </android.support.constraint.ConstraintLayout>

@@ -1,7 +1,12 @@
 package com.example.chayanit.stockunlocked;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class QuizActivity extends AppCompatActivity {
 
@@ -9,5 +14,57 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+
+        Button quiz1_bt = findViewById(R.id.quiz1);
+        Button quiz2_bt = findViewById(R.id.quiz2);
+        Button quiz3_bt = findViewById(R.id.quiz3);
+        Button quiz4_bt = findViewById(R.id.quiz4);
+        Button quiz5_bt = findViewById(R.id.quiz5);
+
+        boolean quiz1state = shared.getBoolean("qz1_enable", false);
+        boolean quiz2state = shared.getBoolean("qz2_enable", false);
+        boolean quiz3state = shared.getBoolean("qz3_enable", false);
+        boolean quiz4state = shared.getBoolean("qz4_enable", false);
+        boolean quiz5state = shared.getBoolean("qz5_enable", false);
+
+        quiz1_bt.setEnabled(quiz1state);
+        quiz2_bt.setEnabled(quiz2state);
+        quiz3_bt.setEnabled(quiz3state);
+        quiz4_bt.setEnabled(quiz4state);
+        quiz5_bt.setEnabled(quiz5state);
+
+        quiz1_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizActivity.this,Quiz1Activity.class));
+            }
+        });
+
+        quiz2_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizActivity.this,Quiz2Activity.class));
+            }
+        });
+        quiz3_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizActivity.this,Quiz3Activity.class));
+            }
+        });
+        quiz4_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizActivity.this,Quiz4Activity.class));
+            }
+        });
+        quiz5_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizActivity.this,Quiz5Activity.class));
+            }
+        });
     }
 }

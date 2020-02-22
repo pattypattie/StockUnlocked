@@ -26,11 +26,11 @@ public class LessonActivity extends AppCompatActivity {
         Button lesson4_bt = findViewById(R.id.lesson4);
         Button lesson5_bt = findViewById(R.id.lesson5);
 
-
-        lesson5_bt.setEnabled(false);
-        lesson2_bt.setEnabled(false);
-        lesson3_bt.setEnabled(false);
-        lesson4_bt.setEnabled(false);
+//
+//        lesson5_bt.setEnabled(false);
+//        lesson2_bt.setEnabled(false);
+//        lesson3_bt.setEnabled(false);
+//        lesson4_bt.setEnabled(false);
 
 //        SharedPreferences.Editor editor = shared.edit();
 //        editor.putBoolean("ls2_enable", false);
