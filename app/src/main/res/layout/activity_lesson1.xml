@@ -22,7 +22,9 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp" />
+        tools:layout_editor_absoluteY="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/textView8"
@@ -107,12 +109,134 @@
         />
 
     <TextView
+        android:id="@+id/complex"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="But as our world has developed and grown more complex, so has the meaning and purpose of money.
+Today we have multinational corporations that handle millions and billions of dollars"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buyer" />
+
+    <TextView
+        android:id="@+id/finance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="monospace"
+        android:text="Financial Industry"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+       app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/complex" />
+
+
+
+    <TextView
+        android:id="@+id/industry"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="The financial industry is all about managing money: investing it, growing it, saving it and ultimately spending it."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finance" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/piggy_bank"
+        android:id="@+id/piggy"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/industry"
+
+        />
+
+    <TextView
+        android:id="@+id/stock"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="The stock market is at the centre of all this, where investors and businesses meet to make transactions and respectively manage their money."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/piggy" />
+
+    <TextView
+        android:id="@+id/benefit"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="The stock market is mutually beneficial to businesses and investors because ..."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stock" />
+
+    <TextView
+        android:id="@+id/benefit1"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="1. Companies raise money to make their businesses grow"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/benefit" />
+
+    <TextView
+        android:id="@+id/benefit2"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="2. Investors invest in businesses to make their money grow"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/benefit1" />
+
+    <ImageView
+        android:id="@+id/market"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="12dp"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/benefit2"
+        app:srcCompat="@drawable/stock_market"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/ls1sum"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Stock exchanges facilitate stock trading among investors – they give investors the ability to buy and sell their shares. That’s why stock prices are constantly changing. If more people are selling (and therefore trying to get rid of) a stock than those buying it, the stock price will drop. If more people want to buy a stock than people selling it, the stock price will rise. Stock exchanges bring all these investors together, so that trades happen in a central and regulated place. "
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/market" />
+
+    <TextView
         android:id="@+id/blank"
         android:layout_width="355dp"
         android:layout_height="64dp"
         android:text=""
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buyer" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ls1sum"
+        />
+    <!--app:layout_constraintBottom_toTopOf="@+id/takequiz1"-->
+
+
 
     <Button
         android:id="@+id/unlockls2"
@@ -122,6 +246,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="120dp"
         android:layout_marginTop="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
         />
 
     <Button
@@ -133,6 +258,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="470dp" />
+
+
 
 
 
