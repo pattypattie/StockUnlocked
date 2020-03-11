@@ -20,6 +20,7 @@ public class Lesson2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_lesson2);
 
         final TextView accountInfo = findViewById(R.id.textView3);
+        final TextView accountInfoDetail = findViewById(R.id.textView14);
 
         Button unlockls3_bt = findViewById(R.id.unlockls3);
         Button take_quiz2 = findViewById(R.id.takequiz2);
@@ -61,6 +62,8 @@ public class Lesson2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 accountInfo.setText("Cash Account");
+                accountInfoDetail.setText("- requires a cash/stock collateral deposit of 20% of your approved credit limit\n" +
+                        "- cash will be settled in the 2 business day (T+2) after the trading date (T)");
             }
         });
 
@@ -69,6 +72,7 @@ public class Lesson2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 accountInfo.setText("Cash Balance");
+                accountInfoDetail.setText("- requires a 100% cash collateral deposit to your stock trading account, in which all cash outstanding can be traded");
             }
         });
 
@@ -76,7 +80,8 @@ public class Lesson2Activity extends AppCompatActivity {
         bookbank3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                accountInfo.setText("Credit Balance Account");
+                accountInfo.setText("Credit Balance Account/Margin Account");
+                accountInfoDetail.setText("- investors are allowed to borrow funds from the broker to purchase stocks");
             }
         });
 
