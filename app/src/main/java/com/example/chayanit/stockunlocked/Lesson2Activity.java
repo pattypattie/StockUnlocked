@@ -56,47 +56,27 @@ public class Lesson2Activity extends AppCompatActivity {
             }
         });
 
+        Button bookbank1 = findViewById(R.id.buttonBank1);
+        bookbank1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                accountInfo.setText("Cash Account");
+            }
+        });
 
-        RadioGroup rGroup = (RadioGroup)findViewById(R.id.radiogroupaccount);
-        RadioButton checkedRadioButton = (RadioButton)rGroup.findViewById(rGroup.getCheckedRadioButtonId());
+        Button bookbank2 = findViewById(R.id.buttonBank2);
+        bookbank2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                accountInfo.setText("Cash Balance");
+            }
+        });
 
-//        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-//        {
-//            public void onCheckedChanged(RadioGroup group, int checkedId)
-//            {
-//                switch (checkedId) {
-//                    case -1:
-//                        break;
-//                    case R.id.account1:
-//                        accountInfo.setText("account 1");
-//                        break;
-//                    case R.id.account2:
-//                        accountInfo.setText("account 2");
-//                        break;
-//                    case R.id.account3:
-//                        accountInfo.setText("account 3");
-//                        break;
-//                }
-//            }
-//        });
-
-        rGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-        {
-            public void onCheckedChanged(RadioGroup group, int checkedId)
-            {
-                switch (checkedId) {
-                    case -1:
-                        break;
-                    case R.id.account1:
-                        accountInfo.setText("Cash Account");
-                        break;
-                    case R.id.account2:
-                        accountInfo.setText("Cash Balance");
-                        break;
-                    case R.id.account3:
-                        accountInfo.setText("Credit Balance Account");
-                        break;
-                }
+        Button bookbank3 = findViewById(R.id.buttonBank3);
+        bookbank3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                accountInfo.setText("Credit Balance Account");
             }
         });
 
