@@ -30,7 +30,6 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="Lesson 2 : Getting Started"
         tools:layout_editor_absoluteX="113dp"
         tools:layout_editor_absoluteY="199dp"

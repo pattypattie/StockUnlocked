@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,14 +22,17 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp" />
+        tools:layout_editor_absoluteY="3dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <Button
         android:id="@+id/unlockls5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="unlock lesson 5"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView31"
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="301dp" />
 
@@ -31,8 +42,242 @@
         android:layout_height="wrap_content"
         android:text="take a quiz"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView31"
         tools:layout_editor_absoluteX="137dp"
         tools:layout_editor_absoluteY="317dp" />
 
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 4 : Stock Types"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/lesson4back"
+        app:layout_constraintTop_toTopOf="@id/lesson4back"/>
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  There are many ways to classify a stock. Here, we will talk about 6 types of stocks classified by Peter Lynch."
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="210dp"
+        app:layout_constraintTop_toBottomOf="@id/lesson4back"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/num1"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@id/textView19"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/num2"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@id/textView26"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/num3"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@id/textView27"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/num4"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@id/textView28"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/num5"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@id/textView29"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/num6"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="119dp"
+        app:layout_constraintTop_toBottomOf="@id/textView30"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slow Growers"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="161dp"
+        app:layout_constraintLeft_toRightOf="@id/imageView8"
+        app:layout_constraintTop_toTopOf="@id/imageView8"
+        app:layout_constraintBottom_toBottomOf="@id/imageView8"/>
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stalwarts"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="161dp"
+        app:layout_constraintLeft_toRightOf="@id/imageView9"
+        app:layout_constraintTop_toTopOf="@id/imageView9"
+        app:layout_constraintBottom_toBottomOf="@id/imageView9"/>
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fast Growers"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="161dp"
+        app:layout_constraintLeft_toRightOf="@id/imageView10"
+        app:layout_constraintTop_toTopOf="@id/imageView10"
+        app:layout_constraintBottom_toBottomOf="@id/imageView10"/>
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cyclical"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="161dp"
+        app:layout_constraintLeft_toRightOf="@id/imageView11"
+        app:layout_constraintTop_toTopOf="@id/imageView11"
+        app:layout_constraintBottom_toBottomOf="@id/imageView11"/>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turnaround"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="161dp"
+        app:layout_constraintLeft_toRightOf="@id/imageView12"
+        app:layout_constraintTop_toTopOf="@id/imageView12"
+        app:layout_constraintBottom_toBottomOf="@id/imageView12"/>
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asset Play"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="161dp"
+        app:layout_constraintLeft_toRightOf="@id/imageView13"
+        app:layout_constraintTop_toTopOf="@id/imageView13"
+        app:layout_constraintBottom_toBottomOf="@id/imageView13"/>
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Slow growers are large-cap companies whose earnings are, if not stable, growing at a lower rate than that of the economy. Their market prices don’t fluctuation much, thus aren’t very lucrative when it comes to capital gain. But they do offer high dividends, sometimes as high as 7-10%, rendering them suitable for low-risk investors who don’t expect sky-high capital gains.
+\n\n      – Low price-to-earnings ratio (P/E) and price-to-book value (P/BV) ratio
+
+\n    – High dividend payout ratio
+
+\n    – Dividend yields might be as high as 7-10% per year
+
+\n    – High market capitalization\n"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView20"
+        app:layout_constraintTop_toBottomOf="@id/imageView8"/>
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  These are large companies with strong fundamentals, making them very resilient to economic uncertainties. Despite their modest profit growth of around 10%, they are well-known and respectable companies in the eyes of the public, are relatively low-risk and can quickly recover from recessions.
+\n\n    – Earnings per share growing steadily at the rate slightly above that of the market
+
+\n    – Low debt-to-equity ratio
+
+\n    – Big market capitalization\n"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView21"
+        app:layout_constraintTop_toBottomOf="@id/imageView9"/>
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  These companies may not be as large or fundamentally as strong as the other two, but they have a potential to grow at least 15-20% or even higher each year. Some of them could produce a return of 100-200% in just a few years. But such growth should be driven by revenues and profits generated by business expansion, not from buying and selling assets. One advantage of investing in these stocks is that you can hold them for as long as they can keep their growth rates up.
+\n\n    – High and consistent price-to-earnings ratio
+
+\n    – Earnings per share grow at the rate of 15-20%\n"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView22"
+        app:layout_constraintTop_toBottomOf="@id/imageView10"/>
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  Cyclical stocks are companies whose sales and profits rise and fall in a more or less predictable fashion. They go through episodes of expansion and contraction as their ability to generate profits are highly sensitive to certain external factors. Most are related to oil, petrochemical, coal, commodities, agricultural products and real estate, which are the majority of stocks in Thailand. For example, oil companies should see their sales and profits surge when oil prices go up and vice versa.
+\n\n    – Price to earnings ratio and earnings per share tend follow a pattern of peaks and plunges—3 years of profitability and 2 years of losses, for example.\n"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView23"
+        app:layout_constraintTop_toBottomOf="@id/imageView11"/>
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  These are companies that have suffered severe losses or nearly went bankrupt due to unprofitable investments or lack of liquidity, but are in the process of turning themselves around. If these companies repay their debts or successfully restructure their businesses and turn a profit, you’ll be benefiting hugely from that, too.
+\n\n    – Price to earnings ratio and earnings per share follow a pattern of peaks and plunges
+
+\n    – Net profit becomes positive
+
+\n    – Debt to equity ratio continues to fall\n"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView24"
+        app:layout_constraintTop_toBottomOf="@id/imageView12"/>
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  These companies usually own high-value assets such as real estate or shares in other companies, like Berkshire Hathaway, Warren Buffett’s holding company that own shares in a number of different businesses.
+
+If you put money in an Asset Play company that invests in profitable businesses or in prime real estate, the value of the Asset Play company will also increase as well. That means you have a chance to enjoy huge capital gain when the market realizes the real value of the assets the company is holding.
+\n\n    – Searching for Asset Plays won’t require much ratio analysis, but more digging through company financials to see what assets are they holding, how much did they spend to acquire those assets, and how much are those assets today. You can find such information in public statements released by the companies.\n"
+        tools:layout_editor_absoluteX="242dp"
+        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView25"
+        app:layout_constraintTop_toBottomOf="@id/imageView13"/>
+
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
