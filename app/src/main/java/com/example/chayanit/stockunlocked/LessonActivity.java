@@ -25,6 +25,7 @@ public class LessonActivity extends AppCompatActivity {
         Button lesson3_bt = findViewById(R.id.lesson3);
         Button lesson4_bt = findViewById(R.id.lesson4);
         Button lesson5_bt = findViewById(R.id.lesson5);
+        Button lesson6_bt = findViewById(R.id.lesson6);
 
 //
 //        lesson5_bt.setEnabled(false);
@@ -43,11 +44,13 @@ public class LessonActivity extends AppCompatActivity {
         boolean ls3state = shared.getBoolean("ls3_enable", false);
         boolean ls4state = shared.getBoolean("ls4_enable", false);
         boolean ls5state = shared.getBoolean("ls5_enable", false);
+        boolean ls6state = shared.getBoolean("ls6_enable", false);
 
         lesson2_bt.setEnabled(ls2state);
         lesson3_bt.setEnabled(ls3state);
         lesson4_bt.setEnabled(ls4state);
         lesson5_bt.setEnabled(ls5state);
+        lesson6_bt.setEnabled(ls6state);
 
 
         lesson1_bt.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +85,13 @@ public class LessonActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LessonActivity.this,Lesson5Activity.class));
+            }
+        });
+
+        lesson6_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LessonActivity.this,Lesson6Activity.class));
             }
         });
 

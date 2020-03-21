@@ -31,18 +31,23 @@ public class QuizActivity extends AppCompatActivity {
         Button quiz3_bt = findViewById(R.id.quiz3);
         Button quiz4_bt = findViewById(R.id.quiz4);
         Button quiz5_bt = findViewById(R.id.quiz5);
+        Button quiz6_bt = findViewById(R.id.quiz6);
+
 
         boolean quiz1state = shared.getBoolean("qz1_enable", false);
         boolean quiz2state = shared.getBoolean("qz2_enable", false);
         boolean quiz3state = shared.getBoolean("qz3_enable", false);
         boolean quiz4state = shared.getBoolean("qz4_enable", false);
         boolean quiz5state = shared.getBoolean("qz5_enable", false);
+        boolean quiz6state = shared.getBoolean("qz6_enable", false);
+
 
         quiz1_bt.setEnabled(quiz1state);
         quiz2_bt.setEnabled(quiz2state);
         quiz3_bt.setEnabled(quiz3state);
         quiz4_bt.setEnabled(quiz4state);
         quiz5_bt.setEnabled(quiz5state);
+        quiz6_bt.setEnabled(quiz6state);
 
         quiz1_bt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +78,12 @@ public class QuizActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(QuizActivity.this,Quiz5Activity.class));
+            }
+        });
+        quiz6_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizActivity.this,Quiz6Activity.class));
             }
         });
     }
