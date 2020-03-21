@@ -16,7 +16,20 @@ public class Lesson5Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson5);
 
+        Button unlockls6_bt = findViewById(R.id.unlockls6);
         Button take_quiz5 = findViewById(R.id.takequiz5);
+
+        unlockls6_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = shared.edit();
+                editor.putBoolean("ls6_enable",true);
+                editor.commit();
+                startActivity(new Intent(Lesson5Activity.this,Lesson6Activity.class));
+
+            }});
+
 
         take_quiz5.setOnClickListener(new View.OnClickListener() {
             @Override

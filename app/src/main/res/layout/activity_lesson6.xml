@@ -11,10 +11,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chayanit.stockunlocked.Lesson5Activity">
+    tools:context="com.example.chayanit.stockunlocked.Lesson6Activity">
 
     <ImageButton
-        android:id="@+id/lesson5back"
+        android:id="@+id/lesson6back"
         android:layout_width="75dp"
         android:layout_height="58dp"
         android:adjustViewBounds="true"
@@ -23,41 +23,8 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp" />
 
-    <TextView
-        android:id="@+id/textView51"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Lesson 5 : Fundamental Analysis"
-        android:textColor="#000"
-        android:textSize="18dp"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lesson5back" />
-    <TextView
-        android:id="@+id/blank"
-        android:layout_width="355dp"
-        android:layout_height="64dp"
-        android:text=""
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView51"
-        />
-
-
     <Button
-        android:id="@+id/unlockls6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="unlock lesson 6"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="178dp" />
-
-
-    <Button
-        android:id="@+id/takequiz5"
+        android:id="@+id/takequiz6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="take a quiz"
