@@ -21,7 +21,9 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp" />
+        tools:layout_editor_absoluteY="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/takequiz6"
@@ -29,9 +31,373 @@
         android:layout_height="wrap_content"
         android:text="take a quiz"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView53"
         tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="437dp" />
+        tools:layout_editor_absoluteY="437dp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lesson 6 : Technical Analysis"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="199dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/lesson6back"
+        app:layout_constraintTop_toTopOf="@id/lesson6back"
+        />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="      Technical Analysis is the analysis of historical or past statistical data of the stock price or trading behaviour in the market to discover patterns in order to
+predict future price of the stock. This method is beneficial for short-term trading where there are no extreme news related to the business, and is based on the following assumptions :
+\n    - Markets efficiently show the values representing all the factors that influence a stock’s price.
+\n   - Stock prices follows trends, meaning every move in the stock price will indicate the next move.
+\n   - Trends are repetitive over time.
+\n        Let's take a look at the basic tools for Technical Analysis.
+\n"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="71dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView7"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lesson6back"
+        app:srcCompat="@drawable/stock_graph_png" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="@id/lesson6back"
+        app:layout_constraintRight_toRightOf="@id/lesson6back"
+        app:layout_constraintTop_toBottomOf="@id/textView35"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trend Line"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView30"
+        app:layout_constraintBottom_toBottomOf="@id/imageView30"
+        app:layout_constraintLeft_toRightOf="@id/imageView30"/>
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="trend line info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView36"
+        app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="@id/lesson6back"
+        app:layout_constraintRight_toRightOf="@id/lesson6back"
+        app:layout_constraintTop_toBottomOf="@id/textView37"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Support and Resistance"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView31"
+        app:layout_constraintBottom_toBottomOf="@id/imageView31"
+        app:layout_constraintLeft_toRightOf="@id/imageView30"/>
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="support and resistance info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView38"
+        app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="@id/lesson6back"
+        app:layout_constraintRight_toRightOf="@id/lesson6back"
+        app:layout_constraintTop_toBottomOf="@id/textView39"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Charts"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView32"
+        app:layout_constraintBottom_toBottomOf="@id/imageView32"
+        app:layout_constraintLeft_toRightOf="@id/imageView30"/>
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="charts info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView40"
+        app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView41"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line Chart"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView39"
+        app:layout_constraintBottom_toBottomOf="@id/imageView39"
+        app:layout_constraintLeft_toRightOf="@id/imageView39"/>
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="line chart info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView54"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView55"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bar Chart"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView40"
+        app:layout_constraintBottom_toBottomOf="@id/imageView40"
+        app:layout_constraintLeft_toRightOf="@id/imageView40"/>
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bar chart info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView56"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView57"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Candlestick Chart"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView41"
+        app:layout_constraintBottom_toBottomOf="@id/imageView41"
+        app:layout_constraintLeft_toRightOf="@id/imageView41"/>
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="candlestick chart info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView58"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintLeft_toLeftOf="@id/lesson6back"
+        app:layout_constraintRight_toRightOf="@id/lesson6back"
+        app:layout_constraintTop_toBottomOf="@id/textView59"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Indicators"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView34"
+        app:layout_constraintBottom_toBottomOf="@id/imageView34"
+        app:layout_constraintLeft_toRightOf="@id/imageView30"/>
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="indicator info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView44"
+        app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView45"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moving Average (MA)"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView35"
+        app:layout_constraintBottom_toBottomOf="@id/imageView35"
+        app:layout_constraintLeft_toRightOf="@id/imageView35"/>
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MA info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView46"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView47"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Moving Average Convergence Divergence (MACD)"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView36"
+        app:layout_constraintBottom_toBottomOf="@id/imageView36"
+        app:layout_constraintLeft_toRightOf="@id/imageView36"/>
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MACD info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView48"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView49"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relative Strength Index (RSI)"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView37"
+        app:layout_constraintBottom_toBottomOf="@id/imageView37"
+        app:layout_constraintLeft_toRightOf="@id/imageView37"/>
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RSI info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView50"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView51"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On-Balance Volume (OBV)"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView38"
+        app:layout_constraintBottom_toBottomOf="@id/imageView38"
+        app:layout_constraintLeft_toRightOf="@id/imageView38"/>
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OBV info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView52"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
 
 </android.support.constraint.ConstraintLayout>
 </ScrollView>
