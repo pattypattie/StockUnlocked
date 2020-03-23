@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="take a quiz"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView53"
+        app:layout_constraintTop_toBottomOf="@id/textView63"
         tools:layout_editor_absoluteX="266dp"
         tools:layout_editor_absoluteY="437dp"
         />
@@ -55,10 +55,10 @@
         android:layout_height="wrap_content"
         android:text="      Technical Analysis is the analysis of historical or past statistical data of the stock price or trading behaviour in the market to discover patterns in order to
 predict future price of the stock. This method is beneficial for short-term trading where there are no extreme news related to the business, and is based on the following assumptions :
-\n    - Markets efficiently show the values representing all the factors that influence a stock’s price.
+\n\n    - Markets efficiently show the values representing all the factors that influence a stock’s price.
 \n   - Stock prices follows trends, meaning every move in the stock price will indicate the next move.
 \n   - Trends are repetitive over time.
-\n        Let's take a look at the basic tools for Technical Analysis.
+\n\n        Let's take a look at the basic tools for Technical Analysis.
 \n"
         tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="71dp"
@@ -87,7 +87,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trend Line"
+        android:text="Charts"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView30"
@@ -96,9 +96,12 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView37"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="trend line info"
+        android:text="\n      Stock charts are graphical representation of how a stock’s price or trading volumes have changed over time.
+        \n\n      Horizontal axis : The historical time periods for which a technical chart has been constructed.
+        \n      Vertical axis : The stock price or the trading volume corresponding to each period.
+\n      \n      Below are some of the most common charts. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView36"
@@ -110,7 +113,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="30dp"
         app:layout_constraintLeft_toLeftOf="@id/lesson6back"
         app:layout_constraintRight_toRightOf="@id/lesson6back"
-        app:layout_constraintTop_toBottomOf="@id/textView37"
+        app:layout_constraintTop_toBottomOf="@id/textView59"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -147,7 +150,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:id="@+id/textView40"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Charts"
+        android:text="Trend Line"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView32"
@@ -156,9 +159,9 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView41"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="charts info"
+        android:text="      Trends indicate the current overall direction of stock prices."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView40"
@@ -169,7 +172,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView44"
-        app:layout_constraintTop_toBottomOf="@id/textView41"
+        app:layout_constraintTop_toBottomOf="@id/textView37"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -258,7 +261,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="30dp"
         app:layout_constraintLeft_toLeftOf="@id/lesson6back"
         app:layout_constraintRight_toRightOf="@id/lesson6back"
-        app:layout_constraintTop_toBottomOf="@id/textView59"
+        app:layout_constraintTop_toBottomOf="@id/textView41"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -397,6 +400,66 @@ predict future price of the stock. This method is beneficial for short-term trad
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView52"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView53"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bollinger Band"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView42"
+        app:layout_constraintBottom_toBottomOf="@id/imageView42"
+        app:layout_constraintLeft_toRightOf="@id/imageView42"/>
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="bollinger band info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView60"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/textView61"
+        app:srcCompat="@drawable/bulletpoint" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parabolic Stop and Reverse (PSAR)"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView43"
+        app:layout_constraintBottom_toBottomOf="@id/imageView43"
+        app:layout_constraintLeft_toRightOf="@id/imageView43"/>
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PSAR info"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/textView62"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+
 
 
 </android.support.constraint.ConstraintLayout>
