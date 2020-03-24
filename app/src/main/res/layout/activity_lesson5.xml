@@ -136,7 +136,7 @@
         android:layout_marginRight="12dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
-        android:text="Another useful tool is to look at The Standard &amp; Poor 500. The S&amp;P 500 is a stock market index that tracks the stocks of 500 large U.S. companies. It represents the stock market's performance by reporting the risks and returns of the biggest companies. You can use it as the benchmark of the overall market, to which all other investments are compared."
+        android:text="Another useful tool is to look at The S&amp;P500. You can use it as the benchmark of the overall market, to which all other investments are compared."
         android:textColor="#000"
         android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
