@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:text="take a quiz"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView63"
+        app:layout_constraintTop_toBottomOf="@id/imageView62"
         tools:layout_editor_absoluteX="266dp"
         tools:layout_editor_absoluteY="437dp"
         />
@@ -102,9 +102,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:text="\n      Stock charts are graphical representation of how a stock’s price or trading volumes have changed over time.
-        \n\n      Horizontal axis : The historical time periods for which a technical chart has been constructed.
-        \n      Vertical axis : The stock price or the trading volume corresponding to each period.
-\n\n        Here are some of the most common charts. \n"
+        \n      - Horizontal axis : The historical time periods for which a technical chart has been constructed.
+        \n      - Vertical axis : The stock price or the trading volume corresponding to each period.
+\n        Here are some of the most common charts. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView36"
@@ -179,7 +179,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:text="\n      The trend line is a line drawn on the stock chart. Trends indicate the current overall direction of stock prices.
-        \n\n      There are 3 types of trends:"
+        \n      There are 3 types of trends:"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView40"
@@ -493,20 +493,77 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView47"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MA info \n"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="      A moving average is the average price for a set time period of trade transactions. It can 'smooth' price data by creating a single flowing line. A Simple Moving Average (SMA) is one of the most popular choices among the investors.
+        \n      The formula of the SMA is given by :  \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView46"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
     <ImageView
+        android:id="@+id/imageView55"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView47"
+        app:srcCompat="@drawable/sma_formula" />
+
+    <TextView
+        android:id="@+id/textView70"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="\n      There are several ways to utilize the moving average.
+\n\n      - Trend : If the line is mostly moving horizontally for an extended amount of time, then the price isn't trending, it is ranging. If the moving average line is angled up, it is indicating an uptrend.
+\n\n      - Crossovers : This can be observed by plotting a 200-day and 50-day moving average on your chart. A buy signal occurs when the 50-day crosses above the 200-day, known as the 'golden cross', while a sell signal occurs when the 50-day drops below the 200-day, known as the 'death cross', as shown in the graph below."
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView55"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView56"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView70"
+        app:srcCompat="@drawable/death_cross_golden_cross" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="\n      - Support and Resistance : A larger periods form stronger moving average support and resistance levels. Below is an example of using moving average as support level."
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView56"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView57"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView71"
+        app:srcCompat="@drawable/ma_support" />
+
+    <ImageView
         android:id="@+id/imageView36"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView44"
-        app:layout_constraintTop_toBottomOf="@id/textView47"
+        app:layout_constraintTop_toBottomOf="@id/imageView57"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -522,20 +579,32 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView49"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MACD info \n"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="       A MACD has two lines—a fast line and a slow line. A buy signal occurs when the fast line crosses through and above the slow line. A sell signal occurs when the fast line crosses through and below the slow line. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView48"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
     <ImageView
+        android:id="@+id/imageView58"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView49"
+        app:srcCompat="@drawable/macd" />
+
+    <ImageView
         android:id="@+id/imageView37"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView44"
-        app:layout_constraintTop_toBottomOf="@id/textView49"
+        app:layout_constraintTop_toBottomOf="@id/imageView58"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -553,18 +622,49 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:id="@+id/textView51"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RSI info \n"
+        android:text="      The formula for RSI is as follows : \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView50"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
     <ImageView
+        android:id="@+id/imageView59"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView51"
+        app:srcCompat="@drawable/rsi_formula" />
+
+    <TextView
+        android:id="@+id/textView72"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="      Prices are considered oversold when the RSI falls under 30 and overbought when RSI rises above the 70. The buying signal is when it bounces back up or off the oversold 30 band, while the selling signal is when it falls back under or deflects back down off the overbought 70 band.\n"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="234dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView59"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView60"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView72"
+        app:srcCompat="@drawable/rsi" />
+
+    <ImageView
         android:id="@+id/imageView38"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView44"
-        app:layout_constraintTop_toBottomOf="@id/textView51"
+        app:layout_constraintTop_toBottomOf="@id/imageView60"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -580,9 +680,11 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView53"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="OBV info \n"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="      OBV is primarily used to confirm or identify overall price trends or to anticipate price movements after divergences. It measures cumulative buying/selling pressure by adding the volume on up days and subtracting volume on down days. Buying pressure is evident when positive volume exceeds negative volume and the OBV line rises, while selling pressure is present when negative volume exceeds positive volume and the OBV line falls. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView52"
@@ -609,20 +711,103 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView61"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="bollinger band info \n"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="      The Bollinger Band consists of 3 bands :"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView60"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
     <ImageView
-        android:id="@+id/imageView43"
+        android:id="@+id/imageView63"
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView44"
         app:layout_constraintTop_toBottomOf="@id/textView61"
+        app:srcCompat="@drawable/num1" />
+
+    <TextView
+        android:id="@+id/textView73"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="An upper moving average, or the upper envelope"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView63"
+        app:layout_constraintBottom_toBottomOf="@id/imageView63"
+        app:layout_constraintLeft_toRightOf="@id/imageView63"/>
+
+    <ImageView
+        android:id="@+id/imageView64"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/imageView63"
+        app:srcCompat="@drawable/num2" />
+
+    <TextView
+        android:id="@+id/textView74"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A middle 20-period moving average"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView64"
+        app:layout_constraintBottom_toBottomOf="@id/imageView64"
+        app:layout_constraintLeft_toRightOf="@id/imageView64"/>
+
+    <ImageView
+        android:id="@+id/imageView65"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/imageView64"
+        app:srcCompat="@drawable/num3" />
+
+    <TextView
+        android:id="@+id/textView75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="A lower moving average, or the lower envelope"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toTopOf="@id/imageView65"
+        app:layout_constraintBottom_toBottomOf="@id/imageView65"
+        app:layout_constraintLeft_toRightOf="@id/imageView65"/>
+
+    <TextView
+        android:id="@+id/textView76"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="      The closer the prices move to the upper band, the more overbought the market, and the closer the prices move to the lower band, the more oversold the market. \n"
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="369dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView65"
+        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView61"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView76"
+        app:srcCompat="@drawable/bollingerbands" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="@id/textView44"
+        app:layout_constraintTop_toBottomOf="@id/imageView61"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -638,13 +823,24 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView63"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="PSAR info"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="      The PSAR indicator forms a parabola composed of small dots that are either above or below the trading price. When the parabola is below the stock price, it signals the bullish market and buying is recommended. When the parabola is above the stock price, it signals the bearish market and selling is recommended."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView62"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+
+    <ImageView
+        android:id="@+id/imageView62"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView63"
+        app:srcCompat="@drawable/psar" />
 
 
 
