@@ -35,6 +35,275 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lesson5back" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="One of the efficient way to find a good reason to trade is reading the news, read on what events have affected which stock recently. This method is called 'Fundamental Analysis' Moreover, Fundamental Analysis also offers insights into a company’s well-being as well as historical performance ratios to predict the future growth and success of a stock"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView51" />
+
+
+
+
+
+    <ImageView
+        android:id="@+id/funnel"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView52"
+        app:srcCompat="@drawable/funnel" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="These fundamentals break down into three categories: Economic Analysis, Industry Analysis and Company Analysis"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/funnel" />
+    <ImageView
+        android:id="@+id/Ecopic"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView56"
+        app:srcCompat="@drawable/economic" />
+
+
+    <TextView
+        android:id="@+id/EcoAna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="Economic Analysis"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Ecopic" />
+
+    <TextView
+        android:id="@+id/textView57"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="All economic events can affect the stock market. You need to be aware of these events in order to make an educated prediction and higher your chances of making profit."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/EcoAna" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="For example, oil production has slowed down, you can assume the demand for oil will begin to increase meaning that oil prices per barrel will rise. News like this is the reason to open a 'buy' position."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView57" />
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Another useful tool is to look at The Standard &amp; Poor 500. The S&amp;P 500 is a stock market index that tracks the stocks of 500 large U.S. companies. It represents the stock market's performance by reporting the risks and returns of the biggest companies. You can use it as the benchmark of the overall market, to which all other investments are compared."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView53" />
+
+    <ImageView
+        android:id="@+id/Indpic"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView55"
+        app:srcCompat="@drawable/trophy" />
+
+
+    <TextView
+        android:id="@+id/IndAna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="Industry Analysis"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Indpic" />
+
+
+    <TextView
+        android:id="@+id/textView58"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Because Fundamental Analysis is mostly used by long-term traders, so most of investors should focus on industries that have favorable long-term growth prospects. For example, there's a clear trend toward online retail sales. Over the past decade or so, the percentage of retail sales that have taken place online have grown from less than 5% to more than 11% today. So, e-commerce is an example of an industry with a favorable growth trend"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IndAna" />
+
+    <ImageView
+        android:id="@+id/Compic"
+        android:layout_width="117dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView58"
+        app:srcCompat="@drawable/statement" />
+
+
+    <TextView
+        android:id="@+id/ComAna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="monospace"
+        android:text="Company Analysis"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Compic" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Company analysis of stocks uses earnings, future growth, revenues, return on equity, profit margins, and a variety of other data sets to see a company’s performance and value. This mainly involves looking at a company’s financial statements over a period of months or years. "
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ComAna" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="The Financial Statement of the company can be found in 56-1 or Financial Investment from www.set.or.th"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView54" />
+    <TextView
+        android:id="@+id/textView510"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="These are 2 useful tools that professional analysts use to look at a company’s fundamentals:"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView59" />
+
+    <TextView
+        android:id="@+id/textView511"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Earnings per share (EPS) tells us how much of a company's profit is assigned to each share of stock. EPS is calculated as net income divided by the number of outstanding shares. The higher EPS is the better as it states that the company has higher profit."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView510" />
+    <TextView
+        android:id="@+id/textView512"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="For example, company A has net income of 100 Baht and 50 outstanding shares. The EPS of company A is 100/50 = 2 Baht per share."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView511" />
+
+    <TextView
+        android:id="@+id/textView513"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Price-to-earnings ratio (P/E) is the ratio which compares the current sales price of a company's stock to its per-share earnings. The lower P/E value, the better."
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView512" />
+
+    <TextView
+        android:id="@+id/textView514"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="For example, company A has net income of 100 Baht, 50 outstanding shares and current sales price of 20 Baht. As we already know that the EPS is 2 Baht per share. Therefore, the P/E = 20/2 = 10"
+        android:textColor="#000"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView513" />
+
     <TextView
         android:id="@+id/blank"
         android:layout_width="355dp"
@@ -42,9 +311,8 @@
         android:text=""
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView51"
+        app:layout_constraintTop_toBottomOf="@id/textView514"
         />
-
 
     <Button
         android:id="@+id/unlockls6"
