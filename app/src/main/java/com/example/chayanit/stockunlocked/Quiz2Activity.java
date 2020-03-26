@@ -36,7 +36,9 @@ public class Quiz2Activity extends AppCompatActivity{
 
         if(savedInstanceState == null){
             Lesson2Quiz1Fragment lesson2Quiz1Fragment = new Lesson2Quiz1Fragment();
+            //Lesson2Quiz2Fragment lesson2Quiz2Fragment = new Lesson2Quiz2Fragment();
             getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2q1, lesson2Quiz1Fragment).commit();
+            //getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2q1, lesson2Quiz2Fragment).commit();
         }
 
 
