@@ -88,9 +88,6 @@ public class Lesson2Quiz1Fragment extends Fragment {
         final TextView l2q1anstext = (TextView) myFragmentView.findViewById(R.id.l2q1ans);
         l2q1anstext.setVisibility(View.INVISIBLE);
 
-        final Button nextBtn = (Button) myFragmentView.findViewById(R.id.nextbtn);
-        nextBtn.setVisibility(View.INVISIBLE);
-
 
 
 //        chb1.setOnClickListener(new View.OnClickListener() {
@@ -117,7 +114,6 @@ public class Lesson2Quiz1Fragment extends Fragment {
                 if(chb1.isChecked()&&chb3.isChecked()&&chb4.isChecked()&&chb6.isChecked()){
                     l2q1anstext.setText("Correct! \n The documents required for the broker to open your brokerage account consists of \n1.ID card \n2.Bank Book \n3.House Registration \n4.Bank Statement.");
                     confirmbtn.setVisibility(View.INVISIBLE);
-                    nextBtn.setVisibility(View.VISIBLE);
                     chb1.setEnabled(false);
                     chb2.setEnabled(false);
                     chb3.setEnabled(false);
