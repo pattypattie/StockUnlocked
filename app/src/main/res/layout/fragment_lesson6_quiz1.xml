@@ -2,12 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.chayanit.stockunlocked.Lesson6Quiz1Fragment">
 
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <!-- TODO: Update blank fragment layout -->
+
+    <ImageButton
+        android:id="@+id/blankbtn"
+        android:layout_width="75dp"
+        android:layout_height="58dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/backicon2"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Lesson 6 quiz 1" />
+        android:text="Lesson 6 quiz 1"
+        app:layout_constraintTop_toBottomOf="@id/blankbtn"/>
+
+    </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>

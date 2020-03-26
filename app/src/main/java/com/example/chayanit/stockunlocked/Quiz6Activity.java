@@ -1,5 +1,6 @@
 package com.example.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,14 @@ public class Quiz6Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz6);
+
+        Button backMenu = findViewById(R.id.backMenu);
+        backMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Quiz6Activity.this, TitleActivity.class));
+            }
+        });
 
         final Lesson6Quiz1Fragment lesson6Quiz1Fragment = new Lesson6Quiz1Fragment();
         final Lesson6Quiz2Fragment lesson6Quiz2Fragment = new Lesson6Quiz2Fragment();
