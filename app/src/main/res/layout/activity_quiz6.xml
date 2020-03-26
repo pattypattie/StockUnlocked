@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context="com.example.chayanit.stockunlocked.Quiz6Activity">
 
+    <Button
+        android:id="@+id/nextQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next Question"
+        app:layout_constraintTop_toBottomOf="@id/fragmentl6"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <FrameLayout
+        android:id="@+id/fragmentl6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+
 </android.support.constraint.ConstraintLayout>
