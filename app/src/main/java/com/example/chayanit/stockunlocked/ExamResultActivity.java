@@ -14,12 +14,12 @@ public class ExamResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exam_result);
 
-        Button examResult_back = findViewById(R.id.resultBack);
         TextView scoreReport = findViewById(R.id.textView33);
         Intent intent = getIntent();
         String finalScore = intent.getStringExtra("finalScore");
         scoreReport.setText("Your score is : "+finalScore);
 
+        Button examResult_back = findViewById(R.id.resultBack);
         examResult_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

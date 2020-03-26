@@ -19,10 +19,9 @@ public class Lesson1Activity extends AppCompatActivity {
         setContentView(R.layout.activity_lesson1);
 
 
-        Button unlockls2_bt = findViewById(R.id.unlockls2);
         Button take_quiz1 = findViewById(R.id.takequiz1);
 
-
+        Button unlockls2_bt = findViewById(R.id.unlockls2);
         unlockls2_bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
