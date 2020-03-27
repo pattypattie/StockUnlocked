@@ -7,6 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 /**
@@ -18,6 +22,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Lesson6Quiz1Fragment extends Fragment {
+
+    TextView result;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -64,7 +70,51 @@ public class Lesson6Quiz1Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lesson6_quiz1, container, false);
+
+        View myFragmentView = inflater.inflate(R.layout.fragment_lesson6_quiz1, container, false);
+
+        final Button openHint = myFragmentView.findViewById(R.id.hintbtn);
+        final TextView hintText = myFragmentView.findViewById(R.id.textView34);
+        final Button submitbtn = myFragmentView.findViewById(R.id.button5);
+        final EditText text1 = myFragmentView.findViewById(R.id.editText);
+        final EditText text2 = myFragmentView.findViewById(R.id.editText2);
+        final EditText text3 = myFragmentView.findViewById(R.id.editText3);
+        final EditText text4 = myFragmentView.findViewById(R.id.editText4);
+        result  = myFragmentView.findViewById(R.id.textView42);
+        final ImageView ans_im = myFragmentView.findViewById(R.id.imageView67);
+
+
+        openHint.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHint.setVisibility(View.INVISIBLE);
+                hintText.setVisibility(View.VISIBLE);
+            }
+        });
+
+        submitbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(text1.getText().toString().equals("")||text2.getText().toString().equals("")||text3.getText().toString().equals("")||text4.getText().toString().equals("")){
+                    result.setText("Please fill in all the blanks");
+                }else{
+                    if(text1.getText().toString().equals("close")&&text2.getText().toString().equals("low")&&text3.getText().toString().equals("high")&&text4.getText().toString().equals("open")){
+                        result.setText("Correct!");
+                    } else{
+                        result.setText("Incorrect. The correct answer is given below.");
+                        ans_im.setVisibility(View.VISIBLE);
+                    }
+                    text1.setEnabled(false);
+                    text2.setEnabled(false);
+                    text3.setEnabled(false);
+                    text4.setEnabled(false);
+                    openHint.setEnabled(false);
+                }
+
+            }
+        });
+
+        return myFragmentView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
