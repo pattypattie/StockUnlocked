@@ -423,8 +423,39 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="150dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="150dp"
         app:layout_constraintTop_toBottomOf="@id/imageView50"
-        app:srcCompat="@drawable/candlestick_component" />
+        app:srcCompat="@drawable/candlestick_component_bear" />
+
+    <TextView
+        android:id="@+id/bullishText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bullish Candlestick"
+        app:layout_constraintTop_toBottomOf="@id/imageView53"
+        app:layout_constraintLeft_toLeftOf="@id/imageView53"
+        app:layout_constraintRight_toRightOf="@id/imageView53"
+        />
+
+    <TextView
+        android:id="@+id/bearishText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bearish Candlestick"
+        app:layout_constraintTop_toBottomOf="@id/imageView66"
+        app:layout_constraintLeft_toLeftOf="@id/imageView66"
+        app:layout_constraintRight_toRightOf="@id/imageView66"
+        />
+
+    <ImageView
+        android:id="@+id/imageView66"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="150dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView50"
+        app:srcCompat="@drawable/candlestick_component_bull" />
 
     <TextView
         android:id="@+id/textView59"
@@ -435,8 +466,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The candlestick chart consists of 2 parts. The first part, 'shadow', is the thin line that shows the price range from high to low. The wider area, 'real body', measures the difference between the opening price and the closing price. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
-        app:layout_constraintTop_toBottomOf="@id/imageView53"
-        app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
+        app:layout_constraintTop_toBottomOf="@id/bearishText"
+        app:layout_constraintLeft_toLeftOf="@id/bearishText"/>
 
 
     <ImageView
