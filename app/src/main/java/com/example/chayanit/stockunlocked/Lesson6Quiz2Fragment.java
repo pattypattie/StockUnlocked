@@ -3,10 +3,17 @@ package com.example.chayanit.stockunlocked;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 
 
 /**
@@ -64,7 +71,41 @@ public class Lesson6Quiz2Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lesson6_quiz2, container, false);
+
+        final View myFragmentView = inflater.inflate(R.layout.fragment_lesson6_quiz2, container, false);
+
+        final TextView ansText = myFragmentView.findViewById(R.id.textView43);
+        final TextView ansExplain = myFragmentView.findViewById(R.id.textView44);
+        final Button submitBtn = myFragmentView.findViewById(R.id.submitl6q2);
+        final ImageView ansImg = myFragmentView.findViewById(R.id.imageView69);
+        final RadioButton buybtn = myFragmentView.findViewById(R.id.buy);
+        final RadioButton sellbtn = myFragmentView.findViewById(R.id.sell);
+        final RadioGroup buysellgroup = myFragmentView.findViewById(R.id.buysell);
+
+        submitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (buybtn.isChecked()) {
+                    ansText.setText("Correct!");
+                }else{
+                    ansText.setText("Incorrect.");
+                }
+                ansText.setVisibility(View.VISIBLE);
+                ansImg.setVisibility(View.VISIBLE);
+                ansExplain.setVisibility(View.VISIBLE);
+
+                String texttext = "&emsp In the question, the PSAR graph is above the price graph, and is intersecting the price graph at the top, which indicates that the stock price will increase in the future. Thus, <b>BUYING</b> at this point which is " +
+                        "before the stock price gets higher is the best solution to get a low price for the stock. The graph below reveals what happens later after the intersection occurs.";
+                ansExplain.setText(Html.fromHtml(texttext));
+
+                submitBtn.setEnabled(false);
+                buysellgroup.setEnabled(false);
+                buybtn.setEnabled(false);
+                sellbtn.setEnabled(false);
+
+            }
+        });
+        return myFragmentView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

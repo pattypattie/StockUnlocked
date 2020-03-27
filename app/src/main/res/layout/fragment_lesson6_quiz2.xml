@@ -25,10 +25,110 @@
         android:visibility="invisible"/>
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Lesson 6 quiz 2"
-        app:layout_constraintTop_toBottomOf="@id/blankbtn"/>
+        android:id="@+id/instructionl6q2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="According to the PSAR graph below, what is the best action?."
+        app:layout_constraintTop_toBottomOf="@id/blankbtn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageView68"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/psar_question1"
+            tools:layout_editor_absoluteX="144dp"
+            tools:layout_editor_absoluteY="202dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instructionl6q2"/>
+
+        <RadioGroup
+            android:checkedButton="@+id/sell"
+            android:id="@+id/buysell"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/buy_sell_toggle_outline"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/imageView68">
+
+            <RadioButton
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/buy"
+                android:background="@drawable/buy_sell_toggle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Buy" />
+
+            <RadioButton
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:id="@+id/sell"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buy_sell_toggle"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Sell" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/submitl6q2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Answer"
+            tools:layout_editor_absoluteX="75dp"
+            tools:layout_editor_absoluteY="321dp"
+            app:layout_constraintTop_toBottomOf="@id/buysell"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="347dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/submitl6q2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:layout_editor_absoluteX="99dp"
+            tools:layout_editor_absoluteY="347dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/textView43"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/imageView69"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/psar_answer1"
+            tools:layout_editor_absoluteX="109dp"
+            tools:layout_editor_absoluteY="397dp"
+            app:layout_constraintTop_toBottomOf="@id/textView44"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="invisible"/>
+
 
     </android.support.constraint.ConstraintLayout>
 
