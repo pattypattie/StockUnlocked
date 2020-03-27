@@ -1,8 +1,6 @@
 package com.example.chayanit.stockunlocked;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,10 +9,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 
 public class Quiz1Activity extends AppCompatActivity {
@@ -33,18 +32,20 @@ public class Quiz1Activity extends AppCompatActivity {
     private int mScore = 0;
     private int mQuestionNumber = 0;
     int count = 0;
-    //int question [];
-    //int i = 0;
-    List<Integer> question = new ArrayList<Integer>();
+
+    Integer[] arr = new Integer[mQuestionLibrary.mQuestions.length];
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz1);
 
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i;
+        }
+        Collections.shuffle(Arrays.asList(arr));
 
-        //randomQs();
-       // mQuestionNumber = (int)question.get(count);
 
 
         mScoreView = (TextView)findViewById(R.id.score);
@@ -66,7 +67,7 @@ public class Quiz1Activity extends AppCompatActivity {
                     updateScore(mScore);
                     Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
 
-                    if (mQuestionNumber == 3) {
+                    if (count == 3) {
                         Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("QsNum", 1);
@@ -78,13 +79,11 @@ public class Quiz1Activity extends AppCompatActivity {
                         updateQuestion();
                     }
 
-                    //updateQuestion();
-                    //This line of code is optiona
-                    //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+
 
                 }else {
                     Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    if (mQuestionNumber == 3) {
+                    if (count == 3) {
                         Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("QsNum", 1);
@@ -95,7 +94,6 @@ public class Quiz1Activity extends AppCompatActivity {
                     } else {
                         updateQuestion();
                     }
-                    //updateQuestion();
                 }
             }
         });
@@ -112,7 +110,7 @@ public class Quiz1Activity extends AppCompatActivity {
                     mScore = mScore + 1;
                     updateScore(mScore);
                     Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
-                    if (mQuestionNumber == 3) {
+                    if (count == 3) {
                         Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
@@ -126,7 +124,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
                 }else {
                     Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    if (mQuestionNumber == 3) {
+                    if (count == 3) {
                         Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
@@ -155,7 +153,7 @@ public class Quiz1Activity extends AppCompatActivity {
                     updateScore(mScore);
                     //This line of code is optiona
                     Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
-                    if (mQuestionNumber == 3) {
+                    if (count == 3) {
                         Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
@@ -170,7 +168,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
                 }else {
                     Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    if (mQuestionNumber == 3) {
+                    if (count == 3) {
                         Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putInt("finalScore", mScore);
@@ -194,55 +192,27 @@ public class Quiz1Activity extends AppCompatActivity {
 
             }
         });
-        Button unlockls2_bt = findViewById(R.id.unlockls2);
-        unlockls2_bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = shared.edit();
-                editor.putBoolean("ls2_enable",true);
-                editor.commit();
-                startActivity(new Intent(Quiz1Activity.this,Lesson2Activity.class));
-            }});
+
     }
 
 
     private void updateQuestion(){
+        mQuestionNumber = arr[count];
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
-        mQuestionNumber++;
-        //mQuestionNumber = (int) izy.next();
+        count++;
 
     }
 
+    Set<Integer> set = new LinkedHashSet<Integer>();
 
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);
     }
 
-//    public void randomQs(){
-//        HashSet hs = new HashSet();
-//        while(hs.size()<mQuestionLibrary.mQuestions.length){
-//
-//            int num=(int)(Math.random()*100);
-//
-//            hs.add(num);
-//
-//        }
-//        Iterator izy = hs.iterator();
-//
-//        //mQuestionNumber = (int) izy.next();
-//        for (int i =0; i< mQuestionLibrary.mQuestions.length;i++){
-//                question.add((int)izy.next());
-//
-//        }
-////        while (izy.hasNext()){
-////            question.add((int)izy.next());
-////        }
-//    }
 
 }

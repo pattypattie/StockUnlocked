@@ -91,6 +91,7 @@ public class Lesson3Activity extends AppCompatActivity {
                 SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
                 editor.putBoolean("ls4_enable",true);
+                editor.putBoolean("qz3_enable",true);
                 editor.commit();
                 startActivity(new Intent(Lesson3Activity.this,Lesson4Activity.class));
 
