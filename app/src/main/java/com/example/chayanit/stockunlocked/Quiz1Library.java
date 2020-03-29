@@ -12,6 +12,24 @@ public class Quiz1Library {
 
     };
 
+     String ls3q1 [] = {
+             "bear","bull","lamp","sell","stock","wood"
+     };
+
+
+     String ls3q2 [] = {
+             "What does Ceiling and Floor mean?",
+             "What does Bull and Bear mean?",
+             "What does Bid and Offer mean?"
+
+     };
+     String ls3q3 [] = {
+             "S&P500 is a Thai composite stock market index from all the common stocks on the main board of the Stock Exchange of Thailand (SET)",
+             "SET Index is a stock market index that tracks the stocks of 500 large U.S. companies",
+             "Volume is the total number of shares that are actually traded, bought and sold, during the trading day or specified set period of time"
+
+     };
+
 
     private String mChoices [][] = {
             {"Buy", "Sell", "Buy or Sell"},
@@ -22,12 +40,44 @@ public class Quiz1Library {
             {"Buying high and selling low", "Buying low and selling high", "Buying and selling at the same price"}
     };
 
+     String ls3q2choices [][] ={
+            {"The highest and lowest selling price in the day","Market that on the rise or in decline","Buying price and selling price of the stock"}
+    };
+
 
 
     private String mCorrectAnswers[] = {"Buy or Sell", "Financial Industry", "The Stock Market is a market where people can buy stocks which are shares of companies.",
             "more", "less", "Buying high and selling low"};
 
+    private String ls3q2Ans [] = {"The highest and lowest selling price in the day","Market that on the rise or in decline","Buying price and selling price of the stock"
 
+    };
+
+      String ls3q3Ans [] = {
+              "false","false","true"
+      };
+
+
+    public String ls3q2getQuestion(int a) {
+        String question = ls3q2[a];
+        return question;
+    }
+
+    public String ls3q3getQuestion(int a) {
+        String question = ls3q3[a];
+        return question;
+    }
+
+
+    public String ls3q2getCorrectAnswer(int a) {
+        String answer = ls3q2Ans[a];
+        return answer;
+    }
+
+    public String ls3q3getCorrectAnswer(int a) {
+        String answer = ls3q3Ans[a];
+        return answer;
+    }
 
 
     public String getQuestion(int a) {

@@ -1,0 +1,105 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chayanit.stockunlocked.lesson3Quiz1Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Match the term that has the opposite meaning" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+         />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="160dp"
+        android:id="@+id/bt1"        />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/button2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="128dp"
+        />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="160dp"
+        android:id="@+id/bt2"        />
+    <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/button4"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="200dp"
+        />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="320dp"
+        android:id="@+id/bt3"        />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/button5"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="128dp"
+        />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="320dp"
+        android:id="@+id/bt4"        />
+
+    <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginStart="8dp"-->
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/button7"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="360dp"
+        />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="480dp"
+        android:id="@+id/bt5"        />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/button8"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="128dp"
+
+        />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="480dp"
+        android:id="@+id/bt6"        />
+
+</FrameLayout>
+</ScrollView>
