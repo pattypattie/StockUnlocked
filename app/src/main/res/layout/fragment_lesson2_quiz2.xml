@@ -52,7 +52,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/bankbook2"
-            app:layout_constraintTop_toTopOf="@id/drop_area_2"
+            app:layout_constraintTop_toTopOf="@id/drop_area_3"
             app:layout_constraintRight_toLeftOf="@id/blanktxt"/>
 
         <ImageView
@@ -60,55 +60,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/bankbook3"
-            app:layout_constraintTop_toTopOf="@id/drop_area_3"
+            app:layout_constraintTop_toTopOf="@id/drop_area_1"
             app:layout_constraintRight_toLeftOf="@id/blanktxt"/>
 
 
-            <LinearLayout
-                android:id="@+id/drop_area_1"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:background="#D68910"
-                android:gravity="center"
-                android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/instructionl2q1"
-                app:layout_constraintLeft_toRightOf="@id/blanktxt">
 
-            </LinearLayout>
-
-        <ImageView
-            android:id="@+id/cashAccOnArea1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bankbook1"
-            android:visibility="invisible"
-            app:layout_constraintRight_toRightOf="@id/drop_area_1"
-            app:layout_constraintLeft_toLeftOf="@id/drop_area_1"
-            app:layout_constraintTop_toTopOf="@id/drop_area_1"
-            app:layout_constraintBottom_toBottomOf="@id/drop_area_1"/>
-        <ImageView
-            android:id="@+id/cashBalOnArea1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bankbook2"
-            android:visibility="invisible"
-            app:layout_constraintRight_toRightOf="@id/drop_area_1"
-            app:layout_constraintLeft_toLeftOf="@id/drop_area_1"
-            app:layout_constraintTop_toTopOf="@id/drop_area_1"
-            app:layout_constraintBottom_toBottomOf="@id/drop_area_1"/>
-        <ImageView
-            android:id="@+id/creditBalOnArea1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/bankbook3"
-            android:visibility="invisible"
-            app:layout_constraintRight_toRightOf="@id/drop_area_1"
-            app:layout_constraintLeft_toLeftOf="@id/drop_area_1"
-            app:layout_constraintTop_toTopOf="@id/drop_area_1"
-            app:layout_constraintBottom_toBottomOf="@id/drop_area_1"/>
 
         <LinearLayout
             android:id="@+id/drop_area_2"
@@ -120,7 +76,7 @@
             android:background="#D68910"
             android:gravity="center"
             android:orientation="vertical"
-            app:layout_constraintTop_toBottomOf="@id/descript1"
+            app:layout_constraintTop_toBottomOf="@id/instructionl2q1"
             android:layout_marginTop="10dp"
             app:layout_constraintLeft_toRightOf="@id/blanktxt">
         </LinearLayout>
@@ -203,6 +159,52 @@
             app:layout_constraintTop_toTopOf="@id/drop_area_3"
             app:layout_constraintBottom_toBottomOf="@id/drop_area_3"/>
 
+        <LinearLayout
+            android:id="@+id/drop_area_1"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="#D68910"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/descript3"
+            app:layout_constraintLeft_toRightOf="@id/blanktxt">
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/cashAccOnArea1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bankbook1"
+            android:visibility="invisible"
+            app:layout_constraintRight_toRightOf="@id/drop_area_1"
+            app:layout_constraintLeft_toLeftOf="@id/drop_area_1"
+            app:layout_constraintTop_toTopOf="@id/drop_area_1"
+            app:layout_constraintBottom_toBottomOf="@id/drop_area_1"/>
+        <ImageView
+            android:id="@+id/cashBalOnArea1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bankbook2"
+            android:visibility="invisible"
+            app:layout_constraintRight_toRightOf="@id/drop_area_1"
+            app:layout_constraintLeft_toLeftOf="@id/drop_area_1"
+            app:layout_constraintTop_toTopOf="@id/drop_area_1"
+            app:layout_constraintBottom_toBottomOf="@id/drop_area_1"/>
+        <ImageView
+            android:id="@+id/creditBalOnArea1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/bankbook3"
+            android:visibility="invisible"
+            app:layout_constraintRight_toRightOf="@id/drop_area_1"
+            app:layout_constraintLeft_toLeftOf="@id/drop_area_1"
+            app:layout_constraintTop_toTopOf="@id/drop_area_1"
+            app:layout_constraintBottom_toBottomOf="@id/drop_area_1"/>
+
         <TextView
             android:id="@+id/blanktxt"
             android:layout_width="wrap_content"
@@ -219,7 +221,7 @@
             android:text="Submit Answer"
             tools:layout_editor_absoluteX="85dp"
             tools:layout_editor_absoluteY="445dp"
-            app:layout_constraintTop_toBottomOf="@id/descript3"
+            app:layout_constraintTop_toBottomOf="@id/descript1"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
 

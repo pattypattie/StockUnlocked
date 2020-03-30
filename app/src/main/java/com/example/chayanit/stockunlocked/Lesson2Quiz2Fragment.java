@@ -84,14 +84,15 @@ public class Lesson2Quiz2Fragment extends Fragment {
 
         View myFragmentView = inflater.inflate(R.layout.fragment_lesson2_quiz2, container, false);
 
-        dragCashAcc = (ImageView) myFragmentView.findViewById(R.id.cashAcc);
-        dragCashBal = (ImageView) myFragmentView.findViewById(R.id.cashBal);
-        dragCreditBal = (ImageView) myFragmentView.findViewById(R.id.creditBal);
+
         dropArea1 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_1);
         dropArea2 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_2);
         dropArea3 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_3);
         submitButton = (Button) myFragmentView.findViewById(R.id.submitbtn);
         sol = (TextView) myFragmentView.findViewById(R.id.textView77);
+        dragCashAcc = (ImageView) myFragmentView.findViewById(R.id.cashAcc);
+        dragCashBal = (ImageView) myFragmentView.findViewById(R.id.cashBal);
+        dragCreditBal = (ImageView) myFragmentView.findViewById(R.id.creditBal);
         cashAccArea1 = (ImageView) myFragmentView.findViewById(R.id.cashAccOnArea1);
         cashBalArea1 = (ImageView) myFragmentView.findViewById(R.id.cashBalOnArea1);
         creditBalArea1 = (ImageView) myFragmentView.findViewById(R.id.creditBalOnArea1);
@@ -119,20 +120,17 @@ public class Lesson2Quiz2Fragment extends Fragment {
                     case DragEvent.ACTION_DROP: {
                         v.setBackgroundColor(Color.rgb(214, 137, 16));
                         clipdt = event.getClipData().getDescription().getLabel().toString();
+                        cashAccArea1.setVisibility(View.INVISIBLE);
+                        cashBalArea1.setVisibility(View.INVISIBLE);
+                        creditBalArea1.setVisibility(View.INVISIBLE);
                         if(clipdt.equals("a1")){
                             ans1 = true;
                             cashAccArea1.setVisibility(View.VISIBLE);
-                            cashBalArea1.setVisibility(View.INVISIBLE);
-                            creditBalArea1.setVisibility(View.INVISIBLE);
                         }else{
                             ans1 = false;
                             if(clipdt.equals("a2")){
-                                cashAccArea1.setVisibility(View.INVISIBLE);
                                 cashBalArea1.setVisibility(View.VISIBLE);
-                                creditBalArea1.setVisibility(View.INVISIBLE);
                             } else if(clipdt.equals("a3")){
-                                cashAccArea1.setVisibility(View.INVISIBLE);
-                                cashBalArea1.setVisibility(View.INVISIBLE);
                                 creditBalArea1.setVisibility(View.VISIBLE);
                             }
                             }
@@ -164,20 +162,17 @@ public class Lesson2Quiz2Fragment extends Fragment {
                     case DragEvent.ACTION_DROP: {
                         v.setBackgroundColor(Color.rgb(214, 137, 16));
                         clipdt = event.getClipData().getDescription().getLabel().toString();
+                        cashAccArea2.setVisibility(View.INVISIBLE);
+                        cashBalArea2.setVisibility(View.INVISIBLE);
+                        creditBalArea2.setVisibility(View.INVISIBLE);
                         if(clipdt.equals("a2")){
                             ans2 = true;
-                            cashAccArea2.setVisibility(View.INVISIBLE);
                             cashBalArea2.setVisibility(View.VISIBLE);
-                            creditBalArea2.setVisibility(View.INVISIBLE);
                         }else{
                             ans2 = false;
                             if(clipdt.equals("a1")){
                                 cashAccArea2.setVisibility(View.VISIBLE);
-                                cashBalArea2.setVisibility(View.INVISIBLE);
-                                creditBalArea2.setVisibility(View.INVISIBLE);
                             }else if(clipdt.equals("a3")){
-                                cashAccArea2.setVisibility(View.INVISIBLE);
-                                cashBalArea2.setVisibility(View.INVISIBLE);
                                 creditBalArea2.setVisibility(View.VISIBLE);
                             }
                         }
@@ -209,21 +204,18 @@ public class Lesson2Quiz2Fragment extends Fragment {
                     case DragEvent.ACTION_DROP: {
                         v.setBackgroundColor(Color.rgb(214, 137, 16));
                         clipdt = event.getClipData().getDescription().getLabel().toString();
+                        cashAccArea3.setVisibility(View.INVISIBLE);
+                        cashBalArea3.setVisibility(View.INVISIBLE);
+                        creditBalArea3.setVisibility(View.INVISIBLE);
                         if(clipdt.equals("a3")){
                             ans3 = true;
-                            cashAccArea3.setVisibility(View.INVISIBLE);
-                            cashBalArea3.setVisibility(View.INVISIBLE);
                             creditBalArea3.setVisibility(View.VISIBLE);
                         }else{
                             ans3 = false;
                             if(clipdt.equals("a2")){
-                                cashAccArea3.setVisibility(View.INVISIBLE);
                                 cashBalArea3.setVisibility(View.VISIBLE);
-                                creditBalArea3.setVisibility(View.INVISIBLE);
                             }else if(clipdt.equals("a1")){
                                 cashAccArea3.setVisibility(View.VISIBLE);
-                                cashBalArea3.setVisibility(View.INVISIBLE);
-                                creditBalArea3.setVisibility(View.INVISIBLE);
                             }
                         }
                         return (true);
@@ -273,10 +265,29 @@ public class Lesson2Quiz2Fragment extends Fragment {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ans1==true&&ans2==true&&ans3==true){
+                if(ans1&&ans2&&ans3){
                     sol.setText("Correct!");
+                    dragCashAcc.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    dragCashBal.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    dragCreditBal.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    submitButton.setEnabled(false);
                 } else{
-                    sol.setText("Incorrect. Please Try Again");
+                    sol.setText("Incorrect. Please Try Again.");
                 }
             }
         });
@@ -290,6 +301,7 @@ public class Lesson2Quiz2Fragment extends Fragment {
             mListener.onFragmentInteraction(uri);
         }
     }
+
 
 //    @Override
 //    public void onAttach(Context context) {
