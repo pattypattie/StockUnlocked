@@ -1,10 +1,13 @@
 package com.example.chayanit.stockunlocked;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -107,10 +110,34 @@ public class Lesson4Quiz1Fragment extends Fragment {
             }
         });
 
+        slowGrowers.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    slowGrowers.setBackgroundResource(R.drawable.button_style_2);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    slowGrowers.setBackgroundResource(R.drawable.button_style_1);
+                }
+                return false;
+            }
+        });
+
         stalWarts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showSolution("Stalwarts");
+            }
+        });
+
+        stalWarts.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    stalWarts.setBackgroundResource(R.drawable.button_style_2);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    stalWarts.setBackgroundResource(R.drawable.button_style_1);
+                }
+                return false;
             }
         });
 
@@ -121,10 +148,34 @@ public class Lesson4Quiz1Fragment extends Fragment {
             }
         });
 
+        fastGrowers.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    fastGrowers.setBackgroundResource(R.drawable.button_style_2);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    fastGrowers.setBackgroundResource(R.drawable.button_style_1);
+                }
+                return false;
+            }
+        });
+
         cyclical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showSolution("Cyclical");
+            }
+        });
+
+        cyclical.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    cyclical.setBackgroundResource(R.drawable.button_style_2);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    cyclical.setBackgroundResource(R.drawable.button_style_1);
+                }
+                return false;
             }
         });
 
@@ -135,10 +186,34 @@ public class Lesson4Quiz1Fragment extends Fragment {
             }
         });
 
+        turnaround.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    turnaround.setBackgroundResource(R.drawable.button_style_2);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    turnaround.setBackgroundResource(R.drawable.button_style_1);
+                }
+                return false;
+            }
+        });
+
         assetPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showSolution("Asset Play");
+            }
+        });
+
+        assetPlay.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction() == MotionEvent.ACTION_DOWN) {
+                    assetPlay.setBackgroundResource(R.drawable.button_style_2);
+                } else if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    assetPlay.setBackgroundResource(R.drawable.button_style_1);
+                }
+                return false;
             }
         });
 
