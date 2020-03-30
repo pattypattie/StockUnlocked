@@ -46,7 +46,13 @@ public class Quiz1Activity extends AppCompatActivity {
         }
         Collections.shuffle(Arrays.asList(arr));
 
-
+        Button backMenu = findViewById(R.id.backMenu);
+        backMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Quiz1Activity.this, TitleActivity.class));
+            }
+        });
 
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
@@ -183,15 +189,15 @@ public class Quiz1Activity extends AppCompatActivity {
             }
         });
 
-
-        ImageButton lesson1_back = findViewById(R.id.Quiz1back);
-        lesson1_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Quiz1Activity.this,QuizActivity.class));
-
-            }
-        });
+//
+//        ImageButton lesson1_back = findViewById(R.id.Quiz1back);
+//        lesson1_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Quiz1Activity.this,QuizActivity.class));
+//
+//            }
+//        });
 
     }
 
