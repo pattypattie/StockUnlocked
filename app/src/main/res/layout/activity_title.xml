@@ -32,6 +32,7 @@
 
     <Button
         android:id="@+id/quiz_bt"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Quiz and Game"
@@ -43,6 +44,7 @@
 
     <Button
         android:id="@+id/exam_bt"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Exam"
@@ -54,6 +56,7 @@
 
     <Button
         android:id="@+id/setting"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Setting"
