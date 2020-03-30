@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,10 +28,10 @@ public class Lesson4Quiz1Fragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    TextView question, checkAns;
-    String[] questionList;
-    String[] answerList;
-    Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay;
+    TextView question, checkAns, explainAns;
+    //String[] questionList, answerList, explainList;
+    ArrayList<String> questionList, answerList, explainList;
+    Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay, nextbtn;
     String correctAns;
     int randomQuestion;
 
@@ -84,33 +87,68 @@ public class Lesson4Quiz1Fragment extends Fragment {
         cyclical = myFragmentView.findViewById(R.id.stocktype4);
         turnaround = myFragmentView.findViewById(R.id.stocktype5);
         assetPlay = myFragmentView.findViewById(R.id.stocktype6);
+        nextbtn = myFragmentView.findViewById(R.id.button6);
+        explainAns = myFragmentView.findViewById(R.id.explainText);
 
-        questionList = new String[] {"...you are looking for a stock with high constant dividend", "...you want to invest in big company's stock to ensure safe investment"};
-        answerList = new String[] {"Slow Growers", "Stalwarts"};
+        questionList = new ArrayList<String>(3);
+        answerList = new ArrayList<String>(3);
+        explainList = new ArrayList<String>(3);
 
+        randomQuestion = -1;
+        questionList.addAll(Arrays.asList("...you are looking for a stock with high constant dividend", "...you want to invest in big company's stock to ensure safe investment", "...oil price has the tendency to increase so you want to benefit from this period"));
+        answerList.addAll(Arrays.asList("Slow Growers", "Stalwarts", "Cyclical"));
+        explainList.addAll(Arrays.asList("Slow growers stock growth are not very high, but it yields a good amount of dividend.","Stalwarts are tolerant to economic crisis, thus investing in this type of stock is less risky.","Cyclical stock profit varies according to the economy related to the business at the moment. Oil stocks are cyclical since its profit varies according to the oil price."));
         nextQuestion();
 
         slowGrowers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(correctAns.equals("Slow Growers")){
-                    checkAns.setText("Correct! You should aim for Slow Growers.");
-                }else{
-                    checkAns.setText("Incorrect. You should aim for "+correctAns);
-                }
-                nextQuestion();
+                showSolution("Slow Growers");
             }
         });
 
         stalWarts.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(correctAns.equals("Stalwarts")){
-                    checkAns.setText("Correct! You should aim for Stalwarts.");
-                }else{
-                    checkAns.setText("Incorrect. You should aim for "+correctAns);
-                }
+                showSolution("Stalwarts");
+            }
+        });
+
+        fastGrowers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showSolution("Fast Growers");
+            }
+        });
+
+        cyclical.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showSolution("Cyclical");
+            }
+        });
+
+        turnaround.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showSolution("Turnaround");
+            }
+        });
+
+        assetPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showSolution("Asset Play");
+            }
+        });
+
+        nextbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 nextQuestion();
+                if(questionList.size()==1){ //last question, disable next button
+                    nextbtn.setEnabled(false);
+                }
             }
         });
 
@@ -125,9 +163,44 @@ public class Lesson4Quiz1Fragment extends Fragment {
     }
 
     public void nextQuestion(){
-        randomQuestion = (int)(Math.random()*questionList.length);
-        question.setText(questionList[randomQuestion]);
-        correctAns = answerList[randomQuestion];
+
+        if(randomQuestion!=-1){
+            questionList.remove(randomQuestion);
+            answerList.remove(randomQuestion);
+            explainList.remove(randomQuestion);
+            questionList.trimToSize();
+            answerList.trimToSize();
+            explainList.trimToSize();
+        }
+
+        if(questionList.size()!=0){
+            randomQuestion = (int)(Math.random()*questionList.size());
+            question.setText(questionList.get(randomQuestion));
+            correctAns = answerList.get(randomQuestion);
+            checkAns.setText("");
+            explainAns.setText("");
+            slowGrowers.setEnabled(true);
+            stalWarts.setEnabled(true);
+            fastGrowers.setEnabled(true);
+            cyclical.setEnabled(true);
+            turnaround.setEnabled(true);
+            assetPlay.setEnabled(true);
+        }
+    }
+
+    public void showSolution(String buttonClickedName){
+        if(correctAns.equals(buttonClickedName)){
+            checkAns.setText("Correct! You should aim for "+correctAns);
+        }else{
+            checkAns.setText("Incorrect. You should aim for "+correctAns);
+        }
+        explainAns.setText(explainList.get(randomQuestion));
+        slowGrowers.setEnabled(false);
+        stalWarts.setEnabled(false);
+        fastGrowers.setEnabled(false);
+        cyclical.setEnabled(false);
+        turnaround.setEnabled(false);
+        assetPlay.setEnabled(false);
     }
 
 //    @Override
