@@ -1,0 +1,135 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chayanit.stockunlocked.Lesson4Quiz1Fragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/blankbtn"
+            android:layout_width="75dp"
+            android:layout_height="58dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/backicon2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/instructionl4q1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Choose the correct stock type to invest if..."
+        app:layout_constraintTop_toBottomOf="@id/blankbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/questionl4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/instructionl4q1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/stocktype1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Slow Growers"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+             android:background="@drawable/button_style_1"
+            app:layout_constraintRight_toLeftOf="@id/stocktype2"
+            app:layout_constraintTop_toBottomOf="@id/questionl4"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Stalwarts"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionl4"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype3"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Fast Growers"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_1"
+            app:layout_constraintLeft_toRightOf="@id/stocktype2"
+            app:layout_constraintTop_toBottomOf="@id/questionl4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype4"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Cyclical"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_1"
+            app:layout_constraintRight_toLeftOf="@id/stocktype5"
+            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype5"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Turnaround"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/stocktype6"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Asset Play"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_1"
+            app:layout_constraintLeft_toRightOf="@id/stocktype5"
+            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/checkAns"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/stocktype6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="5dp"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
