@@ -71,7 +71,7 @@
         android:layout_marginRight="12dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="These fundamentals break down into three categories: Economic Analysis, Industry Analysis and Company Analysis"
+        android:text="These fundamentals break down into three categories: Economic Analysis, Industry Analysis and Company Analysis. This is called a Top-Down Approach"
         android:textColor="#000"
         android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
