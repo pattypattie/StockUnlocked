@@ -26,21 +26,27 @@ public class Quiz6Activity extends AppCompatActivity {
 
         final Lesson6Quiz1Fragment lesson6Quiz1Fragment = new Lesson6Quiz1Fragment();
         final Lesson6Quiz2Fragment lesson6Quiz2Fragment = new Lesson6Quiz2Fragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, lesson6Quiz1Fragment).commit();
-        currentQuiz = 1;
+
+        currentQuiz = (int)(Math.random()*2);
+        if(currentQuiz==0){
+            getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, lesson6Quiz1Fragment).commit();
+        } else{
+            getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, lesson6Quiz2Fragment).commit();
+        }
 
         final Button nextQbtn = findViewById(R.id.nextQ);
         nextQbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(currentQuiz==1){
+                if(currentQuiz==0){
                     getSupportFragmentManager().beginTransaction().remove(lesson6Quiz1Fragment).commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, lesson6Quiz2Fragment).commit();
-                    currentQuiz = 2;
-                }else if(currentQuiz==2){
-                    // next quiz fragment
+                }else{
+                    getSupportFragmentManager().beginTransaction().remove(lesson6Quiz2Fragment).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, lesson6Quiz1Fragment).commit();
                 }
+                nextQbtn.setEnabled(false);
             }
         });
 

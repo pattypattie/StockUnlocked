@@ -27,30 +27,30 @@ public class Quiz2Activity extends AppCompatActivity{
             }
         });
 
-        //if(savedInstanceState == null){
-            //Lesson2Quiz1Fragment lesson2Quiz1Fragment = new Lesson2Quiz1Fragment();
-            //Lesson2Quiz2Fragment lesson2Quiz2Fragment = new Lesson2Quiz2Fragment();
-            //getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2q1, lesson2Quiz1Fragment).commit();
-            //getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2q1, lesson2Quiz2Fragment).commit();
-        //}
-
         final Lesson2Quiz1Fragment lesson2Quiz1Fragment = new Lesson2Quiz1Fragment();
         final Lesson2Quiz2Fragment lesson2Quiz2Fragment = new Lesson2Quiz2Fragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2, lesson2Quiz1Fragment).commit();
-        currentQuiz = 1;
+
+        currentQuiz = (int)(Math.random()*2);
+        if(currentQuiz==0){
+            getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2, lesson2Quiz1Fragment).commit();
+        } else{
+            getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2, lesson2Quiz2Fragment).commit();
+        }
+
 
         final Button nextQbtn = findViewById(R.id.nextQ);
         nextQbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(currentQuiz==1){
+                if(currentQuiz==0){
                     getSupportFragmentManager().beginTransaction().remove(lesson2Quiz1Fragment).commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2, lesson2Quiz2Fragment).commit();
-                    currentQuiz = 2;
-                }else if(currentQuiz==2){
-                    // next quiz fragment
+                }else{
+                    getSupportFragmentManager().beginTransaction().remove(lesson2Quiz2Fragment).commit();
+                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl2, lesson2Quiz1Fragment).commit();
                 }
+                nextQbtn.setEnabled(false);
             }
         });
 
