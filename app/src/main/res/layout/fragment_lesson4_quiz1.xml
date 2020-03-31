@@ -130,6 +130,27 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginTop="5dp"/>
 
+        <TextView
+            android:id="@+id/explainText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            app:layout_constraintTop_toBottomOf="@id/checkAns"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="217dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/explainText"/>
+
     </android.support.constraint.ConstraintLayout>
 
 </FrameLayout>
