@@ -32,7 +32,6 @@ public class Lesson4Quiz1Fragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
 
     TextView question, checkAns, explainAns;
-    //String[] questionList, answerList, explainList;
     ArrayList<String> questionList, answerList, explainList;
     Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay, nextbtn;
     String correctAns;
