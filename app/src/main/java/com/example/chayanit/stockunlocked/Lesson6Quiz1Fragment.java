@@ -1,6 +1,7 @@
 package com.example.chayanit.stockunlocked;
 
 import android.content.Context;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -23,7 +24,9 @@ import android.widget.TextView;
  */
 public class Lesson6Quiz1Fragment extends Fragment {
 
-    TextView result;
+    TextView result, candleName;
+    ImageView bullPic, bullAns, bearPic, bearAns;
+    int randomCandle;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -81,8 +84,21 @@ public class Lesson6Quiz1Fragment extends Fragment {
         final EditText text3 = myFragmentView.findViewById(R.id.editText3);
         final EditText text4 = myFragmentView.findViewById(R.id.editText4);
         result  = myFragmentView.findViewById(R.id.textView42);
-        final ImageView ans_im = myFragmentView.findViewById(R.id.imageView67);
+        candleName = myFragmentView.findViewById(R.id.textView35);
+        bullPic = myFragmentView.findViewById(R.id.imageView33);
+        bearPic = myFragmentView.findViewById(R.id.imageView69);
+        bullAns = myFragmentView.findViewById(R.id.imageView67);
+        bearAns = myFragmentView.findViewById(R.id.imageView68);
 
+        randomCandle = (int)(Math.random()*2);
+
+        if(randomCandle==0){
+            candleName.setText("Bullish Candlestick");
+            bullPic.setVisibility(View.VISIBLE);
+        } else {
+            candleName.setText("Bearish Candlestick");
+            bearPic.setVisibility(View.VISIBLE);
+        }
 
         openHint.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,11 +114,15 @@ public class Lesson6Quiz1Fragment extends Fragment {
                 if(text1.getText().toString().equals("")||text2.getText().toString().equals("")||text3.getText().toString().equals("")||text4.getText().toString().equals("")){
                     result.setText("Please fill in all the blanks");
                 }else{
-                    if(text1.getText().toString().equals("close")&&text2.getText().toString().equals("low")&&text3.getText().toString().equals("high")&&text4.getText().toString().equals("open")){
+                    if((randomCandle==0&&text1.getText().toString().equalsIgnoreCase("close")&&text2.getText().toString().equalsIgnoreCase("low")&&text3.getText().toString().equalsIgnoreCase("high")&&text4.getText().toString().equalsIgnoreCase("open"))||(randomCandle==1&&text1.getText().toString().equalsIgnoreCase("open")&&text2.getText().toString().equalsIgnoreCase("low")&&text3.getText().toString().equalsIgnoreCase("high")&&text4.getText().toString().equalsIgnoreCase("close"))){
                         result.setText("Correct!");
                     } else{
                         result.setText("Incorrect. The correct answer is given below.");
-                        ans_im.setVisibility(View.VISIBLE);
+                        if(randomCandle==0){
+                            bullAns.setVisibility(View.VISIBLE);
+                        } else{
+                            bearAns.setVisibility(View.VISIBLE);
+                        }
                     }
                     text1.setEnabled(false);
                     text2.setEnabled(false);

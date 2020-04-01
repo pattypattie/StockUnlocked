@@ -1,0 +1,250 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.chayanit.stockunlocked.Lesson4Quiz2Fragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <ImageButton
+            android:id="@+id/blankbtn"
+            android:layout_width="75dp"
+            android:layout_height="58dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/backicon2"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="3dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/instructionl4q2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/blankbtn" />
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/instructionl4q2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Select the appropriate stock type for the following company." />
+
+        <ImageView
+            android:id="@+id/fastGrowerImg1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/small_business"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView78"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="211dp"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/turnaroundImg1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/constructing"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView78"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="211dp"
+            android:visibility="invisible"
+            />
+
+        <ImageView
+            android:id="@+id/assetPlayImg1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/company_with_land"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView78"
+            tools:layout_editor_absoluteX="159dp"
+            tools:layout_editor_absoluteY="211dp"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fastGrowerImg1"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="128dp" />
+
+        <ImageButton
+            android:id="@+id/randomImgBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/redbutton"
+            android:background="@null"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="326dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionText"/>
+
+        <ImageButton
+            android:id="@+id/randomImgBtnFade"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/redbutton_fade"
+            android:background="@null"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="326dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/questionText"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/textView79"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RANDOM"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="305dp"
+            app:layout_constraintRight_toLeftOf="@id/randomImgBtn"
+            android:layout_marginRight="5dp"
+            app:layout_constraintTop_toTopOf="@id/randomImgBtn"
+            app:layout_constraintBottom_toBottomOf="@id/randomImgBtn"/>
+
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COMPANY!"
+            tools:layout_editor_absoluteX="58dp"
+            tools:layout_editor_absoluteY="305dp"
+            app:layout_constraintLeft_toRightOf="@id/randomImgBtn"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintTop_toTopOf="@id/randomImgBtn"
+            app:layout_constraintBottom_toBottomOf="@id/randomImgBtn"/>
+
+        <Button
+            android:id="@+id/stocktype1"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Slow Growers"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_3"
+            app:layout_constraintRight_toLeftOf="@id/stocktype2"
+            app:layout_constraintTop_toBottomOf="@id/randomImgBtn"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype2"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Stalwarts"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/randomImgBtn"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype3"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Fast Growers"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_3"
+            app:layout_constraintLeft_toRightOf="@id/stocktype2"
+            app:layout_constraintTop_toBottomOf="@id/randomImgBtn"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype4"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Cyclical"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_3"
+            app:layout_constraintRight_toLeftOf="@id/stocktype5"
+            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <Button
+            android:id="@+id/stocktype5"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Turnaround"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            android:layout_marginTop="5dp"
+            />
+
+        <Button
+            android:id="@+id/stocktype6"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="Asset Play"
+            tools:layout_editor_absoluteX="82dp"
+            tools:layout_editor_absoluteY="239dp"
+            android:background="@drawable/button_style_3"
+            app:layout_constraintLeft_toRightOf="@id/stocktype5"
+            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/checkAnsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stocktype6"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="128dp" />
+
+        <TextView
+            android:id="@+id/explainAnsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/checkAnsText"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="128dp" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
