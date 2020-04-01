@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.chayanit.stockunlocked.Lesson5Qs1Fragment">
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="Question 1" />-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/btn_spin"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginLeft="280dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="SPIN again"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="bird"-->
+        <!--android:background="#0091EA"-->
+        <!--android:textColor="#fff"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--android:id="@+id/choice1"/>-->
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="door"-->
+        <!--android:background="#0091EA"-->
+        <!--android:textColor="#fff"-->
+        <!--android:padding="8dp"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--android:id="@+id/choice2"/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/choice3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="24dp"-->
+        <!--android:background="#0091EA"-->
+        <!--android:padding="8dp"-->
+        <!--android:text="rock"-->
+        <!--android:textColor="#fff" />-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="The key performance indicators for the fundamental analysis are __________"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/question"/>
+
+
+    <Button
+        android:id="@+id/choice1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#0091EA"
+        android:padding="8dp"
+        android:text="Magazine and catalogs"
+        android:textColor="#fff" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cash flow trends, income statements, balance sheets"
+        android:background="#0091EA"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginBottom="24dp"
+        android:id="@+id/choice2"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Social media and forums"
+        android:background="#0091EA"
+        android:textColor="#fff"
+        android:padding="8dp"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/choice3"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/result"/>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.chayanit.stockunlocked.Lesson5Qs3Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:text="Question 3" />-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="What are the name and order of the 3 analysis in the Top-Down Approach?"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/question"/>
+
+    <EditText
+        android:id="@+id/Ans1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="80dp"
+        android:ems="10"
+        android:digits="abcdefghijklmnopqrstuvwxyz "
+        android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/Ans2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="80dp"
+        android:ems="10"
+        android:digits="abcdefghijklmnopqrstuvwxyz "
+        android:inputType="textMultiLine" />
+    <EditText
+        android:id="@+id/Ans3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="80dp"
+        android:ems="10"
+        android:digits="abcdefghijklmnopqrstuvwxyz "
+        android:inputType="textMultiLine" />
+    <Button
+        android:id="@+id/submitbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Ans3"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="150dp"
+        android:text="Submit" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/result"/>
+
+
+</FrameLayout>
