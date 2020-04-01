@@ -1,12 +1,20 @@
 package com.example.chayanit.stockunlocked;
 
+import android.content.ClipData;
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 /**
@@ -26,6 +34,14 @@ public class Lesson6Quiz3Fragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    int randomTrend;
+    ImageView uptrendImg, downtrendImg;
+    Button submitbtn, buybtn, moredemandbtn, sellbtn, moresupplybtn, uptrendbtn, downtrendbtn;
+    LinearLayout dropArea1, dropArea2, dropArea3;
+    String clipdt;
+    boolean ans1, ans2, ans3;
+    TextView checkAnsText, selAns1, selAns2, selAns3, explainAnsText;
 
     private OnFragmentInteractionListener mListener;
 
@@ -64,7 +80,282 @@ public class Lesson6Quiz3Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lesson6_quiz3, container, false);
+
+        View myFragmentView = inflater.inflate(R.layout.fragment_lesson6_quiz3, container, false);
+        submitbtn = myFragmentView.findViewById(R.id.submitButton);
+        buybtn = myFragmentView.findViewById(R.id.buyChoice);
+        moredemandbtn = myFragmentView.findViewById(R.id.moredemandChoice);
+        sellbtn = myFragmentView.findViewById(R.id.sellChoice);
+        moresupplybtn = myFragmentView.findViewById(R.id.moreSupplyChoice);
+        uptrendbtn = myFragmentView.findViewById(R.id.uptrendChoice);
+        downtrendbtn = myFragmentView.findViewById(R.id.downtrendChoice);
+        uptrendImg = myFragmentView.findViewById(R.id.upImg);
+        downtrendImg = myFragmentView.findViewById(R.id.downImg);
+        dropArea1 = (LinearLayout) myFragmentView.findViewById(R.id.ans_area_1);
+        dropArea2 = (LinearLayout) myFragmentView.findViewById(R.id.ans_area_2);
+        dropArea3 = (LinearLayout) myFragmentView.findViewById(R.id.ans_area_3);
+        checkAnsText = myFragmentView.findViewById(R.id.checkAns);
+        selAns1 = myFragmentView.findViewById(R.id.selectedAns1);
+        selAns2 = myFragmentView.findViewById(R.id.selectedAns2);
+        selAns3 = myFragmentView.findViewById(R.id.selectedAns3);
+        explainAnsText = myFragmentView.findViewById(R.id.explainAns);
+
+        moredemandbtn.setText("Demand > Supply");
+        moresupplybtn.setText("Supply > Demand");
+
+        randomTrend = (int)(Math.random()*2);
+
+        if(randomTrend==0){
+            uptrendImg.setVisibility(View.VISIBLE);
+            explainAnsText.setText("During uptrend, the demand of the share is high, so the stock price will keep increasing. The circled points, which are the high points, will keep rising, thus early buying is recommended.");
+        } else {
+            downtrendImg.setVisibility(View.VISIBLE);
+            explainAnsText.setText("During downtrend, there is an oversupply for the share, so the stock price will keep decreasing. The circled points, which are the low points, will keep falling, thus early selling is recommended.");
+
+        }
+
+        dropArea1.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                final int action = event.getAction();
+                switch (action) {
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        break;
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        v.setBackgroundColor(Color.rgb(146, 219, 253));
+                        break;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+                        v.setBackgroundColor(Color.rgb(222, 243, 253    ));
+                        break;
+                    case DragEvent.ACTION_DROP: {
+                        v.setBackgroundColor(Color.rgb(146, 219, 253));
+                        clipdt = event.getClipData().getDescription().getLabel().toString();
+
+                        selAns1.setText(clipdt);
+                        if(randomTrend==0){
+                            if(clipdt.equals("UPTREND")){
+                                ans1 = true;
+                            }else{
+                                ans1 = false;
+                            }
+                        }else{
+                            if(clipdt.equals("DOWNTREND")){
+                                ans1 = true;
+                            }else{
+                                ans1 = false;
+                            }
+                        }
+
+                        return (true);
+                    }
+                    case DragEvent.ACTION_DRAG_ENDED: {
+                        return (true);
+                    }
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
+
+        dropArea2.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                final int action = event.getAction();
+                switch (action) {
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        break;
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        v.setBackgroundColor(Color.rgb(146, 219, 253));
+                        break;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+                        v.setBackgroundColor(Color.rgb(222, 243, 253    ));
+                        break;
+                    case DragEvent.ACTION_DROP: {
+                        v.setBackgroundColor(Color.rgb(146, 219, 253));
+                        clipdt = event.getClipData().getDescription().getLabel().toString();
+
+                        selAns2.setText(clipdt);
+                        if(randomTrend==0){
+                            if(clipdt.equals("DEMAND > SUPPLY")){
+                                ans2 = true;
+                            }else{
+                                ans2 = false;
+                            }
+                        }else{
+                            if(clipdt.equals("SUPPLY > DEMAND")){
+                                ans2 = true;
+                            }else{
+                                ans2 = false;
+                            }
+                        }
+
+                        return (true);
+                    }
+                    case DragEvent.ACTION_DRAG_ENDED: {
+                        return (true);
+                    }
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
+
+        dropArea3.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                final int action = event.getAction();
+                switch (action) {
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        break;
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        v.setBackgroundColor(Color.rgb(146, 219, 253));
+                        break;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+                        v.setBackgroundColor(Color.rgb(222, 243, 253    ));
+                        break;
+                    case DragEvent.ACTION_DROP: {
+                        v.setBackgroundColor(Color.rgb(146, 219, 253));
+                        clipdt = event.getClipData().getDescription().getLabel().toString();
+
+                        selAns3.setText(clipdt);
+                        if(randomTrend==0){
+                            if(clipdt.equals("BUY")){
+                                ans3 = true;
+                            }else{
+                                ans3 = false;
+                            }
+                        }else{
+                            if(clipdt.equals("SELL")){
+                                ans3 = true;
+                            }else{
+                                ans3 = false;
+                            }
+                        }
+
+                        return (true);
+                    }
+                    case DragEvent.ACTION_DRAG_ENDED: {
+                        return (true);
+                    }
+                    default:
+                        break;
+                }
+                return true;
+            }
+        });
+
+        buybtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent arg1) {
+                ClipData data1 = ClipData.newPlainText("BUY", "BUY");
+                View.DragShadowBuilder shadow1 = new View.DragShadowBuilder(buybtn);
+                v.startDrag(data1, shadow1, null, 0);
+                return false;
+            }
+        });
+
+        moredemandbtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent arg1) {
+                ClipData data1 = ClipData.newPlainText("DEMAND > SUPPLY", "DEMAND > SUPPLY");
+                View.DragShadowBuilder shadow1 = new View.DragShadowBuilder(moredemandbtn);
+                v.startDrag(data1, shadow1, null, 0);
+                return false;
+            }
+        });
+        sellbtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent arg1) {
+                ClipData data1 = ClipData.newPlainText("SELL", "SELL");
+                View.DragShadowBuilder shadow1 = new View.DragShadowBuilder(sellbtn);
+                v.startDrag(data1, shadow1, null, 0);
+                return false;
+            }
+        });
+
+        moresupplybtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent arg1) {
+                ClipData data1 = ClipData.newPlainText("SUPPLY > DEMAND", "SUPPLY > DEMAND");
+                View.DragShadowBuilder shadow1 = new View.DragShadowBuilder(moresupplybtn);
+                v.startDrag(data1, shadow1, null, 0);
+                return false;
+            }
+        });
+
+        uptrendbtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent arg1) {
+                ClipData data1 = ClipData.newPlainText("UPTREND", "UPTREND");
+                View.DragShadowBuilder shadow1 = new View.DragShadowBuilder(uptrendbtn);
+                v.startDrag(data1, shadow1, null, 0);
+                return false;
+            }
+        });
+
+        downtrendbtn.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent arg1) {
+                ClipData data1 = ClipData.newPlainText("DOWNTREND", "DOWNTREND");
+                View.DragShadowBuilder shadow1 = new View.DragShadowBuilder(downtrendbtn);
+                v.startDrag(data1, shadow1, null, 0);
+                return false;
+            }
+        });
+
+        submitbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ans1&&ans2&&ans3){
+                    checkAnsText.setText("Correct!");
+                    explainAnsText.setVisibility(View.VISIBLE);
+                    buybtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    moredemandbtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    sellbtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    moresupplybtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    uptrendbtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    downtrendbtn.setOnTouchListener(new View.OnTouchListener() {
+                        @Override
+                        public boolean onTouch(View view, MotionEvent motionEvent) {
+                            return true;
+                        }
+                    });
+                    submitbtn.setEnabled(false);
+                } else{
+                    checkAnsText.setText("Incorrect. Please Try Again.");
+                }
+            }
+        });
+
+
+        return myFragmentView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event

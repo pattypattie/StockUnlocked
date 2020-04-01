@@ -28,7 +28,7 @@
         android:id="@+id/instructionl6q2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="According to the PSAR graph below, what is the best action?."
+        android:text="According to the PSAR graph below, what is the best action?"
         app:layout_constraintTop_toBottomOf="@id/blankbtn"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
