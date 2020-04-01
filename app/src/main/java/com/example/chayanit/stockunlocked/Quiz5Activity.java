@@ -103,15 +103,15 @@ public class Quiz5Activity extends AppCompatActivity {
         String text = "";
         if (degrees >= (FACTOR * 1) && degrees < (FACTOR * 2)){
             text = "Question 1";
-            qsno = 4;
+            qsno = 1;
         }
         if (degrees >= (FACTOR * 2) && degrees < (FACTOR * 3)){
             text = "Question 2";
-            qsno =4;
+            qsno =2;
         }
         if (degrees >= (FACTOR * 3) && degrees < (FACTOR * 4)){
             text = "Question 3";
-            qsno =4;
+            qsno =3;
         }
         if (degrees >= (FACTOR * 4) && degrees < (FACTOR * 5)){
             text = "Question 4";
@@ -119,14 +119,14 @@ public class Quiz5Activity extends AppCompatActivity {
         }
         if (degrees >= (FACTOR * 5) && degrees < (FACTOR * 6)){
             text = "Question 2";
-            qsno =4;
+            qsno =2;
         }
         if (degrees >= (FACTOR * 6) && degrees < (FACTOR * 7)){
-            qsno = 4;
+            qsno = 3;
             text = "Question 3";
         }
         if (degrees >= (FACTOR * 7) && degrees < (FACTOR * 8)){
-            qsno = 4;
+            qsno = 1;
             text = "Question 1";
         }
         if (degrees <= (FACTOR * 1)){
