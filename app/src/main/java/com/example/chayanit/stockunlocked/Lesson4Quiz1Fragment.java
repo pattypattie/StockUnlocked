@@ -220,9 +220,6 @@ public class Lesson4Quiz1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 nextQuestion();
-                if(questionList.size()==1){ //last question, disable next button
-                    nextbtn.setEnabled(false);
-                }
             }
         });
 
@@ -237,6 +234,8 @@ public class Lesson4Quiz1Fragment extends Fragment {
     }
 
     public void nextQuestion(){
+
+        nextbtn.setEnabled(false);
 
         if(randomQuestion!=-1){
             questionList.remove(randomQuestion);
@@ -275,6 +274,11 @@ public class Lesson4Quiz1Fragment extends Fragment {
         cyclical.setEnabled(false);
         turnaround.setEnabled(false);
         assetPlay.setEnabled(false);
+        if(questionList.size()==1){ //last question, disable next button
+            nextbtn.setVisibility(View.INVISIBLE);
+        } else {
+            nextbtn.setEnabled(true);
+        }
     }
 
 //    @Override

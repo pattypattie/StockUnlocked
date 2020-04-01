@@ -150,13 +150,8 @@ public class Lesson4Quiz2Fragment extends Fragment {
                     }
 
                     public void onFinish() {
-                        randomCompany.setVisibility(View.VISIBLE);
-                        randomCompanyFade.setVisibility(View.INVISIBLE);
+
                         nextQuestion();
-                        if(questionList.size()==1){ //last question, disable next button
-                            randomCompany.setVisibility(View.INVISIBLE);
-                            randomCompanyFade.setVisibility(View.VISIBLE);
-                        }
                         slowGrowers.setEnabled(true);
                         stalWarts.setEnabled(true);
                         fastGrowers.setEnabled(true);
@@ -264,6 +259,13 @@ public class Lesson4Quiz2Fragment extends Fragment {
         cyclical.setEnabled(false);
         turnaround.setEnabled(false);
         assetPlay.setEnabled(false);
+        if(questionList.size()==1){ //last question, disable next button
+            randomCompany.setVisibility(View.INVISIBLE);
+            randomCompanyFade.setVisibility(View.VISIBLE);
+        } else {
+            randomCompany.setVisibility(View.VISIBLE);
+            randomCompanyFade.setVisibility(View.INVISIBLE);
+        }
     }
 
 //    @Override
