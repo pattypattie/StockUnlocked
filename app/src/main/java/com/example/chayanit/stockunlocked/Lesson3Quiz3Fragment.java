@@ -79,6 +79,7 @@ public class Lesson3Quiz3Fragment extends Fragment {
 
         final String mAnswer;
         int mQuestionNumber;
+        final String mresult;
         int rand = (int)(Math.random()*3);
         mQuestionNumber = rand;
         mButtonChoice1.setText("true");
@@ -86,12 +87,15 @@ public class Lesson3Quiz3Fragment extends Fragment {
 
         mQuestionView.setText(mQuestionLibrary.ls3q3getQuestion(mQuestionNumber));
         mAnswer = mQuestionLibrary.ls3q3getCorrectAnswer(mQuestionNumber);
+        mresult = mQuestionLibrary.ls3q3getResult(mQuestionNumber);
 
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice1.getText() == mAnswer){
-                                                      resultq3.setText("Correct!");
+                                                      mButtonChoice2.setVisibility(View.GONE);
+                                                      mButtonChoice1.setEnabled(false);
+                                                      resultq3.setText("Correct!\n"+mresult);
                                                   } else {
                                                       resultq3.setText("Incorrect Try again");
                                                   }
@@ -104,7 +108,9 @@ public class Lesson3Quiz3Fragment extends Fragment {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice2.getText() == mAnswer){
-                                                      resultq3.setText("Correct!");
+                                                      mButtonChoice1.setVisibility(View.GONE);
+                                                      mButtonChoice2.setEnabled(false);
+                                                      resultq3.setText("Correct!\n"+mresult);
                                                   } else {
                                                       resultq3.setText("Incorrect Try again");
                                                   }

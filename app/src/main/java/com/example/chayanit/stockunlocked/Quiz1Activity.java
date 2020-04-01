@@ -34,6 +34,7 @@ public class Quiz1Activity extends AppCompatActivity {
     int count = 0;
 
     Integer[] arr = new Integer[mQuestionLibrary.mQuestions.length];
+    String explain;
 
 
     @Override
@@ -46,21 +47,27 @@ public class Quiz1Activity extends AppCompatActivity {
         }
         Collections.shuffle(Arrays.asList(arr));
 
-        Button backMenu = findViewById(R.id.backMenu);
-        backMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Quiz1Activity.this, TitleActivity.class));
-            }
-        });
-
         mScoreView = (TextView)findViewById(R.id.score);
         mQuestionView = (TextView)findViewById(R.id.question);
         mButtonChoice1 = (Button)findViewById(R.id.choice1);
         mButtonChoice2 = (Button)findViewById(R.id.choice2);
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
+        final TextView result = (TextView)findViewById(R.id.result);
+        final Button nextQs = findViewById(R.id.nextQs);
+
 
         updateQuestion();
+
+        nextQs.setEnabled(false);
+        nextQs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                updateQuestion();
+                result.setText("");
+                nextQs.setEnabled(false);
+                //startActivity(new Intent(Quiz1Activity.this, TitleActivity.class));
+            }
+        });
 
         //Start of Button Listener for Button1
         mButtonChoice1.setOnClickListener(new View.OnClickListener(){
@@ -71,84 +78,58 @@ public class Quiz1Activity extends AppCompatActivity {
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+                    mButtonChoice2.setVisibility(View.GONE);
+                    mButtonChoice3.setVisibility(View.GONE);
+                    mButtonChoice1.setEnabled(false);
+
+                    //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
 
                     if (count == 3) {
-                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("QsNum", 1);
-                        bundle.putInt("finalScore", mScore);
-                        i.putExtras(bundle);
-                        Quiz1Activity.this.finish();
-                        startActivity(i);
+                        result.setText("Correct!\n"+explain);
+                        nextQs.setEnabled(true);
+                        nextQs.setText("Result");
+                        nextQs.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startResult();
+                            }
+                        });
+//                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putInt("QsNum", 1);
+//                        bundle.putInt("finalScore", mScore);
+//                        i.putExtras(bundle);
+//                        Quiz1Activity.this.finish();
+//                        startActivity(i);
                     } else {
-                        updateQuestion();
+//                        mButtonChoice1.setVisibility(View.GONE);
+//                        mButtonChoice2.setVisibility(View.GONE);
+//                        mButtonChoice3.setVisibility(View.GONE);
+                        result.setText("Correct!\n"+explain);
+                        nextQs.setEnabled(true);
+//                        updateQuestion();
+
                     }
 
 
-
-                }else {
-                    Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    if (count == 3) {
-                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("QsNum", 1);
-                        bundle.putInt("finalScore", mScore);
-                        i.putExtras(bundle);
-                        Quiz1Activity.this.finish();
-                        startActivity(i);
-                    } else {
-                        updateQuestion();
-                    }
+                } else {
+//                    //Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("QsNum", 1);
+////                        bundle.putInt("finalScore", mScore);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+////                        startActivity(i);
+//                    } else {
+                        result.setText("Incorrect Try again!");
+                        //updateQuestion();
+                    //}
                 }
             }
         });
 
-        //End of Button Listener for Button1
-
-        //Start of Button Listener for Button2
-        mButtonChoice2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                //My logic for Button goes in here
-
-                if (mButtonChoice2.getText() == mAnswer){
-                    mScore = mScore + 1;
-                    updateScore(mScore);
-                    Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
-                    if (count == 3) {
-                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("finalScore", mScore);
-                        bundle.putInt("QsNum", 1);
-                        i.putExtras(bundle);
-                        Quiz1Activity.this.finish();
-                        startActivity(i);
-                    } else {
-                        updateQuestion();
-                    }
-
-                }else {
-                    Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    if (count == 3) {
-                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("finalScore", mScore);
-                        bundle.putInt("QsNum", 1);
-                        i.putExtras(bundle);
-                        Quiz1Activity.this.finish();
-                        startActivity(i);
-                    } else {
-                        updateQuestion();
-                    }
-                }
-            }
-        });
-
-        //End of Button Listener for Button2
-
-
-        //Start of Button Listener for Button3
         mButtonChoice3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -157,52 +138,215 @@ public class Quiz1Activity extends AppCompatActivity {
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    //This line of code is optiona
-                    Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+                    mButtonChoice1.setVisibility(View.GONE);
+                    mButtonChoice2.setVisibility(View.GONE);
+                    mButtonChoice3.setEnabled(false);
+
+                    //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+
                     if (count == 3) {
-                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("finalScore", mScore);
-                        bundle.putInt("QsNum", 1);
-                        i.putExtras(bundle);
-                        Quiz1Activity.this.finish();
-                        startActivity(i);
+                        result.setText("Correct!\n"+explain);
+                        nextQs.setEnabled(true);
+                        nextQs.setText("Result");
+                        nextQs.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startResult();
+                            }
+                        });
+//                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putInt("QsNum", 1);
+//                        bundle.putInt("finalScore", mScore);
+//                        i.putExtras(bundle);
+//                        Quiz1Activity.this.finish();
+//                        startActivity(i);
                     } else {
-                        updateQuestion();
+//                        mButtonChoice1.setVisibility(View.GONE);
+//                        mButtonChoice2.setVisibility(View.GONE);
+//                        mButtonChoice3.setVisibility(View.GONE);
+                        result.setText("Correct!\n"+explain);
+                        nextQs.setEnabled(true);
+//                        updateQuestion();
+
                     }
 
 
                 }else {
-                    Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
+//                    //Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("QsNum", 1);
+////                        bundle.putInt("finalScore", mScore);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+////                        startActivity(i);
+//                    } else {
+                        result.setText("Incorrect Try again!");
+                        //updateQuestion();
+                   // }
+                }
+            }
+        });
+        mButtonChoice2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //My logic for Button goes in here
+
+                if (mButtonChoice2.getText() == mAnswer){
+                    mScore = mScore + 1;
+                    updateScore(mScore);
+                    mButtonChoice1.setVisibility(View.GONE);
+                    mButtonChoice3.setVisibility(View.GONE);
+                    mButtonChoice2.setEnabled(false);
+                    //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+
                     if (count == 3) {
-                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
-                        Bundle bundle = new Bundle();
-                        bundle.putInt("finalScore", mScore);
-                        bundle.putInt("QsNum", 1);
-                        i.putExtras(bundle);
-                        Quiz1Activity.this.finish();
-                        startActivity(i);
+                        result.setText("Correct!\n"+explain);
+                        nextQs.setEnabled(true);
+                        nextQs.setText("Result");
+                        nextQs.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startResult();
+                            }
+                        });
+//                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+//                        Bundle bundle = new Bundle();
+//                        bundle.putInt("QsNum", 1);
+//                        bundle.putInt("finalScore", mScore);
+//                        i.putExtras(bundle);
+//                        Quiz1Activity.this.finish();
+//                        startActivity(i);
                     } else {
-                        updateQuestion();
+//                        mButtonChoice1.setVisibility(View.GONE);
+//                        mButtonChoice2.setVisibility(View.GONE);
+//                        mButtonChoice3.setVisibility(View.GONE);
+                        result.setText("Correct!\n"+explain);
+                        nextQs.setEnabled(true);
+//                        updateQuestion();
+
                     }
+
+
+                }else {
+                    //Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("QsNum", 1);
+////                        bundle.putInt("finalScore", mScore);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+////                        startActivity(i);
+//                    } else {
+                        result.setText("Incorrect Try again!");
+                        //updateQuestion();
+                   // }
                 }
             }
         });
 
-//
-//        ImageButton lesson1_back = findViewById(R.id.Quiz1back);
-//        lesson1_back.setOnClickListener(new View.OnClickListener() {
+        //End of Button Listener for Button1
+
+        //Start of Button Listener for Button2
+//        mButtonChoice2.setOnClickListener(new View.OnClickListener(){
 //            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(Quiz1Activity.this,QuizActivity.class));
+//            public void onClick(View view){
+//                //My logic for Button goes in here
 //
+//                if (mButtonChoice2.getText() == mAnswer){
+//                    mScore = mScore + 1;
+//                    updateScore(mScore);
+//                    Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("finalScore", mScore);
+////                        bundle.putInt("QsNum", 1);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+////                        startActivity(i);
+//                    } else {
+//                        updateQuestion();
+//                    }
+//
+//                }else {
+//                    Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("finalScore", mScore);
+////                        bundle.putInt("QsNum", 1);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+////                        startActivity(i);
+//                    } else {
+//                        result.setText("Incorrect Try again!");
+////                        updateQuestion();
+//                    }
+//                }
 //            }
 //        });
+//
+//        //End of Button Listener for Button2
+//
+//
+//        //Start of Button Listener for Button3
+//        mButtonChoice3.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view){
+//                //My logic for Button goes in here
+//
+//                if (mButtonChoice3.getText() == mAnswer){
+//                    mScore = mScore + 1;
+//                    updateScore(mScore);
+//                    //This line of code is optiona
+//                    Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("finalScore", mScore);
+////                        bundle.putInt("QsNum", 1);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+//                        //startActivity(i);
+//                    } else {
+//                        updateQuestion();
+//                    }
+//
+//
+//                }else {
+//                    Toast.makeText(Quiz1Activity.this, "wrong", Toast.LENGTH_SHORT).show();
+//                    if (count == 3) {
+////                        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+////                        Bundle bundle = new Bundle();
+////                        bundle.putInt("finalScore", mScore);
+////                        bundle.putInt("QsNum", 1);
+////                        i.putExtras(bundle);
+////                        Quiz1Activity.this.finish();
+////                        startActivity(i);
+//                    } else {
+//                        result.setText("Incorrect Try again!");
+////                        updateQuestion();
+//                    }
+//                }
+//            }
+//        });
+
+
 
     }
 
 
     private void updateQuestion(){
+        mButtonChoice1.setVisibility(View.VISIBLE);
+        mButtonChoice2.setVisibility(View.VISIBLE);
+        mButtonChoice3.setVisibility(View.VISIBLE);
+        mButtonChoice1.setEnabled(true);
+        mButtonChoice2.setEnabled(true);
+        mButtonChoice3.setEnabled(true);
         mQuestionNumber = arr[count];
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
@@ -210,11 +354,23 @@ public class Quiz1Activity extends AppCompatActivity {
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
+        explain = mQuestionLibrary.ls1getResult(mQuestionNumber);
+
         count++;
 
     }
 
-    Set<Integer> set = new LinkedHashSet<Integer>();
+    public void startResult(){
+        Intent i = new Intent(Quiz1Activity.this, QuizResultActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("finalScore", mScore);
+        bundle.putInt("QsNum", 1);
+        i.putExtras(bundle);
+        Quiz1Activity.this.finish();
+        startActivity(i);
+    }
+
+    //Set<Integer> set = new LinkedHashSet<Integer>();
 
     private void updateScore(int point) {
         mScoreView.setText("" + mScore);

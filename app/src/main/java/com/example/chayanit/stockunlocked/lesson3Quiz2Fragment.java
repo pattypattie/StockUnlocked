@@ -91,6 +91,7 @@ public class lesson3Quiz2Fragment extends Fragment {
         final String mAnswer;
         int mQuestionNumber;
         int rand = (int)(Math.random()*3);
+        final String explain;
         mQuestionNumber = rand;
 
         mQuestionView.setText(mQuestionLibrary.ls3q2getQuestion(mQuestionNumber));
@@ -98,12 +99,16 @@ public class lesson3Quiz2Fragment extends Fragment {
         mButtonChoice2.setText(mQuestionLibrary.ls3q2choices[0][1]);
         mButtonChoice3.setText(mQuestionLibrary.ls3q2choices[0][2]);
         mAnswer = mQuestionLibrary.ls3q2getCorrectAnswer(mQuestionNumber);
+        explain = mQuestionLibrary.ls3q2getResult(mQuestionNumber);
 
         mButtonChoice1.setOnClickListener(new View.OnClickListener() {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice1.getText() == mAnswer){
-                                                      result.setText("Correct!");
+                                                      mButtonChoice2.setVisibility(View.GONE);
+                                                      mButtonChoice3.setVisibility(View.GONE);
+                                                      mButtonChoice1.setEnabled(false);
+                                                      result.setText("Correct!\n"+explain);
                                                   } else {
                                                       result.setText("Incorrect Try again");
                                                   }
@@ -116,7 +121,10 @@ public class lesson3Quiz2Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(mButtonChoice2.getText() == mAnswer){
-                    result.setText("Correct!");
+                    mButtonChoice1.setVisibility(View.GONE);
+                    mButtonChoice3.setVisibility(View.GONE);
+                    mButtonChoice2.setEnabled(false);
+                    result.setText("Correct!\n"+explain);
                 } else {
                     result.setText("Incorrect Try again");
                 }
@@ -127,7 +135,10 @@ public class lesson3Quiz2Fragment extends Fragment {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice3.getText() == mAnswer){
-                                                      result.setText("Correct!");
+                                                      mButtonChoice2.setVisibility(View.GONE);
+                                                      mButtonChoice1.setVisibility(View.GONE);
+                                                      mButtonChoice3.setEnabled(false);
+                                                      result.setText("Correct!\n"+explain);
                                                   } else {
                                                       result.setText("Incorrect Try again");
                                                   }

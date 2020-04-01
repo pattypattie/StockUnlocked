@@ -33,7 +33,7 @@ public class Quiz1Library {
 
     private String mChoices [][] = {
             {"Buy", "Sell", "Buy or Sell"},
-            {"Investopedia", "Financial Industry", "Stock Exchange"},
+            {"Investopedia", "Financial Service Industry", "Stock Exchange"},
             {"The Stock Market is a market where people bet on race horses to gain some money.", "The Stock Market is a market where people buy products which the merchants have a lot of stock of", "The Stock Market is a market where people can buy stocks which are shares of companies."},
             {"more", "less", "equal number of"},
             {"more", "less", "equal number of"},
@@ -53,10 +53,37 @@ public class Quiz1Library {
 
     };
 
+    String ls1result [] = {"Investors can buy or sell their shares. An investor who owns a stock is called a shareholder","Financial Service Industry encompasses a broad range of businesses that manage money, including including banks, investment companies, insurance companies, and real estate firms.",
+    "The stock market is where investors connect to buy and sell investments or stocks which are shares of ownership in a public company.",
+    "As more people are selling the stocks, the demand of that shares will decrease and causes the stock to drop","As more people are buying the stocks, the demand of that shares will increase and causes the stock to rise",
+    "For example, if a person buy a stock at 10 baht ans sell it at 15 baht, a person get a profit of 5 baht."};
+
       String ls3q3Ans [] = {
               "false","false","true"
       };
 
+      String ls3q2Explain [] = {
+              "Ceiling and Floor is the highest and lowest selling price in that day, respectively.","A bull market is the condition of a financial market in which prices are rising or are expected to rise. The opposite of a bull market is a bear market, which is characterized by falling prices"
+              ,"Bid is the price selected by a buyer to buy a stock, while the Offer is the price at which the seller is offering to sell the stock."
+      };
+
+    String ls3q3Explain [] = {
+            "The Standard and Poor's 500 or S&P500 is a stock market index that tracks the stocks of 500 large U.S. companies.","SET Index is a Thai composite stock market index which is calculated from the prices of all common stocks on the main board of the Stock Exchange of Thailand (SET)",""
+    };
+
+      public String ls3q2getResult(int a){
+          String result = ls3q2Explain[a];
+          return result;
+      }
+    public String ls3q3getResult(int a){
+        String result = ls3q3Explain[a];
+        return result;
+    }
+
+    public String ls1getResult(int a){
+        String result = ls1result[a];
+        return result;
+    }
 
     public String ls3q2getQuestion(int a) {
         String question = ls3q2[a];
