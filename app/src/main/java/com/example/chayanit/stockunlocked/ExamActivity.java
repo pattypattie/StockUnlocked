@@ -16,12 +16,8 @@ import java.util.Arrays;
 
 public class ExamActivity extends AppCompatActivity {
 
-    public Button b1;
-    public Button b2;
-    public Button b3;
-    public Button b4;
-    public TextView questionText;
-    public TextView scoreText;
+    public Button b1, b2, b3, b4, nextQbtn;
+    public TextView questionText, scoreText, checkCorrectText, explainText;
     public ImageView questionImage;
     public int random_question = 0;
     public int random_answer_order = 0;
@@ -132,10 +128,29 @@ public class ExamActivity extends AppCompatActivity {
         b4 = findViewById(R.id.button4);
         scoreText = findViewById(R.id.score);
         questionImage = findViewById(R.id.imageView70);
+        explainText = findViewById(R.id.examExplainText);
+        nextQbtn = findViewById(R.id.nextExam);
+        checkCorrectText = findViewById(R.id.correctText);
 
         btn_none.setVisibility(View.INVISIBLE);
+        nextQbtn.setEnabled(false);
 
         createNewQuestion(1);
+
+        nextQbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(questionCounter!=10){ //limit to 10 questions per one exam
+                    createNewQuestion(level);
+                    nextQbtn.setEnabled(false);
+                }else{
+                    //startActivity(new Intent(ExamActivity.this,ExamResultActivity.class));
+                    Intent intent = new Intent(ExamActivity.this,ExamResultActivity.class);
+                    intent.putExtra("finalScore", testScore+"");
+                    startActivity(intent);
+                }
+            }
+        });
 
         ImageButton exam_back = findViewById(R.id.examback);
         exam_back.setOnClickListener(new View.OnClickListener() {
@@ -153,20 +168,25 @@ public class ExamActivity extends AppCompatActivity {
 
     public void createNewQuestion(int level){
 
+        b1.setEnabled(true);
+        b2.setEnabled(true);
+        b3.setEnabled(true);
+        b4.setEnabled(true);
+
         if(level==1){
-            setAnswerText(answerLevel1, questionLevel1, picLevel1);
+            setAnswerText(answerLevel1, questionLevel1, picLevel1, explainLevel1);
         }
         else if(level==2){
-            setAnswerText(answerLevel2, questionLevel2, picLevel2);
+            setAnswerText(answerLevel2, questionLevel2, picLevel2, explainLevel2);
         }
         else if(level==3){
-            setAnswerText(answerLevel3, questionLevel3, picLevel3);
+            setAnswerText(answerLevel3, questionLevel3, picLevel3, explainLevel3);
         }
         else if(level==4){
-            setAnswerText(answerLevel4, questionLevel4, picLevel4);
+            setAnswerText(answerLevel4, questionLevel4, picLevel4, explainLevel4);
         }
         else if(level==5){
-            setAnswerText(answerLevel5, questionLevel5, picLevel5);
+            setAnswerText(answerLevel5, questionLevel5, picLevel5, explainLevel5);
         }
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -192,7 +212,7 @@ public class ExamActivity extends AppCompatActivity {
 
     }
 
-    public void setAnswerText(String[][] ansString, String[] quesString, String[] picString){
+    public void setAnswerText(String[][] ansString, String[] quesString, String[] picString, String[] explainString){
 
         do{
             random_question = (int)(Math.random()*quesString.length);
@@ -227,6 +247,10 @@ public class ExamActivity extends AppCompatActivity {
             b3.setText("" + ansString[random_question][3]);
         }
 
+        explainText.setText(explainString[random_question]);
+        explainText.setVisibility(View.GONE);
+        checkCorrectText.setVisibility(View.INVISIBLE);
+
         //if the question has image, show it. else don't
         if(picString[random_question]!=""){
             resId = this.getResources().getIdentifier(picString[random_question], "drawable", this.getPackageName());
@@ -239,7 +263,7 @@ public class ExamActivity extends AppCompatActivity {
         //remove duplicate
         quesString[random_question] = "";
         picString[random_question] = "";
-
+        explainString[random_question] = "";
 
     }
 
@@ -247,26 +271,27 @@ public class ExamActivity extends AppCompatActivity {
         if(btn_number==random_answer_order){ //if the answer is correct, increase one level
             testScore+=level; //as level gets higher, the score is higher
             level++;
+            checkCorrectText.setText("Correct!");
             if(level>5){
                 level = 5; //the highest level is 5
             }
         }
         else{ //if the answer is incorrect, decrease one level
             level--;
+            checkCorrectText.setText("Incorrect");
             if(level<1){
                 level = 1; //the lowest level is 1
             }
         }
+        explainText.setVisibility(View.VISIBLE);
+        checkCorrectText.setVisibility(View.VISIBLE);
         scoreText.setText("Score : "+testScore);
         questionCounter++;
-        if(questionCounter!=10){ //limit to 10 questions per one exam
-            createNewQuestion(level);
-        }else{
-            //startActivity(new Intent(ExamActivity.this,ExamResultActivity.class));
-            Intent intent = new Intent(ExamActivity.this,ExamResultActivity.class);
-            intent.putExtra("finalScore", testScore+"");
-            startActivity(intent);
-        }
+        nextQbtn.setEnabled(true);
+        b1.setEnabled(false);
+        b2.setEnabled(false);
+        b3.setEnabled(false);
+        b4.setEnabled(false);
 
     }
 }
