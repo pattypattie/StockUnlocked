@@ -1,11 +1,14 @@
 package com.example.chayanit.stockunlocked;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,6 +22,7 @@ public class ExamActivity extends AppCompatActivity {
     public Button b4;
     public TextView questionText;
     public TextView scoreText;
+    public ImageView questionImage;
     public int random_question = 0;
     public int random_answer_order = 0;
 
@@ -31,11 +35,28 @@ public class ExamActivity extends AppCompatActivity {
     //track user's current level
     int level = 1;
 
+    //for image
+    int resId;
+
     String[] questionLevel1 = {"Level1_Q1", "Level1_Q2", "Level1_Q3", "Level1_Q4", "Level1_Q5", "Level1_Q6", "Level1_Q7", "Level1_Q8", "Level1_Q9", "Level1_Q10"};
     String[] questionLevel2 = {"Level2_Q1", "Level2_Q2", "Level2_Q3", "Level2_Q4", "Level2_Q5", "Level2_Q6", "Level2_Q7", "Level2_Q8", "Level2_Q9", "Level2_Q10"};
     String[] questionLevel3 = {"Level3_Q1", "Level3_Q2", "Level3_Q3", "Level3_Q4", "Level3_Q5", "Level3_Q6", "Level3_Q7", "Level3_Q8", "Level3_Q9", "Level3_Q10"};
     String[] questionLevel4 = {"Level4_Q1", "Level4_Q2", "Level4_Q3", "Level4_Q4", "Level4_Q5", "Level4_Q6", "Level4_Q7", "Level4_Q8", "Level4_Q9", "Level4_Q10"};
     String[] questionLevel5 = {"Level5_Q1", "Level5_Q2", "Level5_Q3", "Level5_Q4", "Level5_Q5", "Level5_Q6", "Level5_Q7", "Level5_Q8", "Level5_Q9", "Level5_Q10"};
+
+    String[] explainLevel1 = {"explainlvl1_Q1", "explainlvl1_Q2", "explainlvl1_Q3", "explainlvl1_Q4", "explainlvl1_Q5", "explainlvl1_Q6", "explainlvl1_Q7", "explainlvl1_Q8", "explainlvl1_Q9", "explainlvl1_Q10"};
+    String[] explainLevel2 = {"explainlvl2_Q1", "explainlvl2_Q2", "explainlvl2_Q3", "explainlvl2_Q4", "explainlvl2_Q5", "explainlvl2_Q6", "explainlvl2_Q7", "explainlvl2_Q8", "explainlvl2_Q9", "explainlvl2_Q10"};
+    String[] explainLevel3 = {"explainlvl3_Q1", "explainlvl3_Q2", "explainlvl3_Q3", "explainlvl3_Q4", "explainlvl3_Q5", "explainlvl3_Q6", "explainlvl3_Q7", "explainlvl3_Q8", "explainlvl3_Q9", "explainlvl3_Q10"};
+    String[] explainLevel4 = {"explainlvl4_Q1", "explainlvl4_Q2", "explainlvl4_Q3", "explainlvl4_Q4", "explainlvl4_Q5", "explainlvl4_Q6", "explainlvl4_Q7", "explainlvl4_Q8", "explainlvl4_Q9", "explainlvl4_Q10"};
+    String[] explainLevel5 = {"explainlvl5_Q1", "explainlvl5_Q2", "explainlvl5_Q3", "explainlvl5_Q4", "explainlvl5_Q5", "explainlvl5_Q6", "explainlvl5_Q7", "explainlvl5_Q8", "explainlvl5_Q9", "explainlvl5_Q10"};
+
+    //image file name if the question needs image
+    String[] picLevel1 = {"", "", "", "", "", "", "", "", "", ""};
+    String[] picLevel2 = {"", "", "", "", "", "", "", "", "", ""};
+    String[] picLevel3 = {"", "", "", "", "", "", "", "", "", ""};
+    String[] picLevel4 = {"", "", "", "", "", "", "", "", "", ""};
+    String[] picLevel5 = {"", "", "", "", "", "", "", "", "", ""};
+
 
     //The correct answer is stored in index 0 (a1)
     String[][] answerLevel1 =
@@ -110,6 +131,7 @@ public class ExamActivity extends AppCompatActivity {
         b3 = findViewById(R.id.button3);
         b4 = findViewById(R.id.button4);
         scoreText = findViewById(R.id.score);
+        questionImage = findViewById(R.id.imageView70);
 
         btn_none.setVisibility(View.INVISIBLE);
 
@@ -125,22 +147,26 @@ public class ExamActivity extends AppCompatActivity {
 
     }
 
+    public static int getResourceByFilename(Context context, String filename) {
+        return context.getResources().getIdentifier(filename, "drawable", context.getPackageName());
+    }
+
     public void createNewQuestion(int level){
 
         if(level==1){
-            setAnswerText(answerLevel1, questionLevel1);
+            setAnswerText(answerLevel1, questionLevel1, picLevel1);
         }
         else if(level==2){
-            setAnswerText(answerLevel2, questionLevel2);
+            setAnswerText(answerLevel2, questionLevel2, picLevel2);
         }
         else if(level==3){
-            setAnswerText(answerLevel3, questionLevel3);
+            setAnswerText(answerLevel3, questionLevel3, picLevel3);
         }
         else if(level==4){
-            setAnswerText(answerLevel4, questionLevel4);
+            setAnswerText(answerLevel4, questionLevel4, picLevel4);
         }
         else if(level==5){
-            setAnswerText(answerLevel5, questionLevel5);
+            setAnswerText(answerLevel5, questionLevel5, picLevel5);
         }
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -166,7 +192,7 @@ public class ExamActivity extends AppCompatActivity {
 
     }
 
-    public void setAnswerText(String[][] ansString, String[] quesString){
+    public void setAnswerText(String[][] ansString, String[] quesString, String[] picString){
 
         do{
             random_question = (int)(Math.random()*quesString.length);
@@ -200,7 +226,20 @@ public class ExamActivity extends AppCompatActivity {
             b2.setText("" + ansString[random_question][2]);
             b3.setText("" + ansString[random_question][3]);
         }
+
+        //if the question has image, show it. else don't
+        if(picString[random_question]!=""){
+            resId = this.getResources().getIdentifier(picString[random_question], "drawable", this.getPackageName());
+            questionImage.setImageResource(resId);
+            questionImage.setVisibility(View.VISIBLE);
+        } else{
+            questionImage.setVisibility(View.GONE);
+        }
+
+        //remove duplicate
         quesString[random_question] = "";
+        picString[random_question] = "";
+
 
     }
 
