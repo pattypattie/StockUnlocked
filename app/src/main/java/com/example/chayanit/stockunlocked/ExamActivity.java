@@ -38,20 +38,17 @@ public class ExamActivity extends AppCompatActivity {
     String[] questionLevel2 = {"Level2_Q1", "Level2_Q2", "Level2_Q3", "Level2_Q4", "Level2_Q5", "Level2_Q6", "Level2_Q7", "Level2_Q8", "Level2_Q9", "Level2_Q10"};
     String[] questionLevel3 = {"Level3_Q1", "Level3_Q2", "Level3_Q3", "Level3_Q4", "Level3_Q5", "Level3_Q6", "Level3_Q7", "Level3_Q8", "Level3_Q9", "Level3_Q10"};
     String[] questionLevel4 = {"Level4_Q1", "Level4_Q2", "Level4_Q3", "Level4_Q4", "Level4_Q5", "Level4_Q6", "Level4_Q7", "Level4_Q8", "Level4_Q9", "Level4_Q10"};
-    String[] questionLevel5 = {"Level5_Q1", "Level5_Q2", "Level5_Q3", "Level5_Q4", "Level5_Q5", "Level5_Q6", "Level5_Q7", "Level5_Q8", "Level5_Q9", "Level5_Q10"};
 
     String[] explainLevel1 = {"explainlvl1_Q1", "explainlvl1_Q2", "explainlvl1_Q3", "explainlvl1_Q4", "explainlvl1_Q5", "explainlvl1_Q6", "explainlvl1_Q7", "explainlvl1_Q8", "explainlvl1_Q9", "explainlvl1_Q10"};
     String[] explainLevel2 = {"explainlvl2_Q1", "explainlvl2_Q2", "explainlvl2_Q3", "explainlvl2_Q4", "explainlvl2_Q5", "explainlvl2_Q6", "explainlvl2_Q7", "explainlvl2_Q8", "explainlvl2_Q9", "explainlvl2_Q10"};
     String[] explainLevel3 = {"explainlvl3_Q1", "explainlvl3_Q2", "explainlvl3_Q3", "explainlvl3_Q4", "explainlvl3_Q5", "explainlvl3_Q6", "explainlvl3_Q7", "explainlvl3_Q8", "explainlvl3_Q9", "explainlvl3_Q10"};
     String[] explainLevel4 = {"explainlvl4_Q1", "explainlvl4_Q2", "explainlvl4_Q3", "explainlvl4_Q4", "explainlvl4_Q5", "explainlvl4_Q6", "explainlvl4_Q7", "explainlvl4_Q8", "explainlvl4_Q9", "explainlvl4_Q10"};
-    String[] explainLevel5 = {"explainlvl5_Q1", "explainlvl5_Q2", "explainlvl5_Q3", "explainlvl5_Q4", "explainlvl5_Q5", "explainlvl5_Q6", "explainlvl5_Q7", "explainlvl5_Q8", "explainlvl5_Q9", "explainlvl5_Q10"};
 
     //image file name if the question needs image
     String[] picLevel1 = {"", "", "", "", "", "", "", "", "", ""};
     String[] picLevel2 = {"", "", "", "", "", "", "", "", "", ""};
     String[] picLevel3 = {"", "", "", "", "", "", "", "", "", ""};
     String[] picLevel4 = {"", "", "", "", "", "", "", "", "", ""};
-    String[] picLevel5 = {"", "", "", "", "", "", "", "", "", ""};
 
 
     //The correct answer is stored in index 0 (a1)
@@ -103,17 +100,6 @@ public class ExamActivity extends AppCompatActivity {
                     {"l4q9a1", "l4q9a2", "l4q9a3", "l4q9a4"},
                     {"l4q10a1", "l4q10a2", "l4q10a3", "l4q10a4"}};
 
-    String[][] answerLevel5 =
-            {{"l5q1a1", "l5q1a2", "l5q1a3", "l5q1a4"},
-                    {"l5q2a1", "l5q2a2", "l5q2a3", "l5q2a4"},
-                    {"l5q3a1", "l5q3a2", "l5q3a3", "l5q3a4"},
-                    {"l5q4a1", "l5q4a2", "l5q4a3", "l5q4a4"},
-                    {"l5q5a1", "l5q5a2", "l5q5a3", "l5q5a4"},
-                    {"l5q6a1", "l5q6a2", "l5q6a3", "l5q6a4"},
-                    {"l5q7a1", "l5q7a2", "l5q7a3", "l5q7a4"},
-                    {"l5q8a1", "l5q8a2", "l5q8a3", "l5q8a4"},
-                    {"l5q9a1", "l5q9a2", "l5q9a3", "l5q9a4"},
-                    {"l5q10a1", "l5q10a2", "l5q10a3", "l5q10a4"}};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -184,9 +170,6 @@ public class ExamActivity extends AppCompatActivity {
         }
         else if(level==4){
             setAnswerText(answerLevel4, questionLevel4, picLevel4, explainLevel4);
-        }
-        else if(level==5){
-            setAnswerText(answerLevel5, questionLevel5, picLevel5, explainLevel5);
         }
 
         b1.setOnClickListener(new View.OnClickListener() {
@@ -272,8 +255,8 @@ public class ExamActivity extends AppCompatActivity {
             testScore+=level; //as level gets higher, the score is higher
             level++;
             checkCorrectText.setText("Correct!");
-            if(level>5){
-                level = 5; //the highest level is 5
+            if(level>4){
+                level = 4; //the highest level is 4
             }
         }
         else{ //if the answer is incorrect, decrease one level
