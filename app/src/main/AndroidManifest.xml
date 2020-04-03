@@ -34,7 +34,8 @@
         <activity android:name=".Lesson6Activity" />
         <activity android:name=".Quiz6Activity" />
         <activity android:name=".QuizResultActivity" />
-        <activity android:name=".Lesson5QsActivity"></activity>
+        <activity android:name=".Lesson5QsActivity" />
+        <activity android:name=".SpecialQuizActivity"></activity>
     </application>
 
 </manifest>
