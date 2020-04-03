@@ -496,7 +496,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="\n      A technical indicator is a mathematical calculation based on historic price, volume, or open interest information used to forecast the direction of the market.
+        android:text="\n      A technical indicator is a mathematical calculation based on historic price, volume, or open interest information used to forecast the direction of the market. It is recommended to consider multiple indicators together to support the predicted trend.
         \n\n      Here are some of the most useful indicators.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
@@ -815,7 +815,10 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="      The closer the prices move to the upper band, the more overbought the market, and the closer the prices move to the lower band, the more oversold the market. \n"
+        android:text="      The closer the prices move to the upper band, the more overbought the market, and the closer the prices move to the lower band, the more oversold the market.
+        \n      'The Squeeze Theory' is the contraction of the outer bands, where the upper band and the lower band gets closer together. After this period, the price often makes a large move in either up or down. Generally, traders buy
+        when the price breaks through the upper band, and sell when the price breaks through the lower band.
+        \n"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toBottomOf="@id/imageView65"
