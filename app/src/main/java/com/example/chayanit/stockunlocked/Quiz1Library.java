@@ -46,7 +46,7 @@ public class Quiz1Library {
 
 
 
-    private String mCorrectAnswers[] = {"Buy or Sell", "Financial Industry", "The Stock Market is a market where people can buy stocks which are shares of companies.",
+    private String mCorrectAnswers[] = {"Buy or Sell", "Financial Service Industry", "The Stock Market is a market where people can buy stocks which are shares of companies.",
             "more", "less", "Buying high and selling low"};
 
     private String ls3q2Ans [] = {"The highest and lowest selling price in the day","Market that on the rise or in decline","Buying price and selling price of the stock"

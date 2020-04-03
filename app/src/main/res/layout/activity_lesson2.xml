@@ -307,7 +307,7 @@ The most important thing to look at when choosing a broker is the structure of t
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="214dp"
         tools:layout_editor_absoluteY="371dp"
-        android:text="  After making a deposit in your account, you will be able to trade via 'Streaming' Application."
+        android:text="  After making a deposit in your account, you will be able to trade via trading applications."
         app:layout_constraintTop_toBottomOf="@id/imageView4"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="10dp"
