@@ -14,23 +14,24 @@ import android.widget.TextView;
 
 public class SpecialQuizActivity extends AppCompatActivity {
 
-    TextView nameText, instructionText, scenarioText, explainText, finalText, amountSelectText, actionText;
+    TextView nameText, instructionText, scenarioText, explainText, finalText, amountSelectText, actionText, portText;
     Button letsgobtn, submitbtn, nextbtn;
     ImageButton plusbtn, minusbtn;
     LinearLayout amountArea;
     RadioGroup radioGroup;
-    RadioButton selectedRadioButton;
+    RadioButton selectedRadioButton, donothing;
 
     String selectedActionText;
 
     String[] scenario = {"scene1", "scene2", "scene3"};
     String[] explanation = {"explain1", "explain2", "explain3"};
-    int[] unitPriceSell = {10,10,10};
-    int[] unitPriceBuy = {20,20,20};
+    double[] unitPriceSell = {10,10,10};
+    double[] unitPriceBuy = {20,20,20};
 
     int currentAmountSelected = 0;
+    double currentCashSelected = 0;
     int currentStockHave = 1000;
-    int currentCashHave = 1000;
+    double currentCashHave = 10000;
 
     int currentScene = 0;
 
@@ -63,6 +64,10 @@ public class SpecialQuizActivity extends AppCompatActivity {
         amountArea = findViewById(R.id.amountAreaView);
         radioGroup = findViewById(R.id.radio_group);
         actionText = findViewById(R.id.actionView);
+        portText = findViewById(R.id.portView);
+        donothing = findViewById(R.id.radionone);
+
+        portText.setText("Your current portfolio : You have $"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyStock company.");
 
         letsgobtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +95,14 @@ public class SpecialQuizActivity extends AppCompatActivity {
                 amountArea.setVisibility(View.GONE);
                 radioGroup.setVisibility(View.GONE);
                 actionText.setVisibility(View.GONE);
+                if(selectedActionText.equals("sell")){
+                    currentStockHave-=currentAmountSelected;
+                    currentCashHave+=currentCashSelected;
+                }else if(selectedActionText.equals("buy")){
+                    currentStockHave+=currentAmountSelected;
+                    currentCashHave-=currentCashSelected;
+                }
+                portText.setText("Your current portfolio : You have $"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyStock company.");
             }
         });
 
@@ -106,6 +119,7 @@ public class SpecialQuizActivity extends AppCompatActivity {
                     nextbtn.setVisibility(View.GONE);
                     finalText.setText("You have reached the end of the game.");
                     finalText.setVisibility(View.VISIBLE);
+                    portText.setVisibility(View.GONE);
                 }
             }
         });
@@ -113,25 +127,32 @@ public class SpecialQuizActivity extends AppCompatActivity {
         plusbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(selectedActionText.equals("do nothing")){ //you cannot set amount if you decide to be idle
-
-                }else{
+                //if you decide to be idle, you cannot set amount
+                if(selectedActionText.equals("sell")&&!(currentAmountSelected+100>currentStockHave)){ //you can only sell not more than the amount of stock you have
                     currentAmountSelected+=100;
-                    amountSelectText.setText(""+currentAmountSelected);
+                    currentCashSelected = currentAmountSelected*unitPriceSell[currentScene];
+                    actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive $"+currentCashSelected);
+                }else if(selectedActionText.equals("buy")&&!((currentAmountSelected+100)*unitPriceBuy[currentScene]>currentCashHave)){ //you can only buy not more than the amount of money you have
+                    currentAmountSelected+=100;
+                    currentCashSelected = currentAmountSelected*unitPriceBuy[currentScene];
+                    actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay $"+currentCashSelected);
                 }
+                amountSelectText.setText(""+currentAmountSelected);
             }
         });
 
          minusbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(selectedActionText.equals("do nothing")){
-
-                }else{
-                    if(currentAmountSelected>0){
-                        currentAmountSelected-=100;
-                    }
+                if((!selectedActionText.equals("do nothing"))&&currentAmountSelected>0){ //amount is non negative
+                    currentAmountSelected-=100;
                     amountSelectText.setText(""+currentAmountSelected);
+                    if(selectedActionText.equals("sell")){
+                        actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive $"+currentCashSelected);
+
+                    }else if(selectedActionText.equals("buy")){
+                        actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay $"+currentCashSelected);
+                    }
                 }
             }
         });
@@ -159,16 +180,26 @@ public class SpecialQuizActivity extends AppCompatActivity {
         amountArea.setVisibility(View.VISIBLE);
         radioGroup.setVisibility(View.VISIBLE);
         actionText.setVisibility(View.VISIBLE);
+        portText.setVisibility(View.VISIBLE);
+        currentAmountSelected = 0;
+        currentCashSelected = 0;
+        amountSelectText.setText(""+currentAmountSelected);
+        donothing.setChecked(true);
     }
 
     public void changeStatus(){
         selectedRadioButton = (RadioButton)radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());
         selectedActionText = (String) selectedRadioButton.getText();
         actionText.setText("You want to "+selectedActionText);
-        if(selectedActionText.equals("do nothing")){
-            currentAmountSelected = 0;
-            amountSelectText.setText(""+currentAmountSelected);
+        currentAmountSelected = 0;
+        currentCashSelected = 0;
+        amountSelectText.setText(""+currentAmountSelected);
+        if(selectedActionText.equals("sell")){
+            actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive $"+currentCashSelected);
+        } else if(selectedActionText.equals("buy")){
+            actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay $"+currentCashSelected);
         }
+
     }
 
 }
