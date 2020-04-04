@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="take a quiz"
+
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView93"
         tools:layout_editor_absoluteX="266dp"
@@ -43,6 +44,8 @@
         android:text="Lesson 6 : Technical Analysis"
         tools:layout_editor_absoluteX="113dp"
         tools:layout_editor_absoluteY="199dp"
+        android:textColor="#000"
+        android:textSize="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/lesson6back"
@@ -64,6 +67,8 @@ predict future price of the stock. This method is beneficial for short-term trad
 \n"
         tools:layout_editor_absoluteX="141dp"
         tools:layout_editor_absoluteY="71dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView7"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -92,6 +97,10 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Charts"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf="@id/imageView30"
         app:layout_constraintBottom_toBottomOf="@id/imageView30"
         app:layout_constraintLeft_toRightOf="@id/imageView30"/>
@@ -107,6 +116,8 @@ predict future price of the stock. This method is beneficial for short-term trad
 \n        Here are some of the most common charts. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView36"
         app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
 
@@ -126,6 +137,10 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Support and Resistance"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf="@id/imageView31"
         app:layout_constraintBottom_toBottomOf="@id/imageView31"
         app:layout_constraintLeft_toRightOf="@id/imageView30"/>
@@ -149,6 +164,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         \n      Buying is recommended  when the price is in the support level areas, and selling is recommended when the price is at the resistance level areas.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView52"
         app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
 
@@ -168,6 +185,10 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Trend Line"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf="@id/imageView32"
         app:layout_constraintBottom_toBottomOf="@id/imageView32"
         app:layout_constraintLeft_toRightOf="@id/imageView30"/>
@@ -182,6 +203,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         \n      There are 3 types of trends:"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView40"
         app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
 
@@ -222,6 +245,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Uptrend"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView44"
         app:layout_constraintBottom_toBottomOf="@id/imageView44"
         app:layout_constraintLeft_toRightOf="@id/imageView44"/>
@@ -235,6 +261,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      An uptrend indicates increasing demand for shares. It is drawn by connecting at least 2 swing lows (bottoms) with a line. The new high will be higher than the previous high, and the new low will also be higher than the previous low. Buying is recommended once the price is moving towards the low point in this trend.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView64"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -253,6 +281,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Downtrend"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView45"
         app:layout_constraintBottom_toBottomOf="@id/imageView45"
         app:layout_constraintLeft_toRightOf="@id/imageView45"/>
@@ -266,6 +297,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      A downtrend indicates an oversupply of shares. It is drawn by connecting at least 2 swing highs (tops) with a line. The new high will be lower than the previous high, and the new low will also be lower than the previous low. Selling is recommended once the price is moving towards the high point in this trend.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView66"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -284,6 +317,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Sideways"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView46"
         app:layout_constraintBottom_toBottomOf="@id/imageView46"
         app:layout_constraintLeft_toRightOf="@id/imageView46"/>
@@ -297,6 +333,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      A sideways trend is the horizontal price movement that occurs when the forces of supply and demand are nearly equal. Buying is recommended when the price is moving towards the low point, and selling is recommended when the price is moving towards the high point in this trend. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView68"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -315,6 +353,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Line Chart"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView39"
         app:layout_constraintBottom_toBottomOf="@id/imageView39"
         app:layout_constraintLeft_toRightOf="@id/imageView39"/>
@@ -337,6 +378,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The line chart measures the closing price and connects each day’s close into a line.  \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView48"
         app:layout_constraintLeft_toLeftOf="@id/imageView39"/>
 
@@ -355,6 +398,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Bar Chart"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView40"
         app:layout_constraintBottom_toBottomOf="@id/imageView40"
         app:layout_constraintLeft_toRightOf="@id/imageView40"/>
@@ -386,6 +432,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The bar chart shows four pieces of information : opening price (optional), closing price, high of the day, and low of the day. A vertical line shows the day’s trading range with a horizontal line pointing left to mark the opening price and a horizontal line pointing right to mark the closing price.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView54"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -402,6 +450,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Candlestick Chart"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView41"
@@ -466,6 +517,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The candlestick chart consists of 2 parts. The first part, 'shadow', is the thin line that shows the price range from high to low. The wider area, 'real body', measures the difference between the opening price and the closing price. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/bearishText"
         app:layout_constraintLeft_toLeftOf="@id/bearishText"/>
 
@@ -486,6 +539,10 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Indicators"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf="@id/imageView34"
         app:layout_constraintBottom_toBottomOf="@id/imageView34"
         app:layout_constraintLeft_toRightOf="@id/imageView30"/>
@@ -500,6 +557,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         \n\n      Here are some of the most useful indicators.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView44"
         app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
 
@@ -516,6 +575,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Moving Average (MA)"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView35"
@@ -532,6 +594,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         \n      The formula of the SMA is given by :  \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView46"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -555,6 +619,8 @@ predict future price of the stock. This method is beneficial for short-term trad
 \n\n      - Crossovers : This can be observed by plotting a 200-day and 50-day moving average on your chart. A buy signal occurs when the 50-day crosses above the 200-day, known as the 'golden cross', while a sell signal occurs when the 50-day drops below the 200-day, known as the 'death cross', as shown in the graph below."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView55"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -576,6 +642,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="\n      - Support and Resistance : A larger periods form stronger moving average support and resistance levels. Below is an example of using moving average as support level."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView56"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -602,6 +670,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Moving Average Convergence Divergence (MACD)"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView36"
@@ -617,6 +688,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="       A MACD has two lines—a fast line and a slow line. A buy signal occurs when the fast line crosses through and above the slow line. A sell signal occurs when the fast line crosses through and below the slow line. \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView48"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -645,6 +718,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Relative Strength Index (RSI)"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView37"
         app:layout_constraintBottom_toBottomOf="@id/imageView37"
         app:layout_constraintLeft_toRightOf="@id/imageView37"/>
@@ -656,6 +732,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The formula for RSI is as follows : \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView50"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -677,6 +755,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      Prices are considered oversold when the RSI falls under 30 and overbought when RSI rises above the 70. The buying signal is when it bounces back up or off the oversold 30 band, while the selling signal is when it falls back under or deflects back down off the overbought 70 band.\n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView59"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -705,6 +785,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="On-Balance Volume (OBV)"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView38"
         app:layout_constraintBottom_toBottomOf="@id/imageView38"
         app:layout_constraintLeft_toRightOf="@id/imageView38"/>
@@ -719,6 +802,8 @@ predict future price of the stock. This method is beneficial for short-term trad
 \n      The formula for OBV is as follows : \n"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView52"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -748,6 +833,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Bollinger Band"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView42"
         app:layout_constraintBottom_toBottomOf="@id/imageView42"
         app:layout_constraintLeft_toRightOf="@id/imageView42"/>
@@ -761,6 +849,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The Bollinger Band consists of 3 bands :"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/textView60"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -777,6 +868,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="An upper moving average, or the upper envelope"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView63"
@@ -796,6 +890,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A middle 20-period moving average"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView64"
@@ -815,6 +912,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="A lower moving average, or the lower envelope"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
         app:layout_constraintTop_toTopOf="@id/imageView65"
@@ -832,6 +932,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         \n"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/imageView65"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -862,6 +964,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Parabolic Stop and Reverse (PSAR)"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView43"
         app:layout_constraintBottom_toBottomOf="@id/imageView43"
         app:layout_constraintLeft_toRightOf="@id/imageView43"/>
@@ -875,6 +980,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      The PSAR indicator forms a parabola composed of small dots that are either above or below the trading price. When the parabola is below the stock price, it signals the bullish market and buying is recommended. When the parabola is above the stock price, it signals the bearish market and selling is recommended."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView62"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -894,6 +1001,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="\n Here are some more definitions that you need to know"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="345dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView62"/>
@@ -914,6 +1023,10 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf ="@id/imageView71"
         app:layout_constraintBottom_toBottomOf="@id/imageView71"
         app:layout_constraintLeft_toRightOf="@id/imageView71"/>
@@ -927,6 +1040,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      A divergence is what happens when the price of an asset is moving in the opposite direction to a momentum indicator or oscillator. It is the opposite of a confirmation signal, which is when the indicator and price are moving in the same direction."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView82"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -945,6 +1060,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Regular Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView72"
         app:layout_constraintBottom_toBottomOf="@id/imageView72"
         app:layout_constraintLeft_toRightOf="@id/imageView72"/>
@@ -964,6 +1082,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Bullish Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView74"
         app:layout_constraintBottom_toBottomOf="@id/imageView74"
         app:layout_constraintLeft_toRightOf="@id/imageView74"/>
@@ -977,6 +1098,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      A bullish divergence is the pattern that occurs when the price falls to lower lows, while the technical indicator reaches higher lows. After a bullish divergence pattern, it is common to see a rapid price increase."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView86"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -995,6 +1118,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Bearish Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView75"
         app:layout_constraintBottom_toBottomOf="@id/imageView75"
         app:layout_constraintLeft_toRightOf="@id/imageView75"/>
@@ -1008,6 +1134,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      A bearish divergence is the pattern that occurs when the price reaches higher highs, while the technical indicator makes lower highs. After a bearish divergence pattern, it is common to see a rapid price decline."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView88"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -1026,6 +1154,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Hidden Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView73"
         app:layout_constraintBottom_toBottomOf="@id/imageView73"
         app:layout_constraintLeft_toRightOf="@id/imageView73"/>
@@ -1045,6 +1176,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Hidden Bullish Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView76"
         app:layout_constraintBottom_toBottomOf="@id/imageView76"
         app:layout_constraintLeft_toRightOf="@id/imageView76"/>
@@ -1058,6 +1192,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="      A hidden bullish divergence occurs when the price has higher bottoms on the chart, while the indicator is showing lower bottoms."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         app:layout_constraintTop_toBottomOf="@id/textView90"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>
 
@@ -1076,6 +1212,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:text="Hidden Bearish Divergence"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="@id/imageView77"
         app:layout_constraintBottom_toBottomOf="@id/imageView77"
         app:layout_constraintLeft_toRightOf="@id/imageView77"/>
@@ -1088,6 +1227,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_marginRight="10dp"
         android:text="       A hidden bearish divergence occurs when the price has lower tops on the chart, while the indicator is showing higher tops."
         tools:layout_editor_absoluteX="102dp"
+        android:textSize="20dp"
+        android:textColor="#000"
         tools:layout_editor_absoluteY="234dp"
         app:layout_constraintTop_toBottomOf="@id/textView92"
         app:layout_constraintLeft_toLeftOf="@id/imageView35"/>

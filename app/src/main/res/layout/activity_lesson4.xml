@@ -41,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="take a quiz"
+
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView31"
         tools:layout_editor_absoluteX="137dp"
@@ -53,6 +54,8 @@
         android:text="Lesson 4 : Stock Types"
         tools:layout_editor_absoluteX="113dp"
         tools:layout_editor_absoluteY="119dp"
+        android:textColor="#000"
+        android:textSize="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/lesson4back"
@@ -65,6 +68,8 @@
         android:text="  There are many ways to classify a stock. Here, we will talk about 6 types of stocks classified by Peter Lynch."
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="210dp"
+        android:textColor="#000"
+        android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@id/lesson4back"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -133,6 +138,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Slow Growers"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="161dp"
         app:layout_constraintLeft_toRightOf="@id/imageView8"
@@ -145,6 +154,10 @@
         android:layout_height="wrap_content"
         android:text="Stalwarts"
         tools:layout_editor_absoluteX="163dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"
         tools:layout_editor_absoluteY="161dp"
         app:layout_constraintLeft_toRightOf="@id/imageView9"
         app:layout_constraintTop_toTopOf="@id/imageView9"
@@ -155,6 +168,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fast Growers"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="161dp"
         app:layout_constraintLeft_toRightOf="@id/imageView10"
@@ -166,6 +183,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cyclical"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="161dp"
         app:layout_constraintLeft_toRightOf="@id/imageView11"
@@ -177,6 +198,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Turnaround"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="161dp"
         app:layout_constraintLeft_toRightOf="@id/imageView12"
@@ -208,6 +233,8 @@
 \n    – High market capitalization\n"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
+        android:textColor="#000"
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView20"
         app:layout_constraintTop_toBottomOf="@id/imageView17"/>
 
@@ -223,6 +250,8 @@
 \n    – Big market capitalization\n"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
+        android:textColor="#000"
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView21"
         app:layout_constraintTop_toBottomOf="@id/imageView23"/>
 
@@ -234,6 +263,8 @@
 \n\n    – High and consistent price-to-earnings ratio
 
 \n    – Earnings per share grow at the rate of 15-20%\n"
+        android:textColor="#000"
+        android:textSize="20dp"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
         app:layout_constraintLeft_toLeftOf="@id/textView22"
@@ -247,6 +278,8 @@
 \n\n    – Price to earnings ratio and earnings per share tend follow a pattern of peaks and plunges—3 years of profitability and 2 years of losses, for example.\n"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
+        android:textColor="#000"
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView23"
         app:layout_constraintTop_toBottomOf="@id/imageView26"/>
 
@@ -260,6 +293,8 @@
 \n    – Net profit becomes positive
 
 \n    – Debt to equity ratio continues to fall\n"
+        android:textColor="#000"
+        android:textSize="20dp"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
         app:layout_constraintLeft_toLeftOf="@id/textView24"
@@ -275,6 +310,8 @@ If you put money in an Asset Play company that invests in profitable businesses 
 \n\n    – Searching for Asset Plays won’t require much ratio analysis, but more digging through company financials to see what assets are they holding, how much did they spend to acquire those assets, and how much are those assets today. You can find such information in public statements released by the companies.\n"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
+        android:textColor="#000"
+        android:textSize="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView25"
         app:layout_constraintTop_toBottomOf="@id/imageView27"/>
 
