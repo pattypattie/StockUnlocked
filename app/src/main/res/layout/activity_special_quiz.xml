@@ -49,4 +49,172 @@
         app:layout_constraintTop_toBottomOf="@id/instructionspecial"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/scenarioView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backMenu"
+        android:visibility="gone"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/scenarioView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radiobuy"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="buy" />
+
+        <RadioButton
+            android:id="@+id/radionone"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="do nothing" />
+
+        <RadioButton
+            android:id="@+id/radiosell"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="sell" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/amountAreaView"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#FEC8D8"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/radio_group"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone">
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/minusView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintRight_toLeftOf="@id/amountAreaView"
+        app:layout_constraintBottom_toBottomOf="@id/amountAreaView"
+        app:layout_constraintTop_toTopOf="@id/amountAreaView"
+        app:srcCompat="@drawable/minus_sign"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/amountSelectView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/amountAreaView"
+        app:layout_constraintTop_toTopOf="@id/amountAreaView"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/plusView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        app:layout_constraintLeft_toRightOf="@id/amountAreaView"
+        app:layout_constraintBottom_toBottomOf="@id/amountAreaView"
+        app:layout_constraintTop_toTopOf="@id/amountAreaView"
+        app:srcCompat="@drawable/plus_sign"
+        android:scaleType="fitCenter"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/actionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minusView"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/explainView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/minusView"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="103dp"
+        app:layout_constraintTop_toBottomOf="@id/explainView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="103dp"
+        app:layout_constraintTop_toBottomOf="@id/submit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/finalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backMenu"
+        android:visibility="gone"/>
+
+
+
 </android.support.constraint.ConstraintLayout>
