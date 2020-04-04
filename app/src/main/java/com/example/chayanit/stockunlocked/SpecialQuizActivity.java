@@ -10,7 +10,8 @@ import android.widget.TextView;
 
 public class SpecialQuizActivity extends AppCompatActivity {
 
-    TextView instructionText;
+    TextView nameText, instructionText;
+    Button letsgobtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,18 @@ public class SpecialQuizActivity extends AppCompatActivity {
             }
         });
 
-        instructionText = findViewById(R.id.instructionqspecial);
-        instructionText.setText(Html.fromHtml("<h1>How much can you get?</h1>"));
+        nameText = findViewById(R.id.namespecial);
+        nameText.setText(Html.fromHtml("<h1>How much can you get?</h1>"));
+        instructionText = findViewById(R.id.instructionspecial);
+        instructionText.setText(Html.fromHtml("&emsp Welcome to the trading simulation game! Now you have <b>$500</b> and <b>100 stocks</b> of HappyStock company. You will be given some scenarios, and you have to choose your action. Let's see how much you'll have at the end. "));
+        letsgobtn = findViewById(R.id.letsgo);
+        letsgobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                letsgobtn.setVisibility(View.GONE);
+                nameText.setVisibility(View.GONE);
+                instructionText.setVisibility(View.GONE);
+            }
+        });
     }
 }

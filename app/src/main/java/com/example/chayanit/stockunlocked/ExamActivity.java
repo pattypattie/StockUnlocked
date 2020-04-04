@@ -48,7 +48,7 @@ public class ExamActivity extends AppCompatActivity {
     String[] picLevel1 = {"", "", "", "", "", "", "", "", "", ""};
     String[] picLevel2 = {"", "", "", "", "", "", "", "", "", ""};
     String[] picLevel3 = {"", "", "", "", "", "", "", "", "", ""};
-    String[] picLevel4 = {"", "", "", "", "", "", "", "", "", ""};
+    String[] picLevel4 = {"", "", "", "", "exampic1", "", "", "", "", ""};
 
 
     //The correct answer is stored in index 0 (a1)
@@ -92,7 +92,7 @@ public class ExamActivity extends AppCompatActivity {
             {{"An important price level is broken", "Donald Trump becomes the president of the U.S.", "Oil prices rise due to supply reduction", "None of them are correct"},
                     {"Help them understand patterns in company’s financial performance", "Help them understand patterns in company’s share price", "Both of them", "Neither"},
                     {"No, we have to compare PE value of the company from the same industry", "Yes, we can compare the PE value of any company to the others", "No, we have to compare PE value of the company from the same country", "No, we have to compare PE value of the company from the same region"},
-                    {"All of then are correct", "No extraordinary efforts are required", "The growth in the industry is slowed down through the rivalry among the current competitors", "The rivalry is modest among the competitor in the same sector"},
+                    {"All of them are correct", "No extraordinary efforts are required", "The growth in the industry is slowed down through the rivalry among the current competitors", "The rivalry is modest among the competitor in the same sector"},
                     {"Negative", "Neutral", "Positive", "Decrease"},
                     {"The 50-day graph crosses above the 200-day graph.", "The 50-day graph oscillates when the 200-day graph remains highly steady.", "The 50-day graph remains highly steady when the 200-day graph oscillates.", "The 50-day graph crosses below the 200-day graph."},
                     {"The fast line crosses below the slow line.", "The fast line crosses above the slow line.", "The fast and the slow line are both moving horizontally.", "None of them is correct."},
