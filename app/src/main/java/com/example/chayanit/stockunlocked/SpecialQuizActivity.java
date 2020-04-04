@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class SpecialQuizActivity extends AppCompatActivity {
 
-    TextView nameText, instructionText, scenarioText, explainText, finalText, amountSelectText, actionText, portText;
+    TextView nameText, instructionText, scenarioText, explainText, finalText, amountSelectText, actionText, portText, finalPortText;
     Button letsgobtn, submitbtn, nextbtn;
     ImageButton plusbtn, minusbtn;
     LinearLayout amountArea;
@@ -66,6 +66,7 @@ public class SpecialQuizActivity extends AppCompatActivity {
         actionText = findViewById(R.id.actionView);
         portText = findViewById(R.id.portView);
         donothing = findViewById(R.id.radionone);
+        finalPortText = findViewById(R.id.finalPortView);
 
         portText.setText("Your current portfolio : You have $"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyStock company.");
 
@@ -119,6 +120,8 @@ public class SpecialQuizActivity extends AppCompatActivity {
                     nextbtn.setVisibility(View.GONE);
                     finalText.setText("You have reached the end of the game.");
                     finalText.setVisibility(View.VISIBLE);
+                    finalPortText.setText("Your current portfolio : You have $"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyStock company.");
+                    finalPortText.setVisibility(View.VISIBLE);
                     portText.setVisibility(View.GONE);
                 }
             }

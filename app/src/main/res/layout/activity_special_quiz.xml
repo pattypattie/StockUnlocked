@@ -235,6 +235,18 @@
         app:layout_constraintTop_toBottomOf="@id/backMenu"
         android:visibility="gone"/>
 
+    <TextView
+        android:id="@+id/finalPortView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finalTextView"
+        android:visibility="gone"/>
+
 
 
 </android.support.constraint.ConstraintLayout>
