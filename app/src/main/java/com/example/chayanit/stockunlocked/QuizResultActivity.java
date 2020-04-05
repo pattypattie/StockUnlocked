@@ -28,8 +28,8 @@ public class QuizResultActivity extends AppCompatActivity {
         switch (QsNum){
             case 1 :
                 finalScore = bundle.getInt("finalScore");
-                scoreReport.setText("Your score is : "+finalScore);
-                unlock.setText("Unlock lesson 2");
+                //scoreReport.setText("Your score is : "+finalScore);
+                //unlock.setText("Unlock lesson 2");
                 unlockls.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -43,8 +43,8 @@ public class QuizResultActivity extends AppCompatActivity {
                 break;
             case 2 :
                 finalScore = bundle.getInt("finalScore");
-                scoreReport.setText("Your score is : "+finalScore);
-                unlock.setText("Unlock lesson 3");
+                //scoreReport.setText("Your score is : "+finalScore);
+                //unlock.setText("Unlock lesson 3");
                 unlockls.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -58,8 +58,8 @@ public class QuizResultActivity extends AppCompatActivity {
                 break;
             case 3 :
                 finalScore = bundle.getInt("finalScore");
-                scoreReport.setText("Your score is : "+finalScore);
-                unlock.setText("Unlock lesson 4");
+                //scoreReport.setText("Your score is : "+finalScore);
+                //unlock.setText("Unlock lesson 4");
                 unlockls.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -73,8 +73,8 @@ public class QuizResultActivity extends AppCompatActivity {
                 break;
             case 4 :
                 finalScore = bundle.getInt("finalScore");
-                scoreReport.setText("Your score is : "+finalScore);
-                unlock.setText("Unlock lesson 5");
+                //scoreReport.setText("Your score is : "+finalScore);
+                //unlock.setText("Unlock lesson 5");
                 unlockls.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -88,8 +88,8 @@ public class QuizResultActivity extends AppCompatActivity {
                 break;
             case 5 :
                 finalScore = bundle.getInt("finalScore");
-                scoreReport.setText("Your score is : "+finalScore);
-                unlock.setText("Unlock lesson 6");
+                //scoreReport.setText("Your score is : "+finalScore);
+                //unlock.setText("Unlock lesson 6");
                 unlockls.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -103,8 +103,8 @@ public class QuizResultActivity extends AppCompatActivity {
                 break;
             case 6 :
                 finalScore = bundle.getInt("finalScore");
-                scoreReport.setText("Your score is : "+finalScore);
-                unlock.setText("Take Exam");
+                //scoreReport.setText("Your score is : "+finalScore);
+                //unlock.setText("Take Exam");
                 unlockls.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {

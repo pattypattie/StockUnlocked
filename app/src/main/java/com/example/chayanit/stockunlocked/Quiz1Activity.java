@@ -54,17 +54,25 @@ public class Quiz1Activity extends AppCompatActivity {
         mButtonChoice3 = (Button)findViewById(R.id.choice3);
         final TextView result = (TextView)findViewById(R.id.result);
         final Button nextQs = findViewById(R.id.nextQs);
+        Button backMenu = findViewById(R.id.backMenu);
+        backMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Quiz1Activity.this, TitleActivity.class));
+            }
+        });
 
+        mScoreView.setVisibility(View.INVISIBLE);
 
         updateQuestion();
 
-        nextQs.setEnabled(false);
+        nextQs.setVisibility(View.INVISIBLE);
         nextQs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 updateQuestion();
                 result.setText("");
-                nextQs.setEnabled(false);
+                nextQs.setVisibility(View.INVISIBLE);
                 //startActivity(new Intent(Quiz1Activity.this, TitleActivity.class));
             }
         });
@@ -77,7 +85,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
-                    updateScore(mScore);
+                    //updateScore(mScore);
                     mButtonChoice2.setVisibility(View.GONE);
                     mButtonChoice3.setVisibility(View.GONE);
                     mButtonChoice1.setEnabled(false);
@@ -86,8 +94,8 @@ public class Quiz1Activity extends AppCompatActivity {
 
                     if (count == 3) {
                         result.setText("Correct!\n"+explain);
-                        nextQs.setEnabled(true);
-                        nextQs.setText("Result");
+                        nextQs.setVisibility(View.VISIBLE);
+                        //nextQs.setText("Result");
                         nextQs.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -106,7 +114,7 @@ public class Quiz1Activity extends AppCompatActivity {
 //                        mButtonChoice2.setVisibility(View.GONE);
 //                        mButtonChoice3.setVisibility(View.GONE);
                         result.setText("Correct!\n"+explain);
-                        nextQs.setEnabled(true);
+                        nextQs.setVisibility(View.VISIBLE);
 //                        updateQuestion();
 
                     }
@@ -137,7 +145,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
-                    updateScore(mScore);
+                    //updateScore(mScore);
                     mButtonChoice1.setVisibility(View.GONE);
                     mButtonChoice2.setVisibility(View.GONE);
                     mButtonChoice3.setEnabled(false);
@@ -146,8 +154,8 @@ public class Quiz1Activity extends AppCompatActivity {
 
                     if (count == 3) {
                         result.setText("Correct!\n"+explain);
-                        nextQs.setEnabled(true);
-                        nextQs.setText("Result");
+                        nextQs.setVisibility(View.VISIBLE);
+                        //nextQs.setText("Result");
                         nextQs.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -166,7 +174,7 @@ public class Quiz1Activity extends AppCompatActivity {
 //                        mButtonChoice2.setVisibility(View.GONE);
 //                        mButtonChoice3.setVisibility(View.GONE);
                         result.setText("Correct!\n"+explain);
-                        nextQs.setEnabled(true);
+                        nextQs.setVisibility(View.VISIBLE);
 //                        updateQuestion();
 
                     }
@@ -196,7 +204,7 @@ public class Quiz1Activity extends AppCompatActivity {
 
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
-                    updateScore(mScore);
+                    //updateScore(mScore);
                     mButtonChoice1.setVisibility(View.GONE);
                     mButtonChoice3.setVisibility(View.GONE);
                     mButtonChoice2.setEnabled(false);
@@ -204,8 +212,8 @@ public class Quiz1Activity extends AppCompatActivity {
 
                     if (count == 3) {
                         result.setText("Correct!\n"+explain);
-                        nextQs.setEnabled(true);
-                        nextQs.setText("Result");
+                        nextQs.setVisibility(View.VISIBLE);
+                        //nextQs.setText("Result");
                         nextQs.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
@@ -224,7 +232,7 @@ public class Quiz1Activity extends AppCompatActivity {
 //                        mButtonChoice2.setVisibility(View.GONE);
 //                        mButtonChoice3.setVisibility(View.GONE);
                         result.setText("Correct!\n"+explain);
-                        nextQs.setEnabled(true);
+                        nextQs.setVisibility(View.VISIBLE);
 //                        updateQuestion();
 
                     }
@@ -372,9 +380,9 @@ public class Quiz1Activity extends AppCompatActivity {
 
     //Set<Integer> set = new LinkedHashSet<Integer>();
 
-    private void updateScore(int point) {
-        mScoreView.setText("" + mScore);
-    }
+//    private void updateScore(int point) {
+//        mScoreView.setText("" + mScore);
+//    }
 
 
 }

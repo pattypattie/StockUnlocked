@@ -29,6 +29,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Drag the correct answer to fill in the blanks."
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
             app:layout_constraintTop_toBottomOf="@id/blankbtn"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
@@ -47,11 +49,9 @@
 
         <ImageView
             android:id="@+id/downImg"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:src="@drawable/downtrend_quiz"
-            tools:layout_editor_absoluteX="192dp"
-            tools:layout_editor_absoluteY="329dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/instructionl6q2"
@@ -62,6 +62,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="This graph is a/an "
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
             app:layout_constraintTop_toTopOf="@id/ans_area_1"
             app:layout_constraintBottom_toBottomOf="@id/ans_area_1"
             app:layout_constraintLeft_toLeftOf="parent"/>
@@ -77,7 +79,6 @@
             android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/upImg"
-            android:layout_marginTop="10dp"
             app:layout_constraintLeft_toRightOf="@id/ask1">
         </LinearLayout>
 
@@ -95,7 +96,9 @@
             android:id="@+id/ask2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The demand-supply relationship is "
+            android:text="The demand-supply \nrelationship is "
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
             app:layout_constraintTop_toTopOf="@id/ans_area_2"
             app:layout_constraintBottom_toBottomOf="@id/ans_area_2"
             app:layout_constraintLeft_toLeftOf="parent"/>
@@ -129,7 +132,9 @@
             android:id="@+id/ask3"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:text="The best action at the circled point is to "
+            android:text="The best action at \nthe circled point \nis to "
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
             app:layout_constraintTop_toTopOf="@id/ans_area_3"
             app:layout_constraintBottom_toBottomOf="@id/ans_area_3"
             app:layout_constraintLeft_toLeftOf="parent"/>
@@ -246,6 +251,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:textColor="@android:color/black"
             app:layout_constraintTop_toBottomOf="@id/checkAns"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

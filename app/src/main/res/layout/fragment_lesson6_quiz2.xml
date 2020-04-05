@@ -29,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="According to the PSAR graph below, what is the best action?"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/blankbtn"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"/>
@@ -98,6 +99,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=""
+            android:textColor="@android:color/black"
             tools:layout_editor_absoluteX="99dp"
             tools:layout_editor_absoluteY="347dp"
             android:visibility="invisible"
@@ -113,6 +115,7 @@
             tools:layout_editor_absoluteX="99dp"
             tools:layout_editor_absoluteY="347dp"
             android:visibility="invisible"
+            android:textColor="@android:color/black"
             app:layout_constraintTop_toBottomOf="@id/textView43"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>

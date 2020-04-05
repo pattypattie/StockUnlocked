@@ -17,6 +17,7 @@
         android:layout_height="127dp"
         android:layout_marginBottom="40dp"
         android:padding="8dp"
+        android:textColor="@android:color/black"
         android:text="Which thing is alive?"
         android:textSize="20sp" />
 
@@ -44,6 +45,7 @@
         android:layout_height="wrap_content"
         android:textSize="20sp"
         android:padding="8dp"
+        android:textColor="@android:color/black"
         android:layout_marginBottom="40dp"
         android:id="@+id/resultq3"/>
 

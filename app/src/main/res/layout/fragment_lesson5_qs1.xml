@@ -55,6 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="The key performance indicators for the fundamental analysis are __________"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:padding="8dp"
         android:layout_marginBottom="20dp"

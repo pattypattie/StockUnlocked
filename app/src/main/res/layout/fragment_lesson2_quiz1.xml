@@ -31,6 +31,8 @@
         android:text="Select the document required for opening a brokerage account."
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         app:layout_constraintTop_toBottomOf="@id/blankbtn"
@@ -41,6 +43,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ID card"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/instructionl2q1"/>
 
     <CheckBox
@@ -48,6 +52,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Student ID"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/instructionl2q1"
         app:layout_constraintLeft_toLeftOf="@id/checkBox4"/>
 
@@ -56,6 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="House Registration"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/checkBox1"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -64,6 +72,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bank Statement"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/checkBox2"
         app:layout_constraintLeft_toRightOf="@id/checkBox3"
         />
@@ -73,6 +83,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Photo"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/checkBox4"
         app:layout_constraintLeft_toLeftOf="parent"/>
 
@@ -81,16 +93,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bank Book"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/checkBox4"
         app:layout_constraintLeft_toLeftOf="@id/checkBox4"/>
 
         <Button
             android:id="@+id/buttonConfirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Confirm"
-            tools:layout_editor_absoluteX="70dp"
-            tools:layout_editor_absoluteY="245dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@drawable/submit"
+            android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/checkBox6"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
@@ -99,7 +112,6 @@
             android:id="@+id/l2q1ans"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
             tools:layout_editor_absoluteX="325dp"
             tools:layout_editor_absoluteY="57dp"
             app:layout_constraintTop_toBottomOf="@id/buttonConfirm"

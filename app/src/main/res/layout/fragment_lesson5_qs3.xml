@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:text="What are the name and order of the 3 analysis in the Top-Down Approach?"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:padding="8dp"
         android:layout_marginBottom="20dp"

@@ -19,6 +19,7 @@
         android:layout_width="75dp"
         android:layout_height="58dp"
         android:adjustViewBounds="true"
+        android:background="@drawable/button_style_2"
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
@@ -28,24 +29,26 @@
 
     <Button
         android:id="@+id/unlockls5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="unlock lesson 5"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/unlock"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView31"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="301dp" />
+        />
 
     <Button
         android:id="@+id/takequiz4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="take a quiz"
-
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/take"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView31"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="317dp" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/unlockls5"
+        android:layout_marginBottom="20dp"
+        />
+
 
     <TextView
         android:id="@+id/textView18"
@@ -66,12 +69,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="  There are many ways to classify a stock. Here, we will talk about 6 types of stocks classified by Peter Lynch."
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="210dp"
         android:textColor="#000"
         android:textSize="20dp"
         app:layout_constraintTop_toBottomOf="@id/lesson4back"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -215,6 +220,10 @@
         android:text="Asset Play"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="161dp"
+        android:textColor="#000"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
         app:layout_constraintLeft_toRightOf="@id/imageView13"
         app:layout_constraintTop_toTopOf="@id/imageView13"
         app:layout_constraintBottom_toBottomOf="@id/imageView13"/>
@@ -231,11 +240,12 @@
 \n    – Dividend yields might be as high as 7-10% per year
 
 \n    – High market capitalization\n"
-        tools:layout_editor_absoluteX="242dp"
-        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         android:textColor="#000"
         android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="@id/textView20"
         app:layout_constraintTop_toBottomOf="@id/imageView17"/>
 
     <TextView
@@ -252,7 +262,10 @@
         tools:layout_editor_absoluteY="101dp"
         android:textColor="#000"
         android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="@id/textView21"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintTop_toBottomOf="@id/imageView23"/>
 
     <TextView
@@ -267,7 +280,10 @@
         android:textSize="20dp"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
-        app:layout_constraintLeft_toLeftOf="@id/textView22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintTop_toBottomOf="@id/imageView22"/>
 
     <TextView
@@ -280,7 +296,10 @@
         tools:layout_editor_absoluteY="101dp"
         android:textColor="#000"
         android:textSize="20dp"
-        app:layout_constraintLeft_toLeftOf="@id/textView23"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintTop_toBottomOf="@id/imageView26"/>
 
     <TextView
@@ -297,7 +316,10 @@
         android:textSize="20dp"
         tools:layout_editor_absoluteX="242dp"
         tools:layout_editor_absoluteY="101dp"
-        app:layout_constraintLeft_toLeftOf="@id/textView24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintTop_toBottomOf="@id/imageView14"/>
 
     <TextView

@@ -8,9 +8,9 @@
     tools:context="com.example.chayanit.stockunlocked.Quiz5Activity">
     <Button
         android:id="@+id/backMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back to Main Menu"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/menu"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         />

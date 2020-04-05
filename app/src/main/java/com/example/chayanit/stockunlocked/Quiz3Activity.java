@@ -50,7 +50,7 @@ public class Quiz3Activity extends AppCompatActivity {
                 }else if(currentQuiz==2){
                     getSupportFragmentManager().beginTransaction().remove(lesson3Quiz2Fragment).commit();
                     getSupportFragmentManager().beginTransaction().add(R.id.fragmentl3, lesson3Quiz3Fragment).commit();
-                    nextQbtn.setText("Result");
+                    //nextQbtn.setText("Result");
                     currentQuiz = 3;
                 } else if(currentQuiz ==3){
                     //startActivity(new Intent(Quiz3Activity.this, QuizResultActivity.class));

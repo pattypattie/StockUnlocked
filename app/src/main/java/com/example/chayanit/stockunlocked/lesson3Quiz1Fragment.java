@@ -110,6 +110,7 @@ public class lesson3Quiz1Fragment extends Fragment {
         // Inflate the layout for this fragment
         View myFragmentView = inflater.inflate(R.layout.fragment_lesson3_quiz1, container, false);
 
+
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
         }

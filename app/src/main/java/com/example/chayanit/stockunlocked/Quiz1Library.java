@@ -37,7 +37,7 @@ public class Quiz1Library {
             {"The Stock Market is a market where people bet on race horses to gain some money.", "The Stock Market is a market where people buy products which the merchants have a lot of stock of", "The Stock Market is a market where people can buy stocks which are shares of companies."},
             {"more", "less", "equal number of"},
             {"more", "less", "equal number of"},
-            {"Buying high and selling low", "Buying low and selling high", "Buying and selling at the same price"}
+            {"Buying low and selling high", "Buying high and selling low", "Buying and selling at the same price"}
     };
 
      String ls3q2choices [][] ={
@@ -47,7 +47,7 @@ public class Quiz1Library {
 
 
     private String mCorrectAnswers[] = {"Buy or Sell", "Financial Service Industry", "The Stock Market is a market where people can buy stocks which are shares of companies.",
-            "more", "less", "Buying high and selling low"};
+            "more", "less", "Buying low and selling high"};
 
     private String ls3q2Ans [] = {"The highest and lowest selling price in the day","Market that on the rise or in decline","Buying price and selling price of the stock"
 
