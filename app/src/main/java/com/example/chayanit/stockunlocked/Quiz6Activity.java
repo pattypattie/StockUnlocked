@@ -17,6 +17,7 @@ public class Quiz6Activity extends AppCompatActivity {
     ArrayList<Fragment> fragments;
     Button nextQbtn;
     Fragment lesson6Quiz1Fragment, lesson6Quiz2Fragment, lesson6Quiz3Fragment, currentFragment;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,22 +53,35 @@ public class Quiz6Activity extends AppCompatActivity {
 
     }
 
-    public void randomPart(){
+    public void randomPart() {
 
-        if(randomFragment!=-1){
-            fragments.remove(currentFragment);
-            fragments.trimToSize();
-        } else{
-            currentFragment = lesson6Quiz1Fragment;
-        }
+        if (count == 3) {
+            Intent i = new Intent(Quiz6Activity.this, QuizResultActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("finalScore", 2);
+            bundle.putInt("QsNum", 6);
+            i.putExtras(bundle);
+            Quiz6Activity.this.finish();
+            startActivity(i);
+        } else {
 
-        if(fragments.size()!=0){
-            randomFragment = (int)(Math.random()*fragments.size());
-            getSupportFragmentManager().beginTransaction().remove(currentFragment).commit();
-            currentFragment = fragments.get(randomFragment);
-            getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, currentFragment).commit();
-        } if(fragments.size()==1){
-            nextQbtn.setEnabled(false);
+            if (randomFragment != -1) {
+                fragments.remove(currentFragment);
+                fragments.trimToSize();
+            } else {
+                currentFragment = lesson6Quiz1Fragment;
+            }
+
+            if (fragments.size() != 0) {
+                randomFragment = (int) (Math.random() * fragments.size());
+                getSupportFragmentManager().beginTransaction().remove(currentFragment).commit();
+                currentFragment = fragments.get(randomFragment);
+                getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, currentFragment).commit();
+            }
+            if (fragments.size() == 1) {
+                //nextQbtn.setEnabled(false);
+            }
         }
+        count++;
     }
 }

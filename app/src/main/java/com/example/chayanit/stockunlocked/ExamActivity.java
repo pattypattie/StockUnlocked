@@ -119,7 +119,7 @@ public class ExamActivity extends AppCompatActivity {
         checkCorrectText = findViewById(R.id.correctText);
 
         btn_none.setVisibility(View.INVISIBLE);
-        nextQbtn.setEnabled(false);
+        nextQbtn.setVisibility(View.INVISIBLE);
 
         createNewQuestion(1);
 
@@ -128,7 +128,7 @@ public class ExamActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(questionCounter!=10){ //limit to 10 questions per one exam
                     createNewQuestion(level);
-                    nextQbtn.setEnabled(false);
+                    nextQbtn.setVisibility(View.INVISIBLE);
                 }else{
                     //startActivity(new Intent(ExamActivity.this,ExamResultActivity.class));
                     Intent intent = new Intent(ExamActivity.this,ExamResultActivity.class);
@@ -270,7 +270,7 @@ public class ExamActivity extends AppCompatActivity {
         checkCorrectText.setVisibility(View.VISIBLE);
         scoreText.setText("Score : "+testScore);
         questionCounter++;
-        nextQbtn.setEnabled(true);
+        nextQbtn.setVisibility(View.VISIBLE);
         b1.setEnabled(false);
         b2.setEnabled(false);
         b3.setEnabled(false);

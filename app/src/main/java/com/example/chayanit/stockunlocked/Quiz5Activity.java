@@ -35,7 +35,7 @@ public class Quiz5Activity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz5);
 
         final Button enterqs = findViewById(R.id.btn_qs);
-        enterqs.setEnabled(false);
+        enterqs.setVisibility(View.INVISIBLE);
         enterqs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,13 +80,14 @@ public class Quiz5Activity extends AppCompatActivity {
                     @Override
                     public void onAnimationStart(Animation animation) {
                         textView.setText("");
-                        enterqs.setEnabled(false);
+                    enterqs.setVisibility(View.INVISIBLE);
                     }
+
 
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         textView.setText(currentNumber(360 - (degree % 360)));
-                        enterqs.setEnabled(true);
+                        enterqs.setVisibility(View.VISIBLE);
                         //Toast.makeText(Quiz5Activity.this, degree, Toast.LENGTH_SHORT).show();
                     }
 

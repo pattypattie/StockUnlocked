@@ -92,6 +92,8 @@ public class Lesson4Quiz1Fragment extends Fragment {
         nextbtn = myFragmentView.findViewById(R.id.button6);
         explainAns = myFragmentView.findViewById(R.id.explainText);
 
+        nextbtn.setVisibility(View.INVISIBLE);
+
         questionList = new ArrayList<String>(3);
         answerList = new ArrayList<String>(3);
         explainList = new ArrayList<String>(3);
@@ -264,8 +266,10 @@ public class Lesson4Quiz1Fragment extends Fragment {
     public void showSolution(String buttonClickedName){
         if(correctAns.equals(buttonClickedName)){
             checkAns.setText("Correct! You should aim for "+correctAns);
+            nextbtn.setVisibility(View.VISIBLE);
         }else{
             checkAns.setText("Incorrect. You should aim for "+correctAns);
+            nextbtn.setVisibility(View.VISIBLE);
         }
         explainAns.setText(explainList.get(randomQuestion));
         slowGrowers.setEnabled(false);

@@ -84,7 +84,7 @@ public class Lesson2Quiz2Fragment extends Fragment {
 
         View myFragmentView = inflater.inflate(R.layout.fragment_lesson2_quiz2, container, false);
 
-
+        //final Button next = myFragmentView.findViewById(R.id.nextQ);
         dropArea1 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_1);
         dropArea2 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_2);
         dropArea3 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_3);
@@ -103,6 +103,7 @@ public class Lesson2Quiz2Fragment extends Fragment {
         cashBalArea3 = (ImageView) myFragmentView.findViewById(R.id.cashBalOnArea3);
         creditBalArea3 = (ImageView) myFragmentView.findViewById(R.id.creditBalOnArea3);
 
+        //next.setVisibility(View.INVISIBLE);
 
         dropArea1.setOnDragListener(new View.OnDragListener() {
             @Override
@@ -286,6 +287,7 @@ public class Lesson2Quiz2Fragment extends Fragment {
                         }
                     });
                     submitButton.setEnabled(false);
+                   //next.setVisibility(View.VISIBLE);
                 } else{
                     sol.setText("Incorrect. Please Try Again.");
                 }
