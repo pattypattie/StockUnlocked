@@ -69,12 +69,87 @@
         app:layout_constraintTop_toBottomOf="@id/backMenu"
         android:visibility="gone"/>
 
+    <ImageView
+        android:id="@+id/scene2questionImageView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:srcCompat="@drawable/special_scene2_question"
+        app:layout_constraintTop_toBottomOf="@id/scenarioView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/explainView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scene2questionImageView"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/explainImageView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toBottomOf="@id/explainView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/profileToggleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Company Profile"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/explainImageView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/profileView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileToggleView"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/assetToggleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Your Asset Information"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profileView"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/assetView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/assetToggleView"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"/>
+
     <RadioGroup
         android:id="@+id/radio_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/scenarioView"
+        app:layout_constraintTop_toBottomOf="@id/assetView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:visibility="gone">
@@ -172,19 +247,6 @@
         android:layout_marginBottom="10dp"
         android:visibility="invisible"/>
 
-    <TextView
-        android:id="@+id/explainView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        tools:layout_editor_absoluteX="189dp"
-        tools:layout_editor_absoluteY="212dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/minusView"
-        android:layout_marginBottom="10dp"
-        android:visibility="invisible"/>
-
     <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
@@ -192,23 +254,10 @@
         android:text="Confirm"
         tools:layout_editor_absoluteX="88dp"
         tools:layout_editor_absoluteY="103dp"
-        app:layout_constraintTop_toBottomOf="@id/explainView"
+        app:layout_constraintTop_toBottomOf="@id/minusView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="30dp"
-        android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/portView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        tools:layout_editor_absoluteX="189dp"
-        tools:layout_editor_absoluteY="212dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/next"
-        android:layout_marginBottom="10dp"
         android:visibility="gone"/>
 
     <Button
@@ -231,12 +280,31 @@
         tools:layout_editor_absoluteX="189dp"
         tools:layout_editor_absoluteY="212dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/backMenu"
         android:visibility="gone"/>
 
+    <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/special_congrats"
+        android:id="@+id/congratsView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalTextView"
+        android:visibility="invisible" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/special_comfort"
+        android:id="@+id/comfortView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalTextView"
+        android:visibility="invisible" />
+
     <TextView
-        android:id="@+id/finalPortView"
+        android:id="@+id/finalAssetView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -244,10 +312,61 @@
         tools:layout_editor_absoluteY="212dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/finalTextView"
+        app:layout_constraintTop_toBottomOf="@id/congratsView"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/finalNoticeToggleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="103dp"
+        app:layout_constraintTop_toBottomOf="@id/finalAssetView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/finalNoticeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finalNoticeToggleView"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/finalPerformanceToggleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="103dp"
+        app:layout_constraintTop_toBottomOf="@id/finalNoticeView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/finalPerformanceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        tools:layout_editor_absoluteX="189dp"
+        tools:layout_editor_absoluteY="212dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/finalPerformanceToggleView"
         android:visibility="gone"/>
 
 
 
+
 </android.support.constraint.ConstraintLayout>
+
+
+
+
 </ScrollView>
