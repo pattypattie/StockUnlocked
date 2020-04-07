@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -30,6 +37,7 @@
         android:id="@+id/backMenu"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:background="@drawable/menu"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -82,6 +90,7 @@
         android:textColor="#fff"
         android:padding="8dp"
         android:text="bird"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice1"/>
 
@@ -90,6 +99,7 @@
         android:layout_height="wrap_content"
         android:text="door"
         android:background="#0091EA"
+        android:foreground="?android:attr/selectableItemBackground"
         android:textColor="#fff"
         android:padding="8dp"
         android:layout_marginBottom="24dp"
@@ -100,6 +110,7 @@
         android:layout_height="wrap_content"
         android:text="rock"
         android:background="#0091EA"
+        android:foreground="?android:attr/selectableItemBackground"
         android:textColor="#fff"
         android:padding="8dp"
         android:layout_marginBottom="24dp"
@@ -116,6 +127,7 @@
         android:id="@+id/nextQs"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:background="@drawable/next"
         android:layout_centerHorizontal="true"
       />
@@ -125,3 +137,4 @@
 
 <!--</android.support.constraint.ConstraintLayout>-->
 </LinearLayout>
+</ScrollView>

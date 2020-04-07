@@ -113,7 +113,7 @@ public class Lesson2Quiz1Fragment extends Fragment {
 //                if(Arrays.equals(checkedDocument, correctChecked)){
 //                    confirmbtn.setVisibility(View.INVISIBLE);
 //                }
-                if(chb1.isChecked()&&chb3.isChecked()&&chb4.isChecked()&&chb6.isChecked()){
+                if(chb1.isChecked()&&chb3.isChecked()&&chb4.isChecked()&&chb6.isChecked()&&(chb2.isChecked()==false)&&(chb5.isChecked()==false)){
                     l2q1anstext.setText("Correct! \n The documents required for the broker to open your brokerage account consists of \n1.ID card \n2.Bank Book \n3.House Registration \n4.Bank Statement.");
                     confirmbtn.setVisibility(View.INVISIBLE);
                     //next.setVisibility(View.VISIBLE);
@@ -126,6 +126,14 @@ public class Lesson2Quiz1Fragment extends Fragment {
 
                 } else{
                     l2q1anstext.setText("Incorrect. Try again.");
+                    chb1.setChecked(false);
+                    chb2.setChecked(false);
+                    chb3.setChecked(false);
+                    chb4.setChecked(false);
+                    chb5.setChecked(false);
+                    chb6.setChecked(false);
+
+
                 }
             }
         });

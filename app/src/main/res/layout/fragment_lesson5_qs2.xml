@@ -28,6 +28,7 @@
         android:layout_marginBottom="24dp"
         android:background="#0091EA"
         android:padding="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
         android:text="The market price divided by the earnings per share"
         android:textColor="#fff" />
 
@@ -37,6 +38,7 @@
         android:text="Annual dividends per common share divided by earnings per share"
         android:background="#0091EA"
         android:textColor="#fff"
+        android:foreground="?android:attr/selectableItemBackground"
         android:padding="8dp"
         android:layout_marginBottom="24dp"
         android:id="@+id/choice2"/>
@@ -47,6 +49,7 @@
         android:text="Net income minus dividends divided by earnings per share"
         android:background="#0091EA"
         android:textColor="#fff"
+        android:foreground="?android:attr/selectableItemBackground"
         android:padding="8dp"
         android:layout_marginBottom="14dp"
         android:id="@+id/choice3"/>

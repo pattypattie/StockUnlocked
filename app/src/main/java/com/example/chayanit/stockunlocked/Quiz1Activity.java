@@ -1,6 +1,7 @@
 package com.example.chayanit.stockunlocked;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -86,9 +87,14 @@ public class Quiz1Activity extends AppCompatActivity {
                 if (mButtonChoice1.getText() == mAnswer){
                     mScore = mScore + 1;
                     //updateScore(mScore);
-                    mButtonChoice2.setVisibility(View.GONE);
-                    mButtonChoice3.setVisibility(View.GONE);
+                    //mButtonChoice2.setVisibility(View.GONE);
+                    //mButtonChoice3.setVisibility(View.GONE);
+                    mButtonChoice2.setBackgroundColor(Color.GRAY);
+                    mButtonChoice3.setBackgroundColor(Color.GRAY);
+                    mButtonChoice1.setBackgroundColor(Color.parseColor("#66a103"));
                     mButtonChoice1.setEnabled(false);
+                    mButtonChoice2.setEnabled(false);
+                    mButtonChoice3.setEnabled(false);
 
                     //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
 
@@ -146,8 +152,14 @@ public class Quiz1Activity extends AppCompatActivity {
                 if (mButtonChoice3.getText() == mAnswer){
                     mScore = mScore + 1;
                     //updateScore(mScore);
-                    mButtonChoice1.setVisibility(View.GONE);
-                    mButtonChoice2.setVisibility(View.GONE);
+//                    mButtonChoice1.setVisibility(View.GONE);
+//                    mButtonChoice2.setVisibility(View.GONE);
+//                    mButtonChoice3.setEnabled(false);
+                    mButtonChoice1.setBackgroundColor(Color.GRAY);
+                    mButtonChoice2.setBackgroundColor(Color.GRAY);
+                    mButtonChoice3.setBackgroundColor(Color.parseColor("#66a103"));
+                    mButtonChoice1.setEnabled(false);
+                    mButtonChoice2.setEnabled(false);
                     mButtonChoice3.setEnabled(false);
 
                     //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
@@ -205,9 +217,15 @@ public class Quiz1Activity extends AppCompatActivity {
                 if (mButtonChoice2.getText() == mAnswer){
                     mScore = mScore + 1;
                     //updateScore(mScore);
-                    mButtonChoice1.setVisibility(View.GONE);
-                    mButtonChoice3.setVisibility(View.GONE);
+//                    mButtonChoice1.setVisibility(View.GONE);
+//                    mButtonChoice3.setVisibility(View.GONE);
+//                    mButtonChoice2.setEnabled(false);
+                    mButtonChoice1.setBackgroundColor(Color.GRAY);
+                    mButtonChoice3.setBackgroundColor(Color.GRAY);
+                    mButtonChoice2.setBackgroundColor(Color.parseColor("#66a103"));
+                    mButtonChoice1.setEnabled(false);
                     mButtonChoice2.setEnabled(false);
+                    mButtonChoice3.setEnabled(false);
                     //Toast.makeText(Quiz1Activity.this, "correct", Toast.LENGTH_SHORT).show();
 
                     if (count == 3) {
@@ -356,10 +374,14 @@ public class Quiz1Activity extends AppCompatActivity {
         mButtonChoice2.setEnabled(true);
         mButtonChoice3.setEnabled(true);
         mQuestionNumber = arr[count];
+        mButtonChoice1.setBackgroundColor(Color.parseColor("#0091EA"));
+        mButtonChoice2.setBackgroundColor(Color.parseColor("#0091EA"));
+        mButtonChoice3.setBackgroundColor(Color.parseColor("#0091EA"));
         mQuestionView.setText(mQuestionLibrary.getQuestion(mQuestionNumber));
         mButtonChoice1.setText(mQuestionLibrary.getChoice1(mQuestionNumber));
         mButtonChoice2.setText(mQuestionLibrary.getChoice2(mQuestionNumber));
         mButtonChoice3.setText(mQuestionLibrary.getChoice3(mQuestionNumber));
+
 
         mAnswer = mQuestionLibrary.getCorrectAnswer(mQuestionNumber);
         explain = mQuestionLibrary.ls1getResult(mQuestionNumber);

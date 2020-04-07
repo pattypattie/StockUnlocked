@@ -1,6 +1,7 @@
 package com.example.chayanit.stockunlocked;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -88,9 +89,15 @@ public class Lesson5Qs2Fragment extends Fragment {
         choice1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                choice1.setEnabled(false);
+//                choice2.setVisibility(View.GONE);
+//                choice3.setVisibility(View.GONE);
+                choice2.setBackgroundColor(Color.GRAY);
+                choice2.setEnabled(false);
                 choice1.setEnabled(false);
-                choice2.setVisibility(View.GONE);
-                choice3.setVisibility(View.GONE);
+                choice3.setEnabled(false);
+                choice1.setBackgroundColor(Color.parseColor("#66a103"));
+                choice3.setBackgroundColor(Color.GRAY);
                 result.setText("Correct!"+"\nAnalysts compare P/E ratio of several companies within the same industry to see whether there's good investment opportunity.");
 
             }

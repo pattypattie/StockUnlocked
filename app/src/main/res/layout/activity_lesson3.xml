@@ -21,6 +21,7 @@
         android:scaleType="fitCenter"
         android:background="@drawable/button_style_2"
         app:srcCompat="@drawable/backicon2"
+        android:foreground="?android:attr/selectableItemBackground"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp" />
 
@@ -292,6 +293,7 @@
         android:layout_marginTop="40dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintTop_toBottomOf="@id/textView25"
         />
 
@@ -302,6 +304,7 @@
         android:background="@drawable/take"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintTop_toBottomOf="@id/unlockls4"
         android:layout_marginBottom="20dp"
         />
