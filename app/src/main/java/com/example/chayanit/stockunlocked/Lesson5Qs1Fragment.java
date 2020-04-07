@@ -2,6 +2,7 @@ package com.example.chayanit.stockunlocked;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -89,9 +90,13 @@ public class Lesson5Qs1Fragment extends Fragment {
         choice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                choice1.setVisibility(View.GONE);
+                //choice1.setBackgroundColor(Color.RED);
+                choice1.setBackgroundColor(Color.GRAY);
                 choice2.setEnabled(false);
-                choice3.setVisibility(View.GONE);
+                choice1.setEnabled(false);
+                choice3.setEnabled(false);
+                choice2.setBackgroundColor(Color.parseColor("#66a103"));
+                choice3.setBackgroundColor(Color.GRAY);
                 result.setText("Correct!"+"\nFundamental analysis is the study of the financial data and other qualitative measures of the company and the environment in which they operate to determine the value of a company.");
 
             }

@@ -21,12 +21,13 @@
 
     <Button
         android:id="@+id/submitbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/Ans3"
         android:layout_marginTop="200dp"
-        android:layout_marginLeft="150dp"
-        android:text="Submit" />
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/submit"
+        android:layout_marginLeft="110dp" />
 
     <EditText
         android:id="@+id/ans"

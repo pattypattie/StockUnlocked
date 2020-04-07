@@ -1,6 +1,7 @@
 package com.example.chayanit.stockunlocked;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -93,7 +94,8 @@ public class Lesson3Quiz3Fragment extends Fragment {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice1.getText() == mAnswer){
-                                                      mButtonChoice2.setVisibility(View.GONE);
+                                                      mButtonChoice2.setBackgroundColor(Color.GRAY);
+                                                      mButtonChoice2.setEnabled(false);
                                                       mButtonChoice1.setEnabled(false);
                                                       resultq3.setText("Correct!\n"+mresult);
                                                   } else {
@@ -108,7 +110,8 @@ public class Lesson3Quiz3Fragment extends Fragment {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice2.getText() == mAnswer){
-                                                      mButtonChoice1.setVisibility(View.GONE);
+                                                      mButtonChoice1.setBackgroundColor(Color.GRAY);
+                                                      mButtonChoice1.setEnabled(false);
                                                       mButtonChoice2.setEnabled(false);
                                                       resultq3.setText("Correct!\n"+mresult);
                                                   } else {

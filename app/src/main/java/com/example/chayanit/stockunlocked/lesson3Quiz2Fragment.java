@@ -1,6 +1,7 @@
 package com.example.chayanit.stockunlocked;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -105,9 +106,12 @@ public class lesson3Quiz2Fragment extends Fragment {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice1.getText() == mAnswer){
-                                                      mButtonChoice2.setVisibility(View.GONE);
-                                                      mButtonChoice3.setVisibility(View.GONE);
+                                                      mButtonChoice2.setBackgroundColor(Color.GRAY);
+                                                      mButtonChoice3.setBackgroundColor(Color.GRAY);
+                                                      mButtonChoice1.setBackgroundColor(Color.parseColor("#66a103"));
                                                       mButtonChoice1.setEnabled(false);
+                                                      mButtonChoice2.setEnabled(false);
+                                                      mButtonChoice3.setEnabled(false);
                                                       result.setText("Correct!\n"+explain);
                                                   } else {
                                                       result.setText("Incorrect Try again");
@@ -121,9 +125,15 @@ public class lesson3Quiz2Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if(mButtonChoice2.getText() == mAnswer){
-                    mButtonChoice1.setVisibility(View.GONE);
-                    mButtonChoice3.setVisibility(View.GONE);
+                    mButtonChoice1.setBackgroundColor(Color.GRAY);
+                    mButtonChoice3.setBackgroundColor(Color.GRAY);
+                    mButtonChoice2.setBackgroundColor(Color.parseColor("#66a103"));
+                    mButtonChoice1.setEnabled(false);
                     mButtonChoice2.setEnabled(false);
+                    mButtonChoice3.setEnabled(false);
+//                    mButtonChoice1.setVisibility(View.GONE);
+//                    mButtonChoice3.setVisibility(View.GONE);
+//                    mButtonChoice2.setEnabled(false);
                     result.setText("Correct!\n"+explain);
                 } else {
                     result.setText("Incorrect Try again");
@@ -135,8 +145,14 @@ public class lesson3Quiz2Fragment extends Fragment {
                                               @Override
                                               public void onClick(View view) {
                                                   if(mButtonChoice3.getText() == mAnswer){
-                                                      mButtonChoice2.setVisibility(View.GONE);
-                                                      mButtonChoice1.setVisibility(View.GONE);
+//                                                      mButtonChoice2.setVisibility(View.GONE);
+//                                                      mButtonChoice1.setVisibility(View.GONE);
+//                                                      mButtonChoice3.setEnabled(false);
+                                                      mButtonChoice1.setBackgroundColor(Color.GRAY);
+                                                      mButtonChoice2.setBackgroundColor(Color.GRAY);
+                                                      mButtonChoice3.setBackgroundColor(Color.parseColor("#66a103"));
+                                                      mButtonChoice1.setEnabled(false);
+                                                      mButtonChoice2.setEnabled(false);
                                                       mButtonChoice3.setEnabled(false);
                                                       result.setText("Correct!\n"+explain);
                                                   } else {

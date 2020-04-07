@@ -3,6 +3,7 @@ package com.example.chayanit.stockunlocked;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -126,6 +127,10 @@ public class ExamActivity extends AppCompatActivity {
         nextQbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                b1.setBackgroundColor(Color.parseColor("#0091EA"));
+                b2.setBackgroundColor(Color.parseColor("#0091EA"));
+                b3.setBackgroundColor(Color.parseColor("#0091EA"));
+                b4.setBackgroundColor(Color.parseColor("#0091EA"));
                 if(questionCounter!=10){ //limit to 10 questions per one exam
                     createNewQuestion(level);
                     nextQbtn.setVisibility(View.INVISIBLE);
@@ -175,22 +180,22 @@ public class ExamActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickAnswer(1);
+                clickAnswer(1,b1,b2,b3,b4,2,3,4);
             }});
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickAnswer(2);
+                clickAnswer(2,b2,b1,b3,b4,1,3,4);
             }});
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickAnswer(3);
+                clickAnswer(3,b3,b1,b2,b4,1,2,4);
             }});
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                clickAnswer(4);
+                clickAnswer(4,b4,b1,b2,b3,1,2,3);
             }});
 
     }
@@ -250,16 +255,38 @@ public class ExamActivity extends AppCompatActivity {
 
     }
 
-    public void clickAnswer(int btn_number){
+    public void clickAnswer(int btn_number,Button click,Button a,Button b, Button c,int aa, int bb, int cc){
         if(btn_number==random_answer_order){ //if the answer is correct, increase one level
+            click.setBackgroundColor(Color.parseColor("#66a103"));
+            a.setBackgroundColor(Color.GRAY);
+            b.setBackgroundColor(Color.GRAY);
+            c.setBackgroundColor(Color.GRAY);
             testScore+=level; //as level gets higher, the score is higher
             level++;
             checkCorrectText.setText("Correct!");
+
             if(level>4){
                 level = 4; //the highest level is 4
             }
         }
         else{ //if the answer is incorrect, decrease one level
+            click.setBackgroundColor(Color.parseColor("#B53737"));
+            if (aa == random_answer_order){
+                a.setBackgroundColor(Color.parseColor("#66a103"));
+            } else {
+                a.setBackgroundColor(Color.GRAY);
+            }
+            if (bb == random_answer_order){
+                b.setBackgroundColor(Color.parseColor("#66a103"));
+            } else {
+                b.setBackgroundColor(Color.GRAY);
+            }
+            if (cc == random_answer_order){
+                c.setBackgroundColor(Color.parseColor("#66a103"));
+            } else {
+                c.setBackgroundColor(Color.GRAY);
+            }
+
             level--;
             checkCorrectText.setText("Incorrect");
             if(level<1){

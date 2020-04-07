@@ -22,7 +22,7 @@
         android:scaleType="fitCenter"
         app:srcCompat="@drawable/backicon2"
         android:background="@drawable/button_style_2"
-
+        android:foreground="?android:attr/selectableItemBackground"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -250,6 +250,7 @@ Today we have multinational corporations that handle millions and billions of do
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ls1sum"
+        android:foreground="?android:attr/selectableItemBackground"
         />
 
     <Button
@@ -261,6 +262,7 @@ Today we have multinational corporations that handle millions and billions of do
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/unlockls2"
         android:layout_marginBottom="20dp"
+        android:foreground="?android:attr/selectableItemBackground"
         />
 
 

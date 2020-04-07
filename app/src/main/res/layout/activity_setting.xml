@@ -12,6 +12,7 @@
         android:layout_height="58dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
+        android:foreground="?android:attr/selectableItemBackground"
         android:background="@drawable/button_style_2"
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
@@ -22,8 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reset"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_style_4"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="53dp"
+        android:foreground="?android:attr/selectableItemBackground"
         app:layout_constraintTop_toBottomOf="@id/settingback"/>
 </android.support.constraint.ConstraintLayout>
