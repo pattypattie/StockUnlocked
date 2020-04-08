@@ -85,7 +85,7 @@ public class Lesson6Quiz2Fragment extends Fragment {
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (buybtn.isChecked()) {
+                if (sellbtn.isChecked()) {
                     ansText.setText("Correct!");
                 }else{
                     ansText.setText("Incorrect.");
@@ -94,8 +94,10 @@ public class Lesson6Quiz2Fragment extends Fragment {
                 ansImg.setVisibility(View.VISIBLE);
                 ansExplain.setVisibility(View.VISIBLE);
 
-                String texttext = "&emsp In the question, the PSAR graph is above the price graph, and is intersecting the price graph at the top, which indicates that the stock price will increase in the future. Thus, <b>BUYING</b> at this point which is " +
-                        "before the stock price gets higher is the best solution to get a low price for the stock. The graph below reveals what happens later after the intersection occurs.";
+                String texttext = "&emsp In the question, the chart is rising to the resistance level. Normally, a resistance level prevents the price from going higher, but it is still possible for the graph to break through. However, " +
+                        "it is shown in the graph that the price is dropping a little once it hits the resistance level. This indicates that the price tends to respect the resistance level and is likely to continue falling below the level to remain " +
+                        "within the same support and resistance area. Thus, <b>SELLING</b> at this point " +
+                        "is the best solution to get a high price for the stock. The graph below reveals what happens later.";
                 ansExplain.setText(Html.fromHtml(texttext));
 
                 submitBtn.setEnabled(false);

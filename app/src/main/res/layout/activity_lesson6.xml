@@ -61,7 +61,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:text="      Technical Analysis is the analysis of historical or past statistical data of the stock price or trading behaviour in the market to discover patterns in order to
-predict future price of the stock. This method is beneficial for short-term trading where there are no extreme news related to the business, and is based on the following assumptions :
+predict future price of the stock and identify trading opportunities. The 2 main information used for technical analysis is price and volume. This method is beneficial for short-term trading where there are no extreme news related to the business, and is based on the following assumptions :
 \n\n    - Markets efficiently show the values representing all the factors that influence a stock’s price.
 \n   - Stock prices follows trends, meaning every move in the stock price will indicate the next move.
 \n   - Trends are repetitive over time.
@@ -134,7 +134,7 @@ predict future price of the stock. This method is beneficial for short-term trad
 
     <TextView
         android:id="@+id/textView38"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Support and Resistance"
         tools:layout_editor_absoluteX="142dp"
@@ -145,16 +145,9 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:fontFamily="monospace"
         app:layout_constraintTop_toTopOf="@id/imageView31"
         app:layout_constraintBottom_toBottomOf="@id/imageView31"
-        app:layout_constraintLeft_toRightOf="@id/imageView30"/>
-
-    <ImageView
-        android:id="@+id/imageView52"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView38"
-        app:srcCompat="@drawable/support_and_resistance" />
+        app:layout_constraintLeft_toRightOf="@id/imageView30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageView30"/>
 
     <TextView
         android:id="@+id/textView39"
@@ -163,13 +156,24 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:text="      By linking the swing highs and swing lows in the charts, the support and resistance zone can be determined.  Support levels are price levels that tend to prevent prices from falling any further before rising back up again. Resistance levels are ceilings that will eventually cause prices to fall back down again.
-        \n      Buying is recommended  when the price is in the support level areas, and selling is recommended when the price is at the resistance level areas.\n"
+        \n      In normal situation, buying is recommended  when the price is in the support level areas, and selling is recommended when the price is at the resistance level areas.
+        \n      A breakout happens once the price rises above a resistance area, or falls below a support area. Normally, the price will start trending in the breakout direction.
+        \n      A resistance level may flip into a new support level if the price continues to rise above it. Likewise, a support level may flip into a new resistance level if the price continues to fall below it."
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="234dp"
         android:textSize="20dp"
         android:textColor="#000"
-        app:layout_constraintTop_toBottomOf="@id/imageView52"
+        app:layout_constraintTop_toBottomOf="@id/textView38"
         app:layout_constraintLeft_toLeftOf="@id/imageView30"/>
+
+    <ImageView
+        android:id="@+id/imageView52"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView39"
+        app:srcCompat="@drawable/support_and_resistance" />
 
     <ImageView
         android:id="@+id/imageView32"
@@ -534,7 +538,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="30dp"
         app:layout_constraintLeft_toLeftOf="@id/lesson6back"
         app:layout_constraintRight_toRightOf="@id/lesson6back"
-        app:layout_constraintTop_toBottomOf="@id/textView39"
+        app:layout_constraintTop_toBottomOf="@id/imageView52"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -667,7 +671,8 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_height="20dp"
         android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView44"
-        app:layout_constraintTop_toBottomOf="@id/imageView57"
+        app:layout_constraintTop_toTopOf="@id/textView48"
+        app:layout_constraintBottom_toBottomOf="@id/textView48"
         app:srcCompat="@drawable/bulletpoint" />
 
     <TextView
@@ -682,8 +687,7 @@ predict future price of the stock. This method is beneficial for short-term trad
         android:layout_marginBottom="10dp"
         tools:layout_editor_absoluteX="142dp"
         tools:layout_editor_absoluteY="369dp"
-        app:layout_constraintTop_toTopOf="@id/imageView36"
-        app:layout_constraintBottom_toBottomOf="@id/imageView36"
+        app:layout_constraintTop_toBottomOf="@id/imageView57"
         app:layout_constraintLeft_toRightOf="@id/imageView36"/>
 
     <TextView

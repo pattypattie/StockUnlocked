@@ -64,7 +64,7 @@ public class Lesson2Activity extends AppCompatActivity {
             public void onClick(View view) {
                 accountInfo.setText("Cash Account");
                 accountInfoDetail.setText("- Requires a cash/stock collateral deposit of 20% of your approved credit limit\n" +
-                        "- cash will be settled in the 2 business day (T+2) after the trading date (T)");
+                        "- Cash will be settled in the 2 business day (T+2) after the trading date (T)");
             }
         });
 
