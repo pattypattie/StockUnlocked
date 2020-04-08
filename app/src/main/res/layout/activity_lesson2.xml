@@ -20,7 +20,7 @@
         android:layout_height="58dp"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        android:background="@drawable/button_style_2"
+        android:background="@drawable/button_style_5"
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp"

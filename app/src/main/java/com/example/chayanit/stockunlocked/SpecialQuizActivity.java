@@ -108,7 +108,7 @@ public class SpecialQuizActivity extends AppCompatActivity {
         congratsImg = findViewById(R.id.congratsView);
         comfortImg = findViewById(R.id.comfortView);
 
-        assetText.setText("\n--Your current asset-- \nYou have ฿"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyHospital company.");
+        assetText.setText("\n -- Your current asset -- \nYou have ฿"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyHospital company.");
 
         letsgobtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,7 +118,8 @@ public class SpecialQuizActivity extends AppCompatActivity {
                 instructionText.setVisibility(View.GONE);
                 scenarioText.setVisibility(View.VISIBLE);
                 submitbtn.setVisibility(View.VISIBLE);
-                nextbtn.setVisibility(View.VISIBLE);
+                nextbtn.setVisibility(View.INVISIBLE);
+                nextbtn.setEnabled(false);
                 changeScene();
                 changeStatus();
             }
@@ -129,6 +130,8 @@ public class SpecialQuizActivity extends AppCompatActivity {
             public void onClick(View view) {
                 explainText.setVisibility(View.VISIBLE);
                 submitbtn.setEnabled(false);
+                submitbtn.setVisibility(View.INVISIBLE);
+                nextbtn.setVisibility(View.VISIBLE);
                 nextbtn.setEnabled(true);
                 plusbtn.setVisibility(View.GONE);
                 minusbtn.setVisibility(View.GONE);
@@ -146,10 +149,10 @@ public class SpecialQuizActivity extends AppCompatActivity {
                 if(!explain_img_array[currentScene].equals("")){
                     explainImage.setVisibility(View.VISIBLE);
                 }
-                profileText.setText("\n--HappyHospital Company Profile--\nMarket : SET\nIndustry : Services\nSector : Health Care Services" +
+                profileText.setText("\n -- HappyHospital Company Profile --\nMarket : SET\nIndustry : Services\nSector : Health Care Services" +
                         "\nCompany Description : The Company operates business as a Group providing health care service for both cash patients and social security scheme" +
                         "\nIncome from Social Security patient : 33% of total income\nDividend Yield : 1.93%\nCurrent share unit price : ฿"+unitPrice[currentScene+1]);
-                assetText.setText("\n--Your current asset-- \nYou have ฿"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyHospital company.");
+                assetText.setText("\n -- Your current asset -- \nYou have ฿"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyHospital company.");
             }
         });
 
@@ -171,11 +174,11 @@ public class SpecialQuizActivity extends AppCompatActivity {
                     if(performanceBaht>0){
                         performanceStatus = "profit";
                         congratsImg.setVisibility(View.VISIBLE);
-                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+performanceBaht+", or "+performancePercent+"%\n\nCongratulations!!! You profit from this game!!! Great job!!!");
+                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+Math.round(performanceBaht)+", or about "+Math.round(performancePercent)+"%\n\nCongratulations!!! You profit from this game!!! Great job!!!");
                     } else if(performanceBaht<0){
                         performanceStatus = "loss";
                         comfortImg.setVisibility(View.VISIBLE);
-                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+performanceBaht+", or "+performancePercent+"%\n\nYou did not profit from this game. It's alright, you can try harder next time.");
+                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+Math.round(performanceBaht)+", or about "+Math.round(performancePercent)+"%\n\nYou did not profit from this game. It's alright, you can try harder next time.");
                     } else{
                         performanceStatus = "no loss or profit";
                         comfortImg.setVisibility(View.VISIBLE);
@@ -184,13 +187,13 @@ public class SpecialQuizActivity extends AppCompatActivity {
                     profileText.setVisibility(View.GONE);
                     profileTogglebtn.setVisibility(View.GONE);
                     finalText.setVisibility(View.VISIBLE);
-                    finalAssetText.setText("\n--Your current asset-- \nYou have ฿"+currentCashHave+" in cash, and "+currentStockHave+" stocks of HappyHospital company.");
+                    finalAssetText.setText("\n -- Your current asset -- \nYou have ฿"+Math.round(currentCashHave)+" in cash, and "+currentStockHave+" stocks of HappyHospital company.");
                     finalAssetText.setVisibility(View.VISIBLE);
                     assetText.setVisibility(View.GONE);
                     assetTogglebtn.setVisibility(View.GONE);
                     finalNoticeTogglebtn.setText("* View Final Notice *");
                     finalNoticeTogglebtn.setVisibility(View.VISIBLE);
-                    finalNoticeText.setText("\n---Final Note---" +
+                    finalNoticeText.setText("\n --- Final Note ---" +
                             "\n- HappyHospital Company later declares Ex-dividend date to be on 17 Mar 2020, and the record date is one 18 Mar 2020." +
                             "This means if you own the stock of HappyHospital before the ex-dividend date, you will get a dividend." +
                             "\n- In reality, you should consider fundamental, sentiment, and technical factors altogether. Considering only one type of analysis is generally not adequate for stock price prediction." +
@@ -216,11 +219,11 @@ public class SpecialQuizActivity extends AppCompatActivity {
                 if(selectedActionText.equals("sell")&&!(currentAmountSelected+100>currentStockHave)){ //you can only sell not more than the amount of stock you have
                     currentAmountSelected+=100;
                     currentCashSelected = currentAmountSelected*unitPrice[currentScene];
-                    actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive ฿"+currentCashSelected);
+                    actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive ฿"+Math.round(currentCashSelected));
                 }else if(selectedActionText.equals("buy")&&!((currentAmountSelected+100)*unitPrice[currentScene]>currentCashHave)){ //you can only buy not more than the amount of money you have
                     currentAmountSelected+=100;
                     currentCashSelected = currentAmountSelected*unitPrice[currentScene];
-                    actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay ฿"+currentCashSelected);
+                    actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay ฿"+Math.round(currentCashSelected));
                 }
                 amountSelectText.setText(""+currentAmountSelected);
             }
@@ -234,11 +237,11 @@ public class SpecialQuizActivity extends AppCompatActivity {
                     currentCashSelected = currentAmountSelected*unitPrice[currentScene];
                     amountSelectText.setText(""+currentAmountSelected);
                     if(selectedActionText.equals("sell")){
-                        actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive ฿"+currentCashSelected);
+                        actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and receive ฿"+Math.round(currentCashSelected));
 
                     }else if(selectedActionText.equals("buy")){
                         currentCashSelected = currentAmountSelected*unitPrice[currentScene];
-                        actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay ฿"+currentCashSelected);
+                        actionText.setText("You want to "+selectedActionText+" "+currentAmountSelected+" stocks and pay ฿"+Math.round(currentCashSelected));
                     }
                 }
             }
@@ -307,13 +310,15 @@ public class SpecialQuizActivity extends AppCompatActivity {
 
     public void changeScene(){
         scenarioText.setText(scenario[currentScene]);
-        profileText.setText("\n--HappyHospital Company Profile--\nMarket : SET\nIndustry : Services\nSector : Health Care Services" +
+        profileText.setText("\n -- HappyHospital Company Profile --\nMarket : SET\nIndustry : Services\nSector : Health Care Services" +
                 "\nCompany Description : The Company operates business as a Group providing health care service for both cash patients and social security scheme" +
                 "\nIncome from Social Security patient : 33% of total income\nDividend Yield : 1.93%\nCurrent share unit price : ฿"+unitPrice[currentScene]);
         explainText.setText("Explanation : "+explanation[currentScene]);
         explainText.setVisibility(View.GONE);
         nextbtn.setEnabled(false);
+        nextbtn.setVisibility(View.INVISIBLE);
         submitbtn.setEnabled(true);
+        submitbtn.setVisibility(View.VISIBLE);
         plusbtn.setVisibility(View.VISIBLE);
         minusbtn.setVisibility(View.VISIBLE);
         amountSelectText.setVisibility(View.VISIBLE);

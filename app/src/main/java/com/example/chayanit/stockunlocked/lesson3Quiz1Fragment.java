@@ -98,6 +98,10 @@ public class lesson3Quiz1Fragment extends Fragment {
                     tv.setVisibility(View.GONE);
                     numClick = 0;
                 } else {
+                    int image_resid = getResources().getIdentifier(img, "drawable", getActivity().getPackageName());
+                    bt.setBackgroundResource(image_resid);
+                    int imgpre = getResources().getIdentifier(img_pre,"drawable",getActivity().getPackageName());
+                    bt_pre.setBackgroundResource(imgpre);
                     numClick = 0;
                     Toast.makeText(getActivity(), "Try Again", Toast.LENGTH_SHORT).show();
                 }
@@ -155,6 +159,7 @@ public class lesson3Quiz1Fragment extends Fragment {
 
 
         final String img = mQuestionLibrary.ls3q1[arr[0]];
+
         int image_resid = getResources().getIdentifier(img, "drawable", getActivity().getPackageName());
         button1.setBackgroundResource(image_resid);
         setText(img,bt1);
@@ -188,7 +193,12 @@ public class lesson3Quiz1Fragment extends Fragment {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                button1.setBackgroundColor(Color.GREEN);
+//                button1.setBackgroundResource(image_resid);
 //                buttonEffect(button1);
+                String imgbg = img+"_withbg";
+                int imagebg = getResources().getIdentifier(imgbg, "drawable", getActivity().getPackageName());
+                button1.setBackgroundResource(imagebg);
                 numClick++;
                 checkCount(img,button1,bt1);
             }
@@ -196,6 +206,9 @@ public class lesson3Quiz1Fragment extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String imgbg2 = img2+"_withbg";
+                int imagebg2 = getResources().getIdentifier(imgbg2, "drawable", getActivity().getPackageName());
+                button2.setBackgroundResource(imagebg2);
                 numClick++;
                 checkCount(img2,button2,bt2);
             }
@@ -203,6 +216,9 @@ public class lesson3Quiz1Fragment extends Fragment {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String imgbg3 = img3+"_withbg";
+                int imagebg3 = getResources().getIdentifier(imgbg3, "drawable", getActivity().getPackageName());
+                button3.setBackgroundResource(imagebg3);
                 numClick++;
                 checkCount(img3,button3,bt3);
             }
@@ -210,6 +226,9 @@ public class lesson3Quiz1Fragment extends Fragment {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String imgbg4 = img4+"_withbg";
+                int imagebg4 = getResources().getIdentifier(imgbg4, "drawable", getActivity().getPackageName());
+                button4.setBackgroundResource(imagebg4);
                 numClick++;
                 checkCount(img4,button4,bt4);
             }
@@ -217,6 +236,9 @@ public class lesson3Quiz1Fragment extends Fragment {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String imgbg5 = img5+"_withbg";
+                int imagebg5 = getResources().getIdentifier(imgbg5, "drawable", getActivity().getPackageName());
+                button5.setBackgroundResource(imagebg5);
                 numClick++;
                 checkCount(img5,button5,bt5);
             }
@@ -224,6 +246,9 @@ public class lesson3Quiz1Fragment extends Fragment {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String imgbg6 = img6+"_withbg";
+                int imagebg6 = getResources().getIdentifier(imgbg6, "drawable", getActivity().getPackageName());
+                button6.setBackgroundResource(imagebg6);
                 numClick++;
                 checkCount(img6,button6,bt6);
             }
@@ -231,6 +256,7 @@ public class lesson3Quiz1Fragment extends Fragment {
 
 
         return myFragmentView;
+
 
 //        View myFragmentView = inflater.inflate(R.layout.fragment_lesson3_quiz1, container, false);
 //        final TextView hi = myFragmentView.findViewById(R.id.hello);

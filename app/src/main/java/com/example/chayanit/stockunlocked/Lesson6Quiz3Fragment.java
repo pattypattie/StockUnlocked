@@ -350,6 +350,10 @@ public class Lesson6Quiz3Fragment extends Fragment {
                     submitbtn.setEnabled(false);
                 } else{
                     checkAnsText.setText("Incorrect. Please Try Again.");
+                    selAns1.setText("");
+                    selAns2.setText("");
+                    selAns3.setText("");
+
                 }
             }
         });
