@@ -48,10 +48,9 @@
         tools:layout_editor_absoluteY="199dp"
         android:textColor="#000"
         android:textSize="18dp"
-        app:layout_constraintLeft_toRightOf="@id/lesson6back"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/lesson6back"
-        app:layout_constraintTop_toTopOf="@id/lesson6back"
+        app:layout_constraintTop_toBottomOf="@id/lesson6back"
         />
 
     <TextView
@@ -1029,7 +1028,7 @@ predict future price of the stock and identify trading opportunities. The 2 main
         android:id="@+id/textView81"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="\n Here are some more definitions that you need to know"
+        android:text="\n These are just some examples of technical analysis techniques and indicators that you should know in the beginning. You may study more about other techniques and patterns once you have mastered the basics, but you should be able to understand the main idea by now. Lastly, here are some more definitions that you need to know.\n"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="345dp"
         android:textSize="20dp"
