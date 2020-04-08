@@ -50,7 +50,7 @@
         android:id="@+id/submitbtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/Ans3"
+        android:layout_below="@+id/result"
         android:layout_marginTop="280dp"
         android:foreground="?android:attr/selectableItemBackground"
         android:background="@drawable/submit"
@@ -62,7 +62,9 @@
         android:textSize="20sp"
         android:layout_marginTop="340dp"
         android:layout_marginLeft="30dp"
-        android:id="@+id/result"/>
+        android:id="@+id/result"
+        android:layout_below="@+id/Ans3"
+        />
 
 
 </FrameLayout>

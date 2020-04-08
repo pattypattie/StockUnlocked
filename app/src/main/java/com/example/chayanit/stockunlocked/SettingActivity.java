@@ -8,13 +8,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class SettingActivity extends AppCompatActivity {
+
+    TextView resetText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+
+        resetText = findViewById(R.id.resetmsg);
 
         ImageButton setting_back = findViewById(R.id.settingback);
         setting_back.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +37,7 @@ public class SettingActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = shared.edit();
                 editor.clear();
                 editor.commit();
+                resetText.setVisibility(View.VISIBLE);
 
             }
         });
