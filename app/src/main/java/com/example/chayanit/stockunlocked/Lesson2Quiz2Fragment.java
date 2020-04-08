@@ -290,6 +290,7 @@ public class Lesson2Quiz2Fragment extends Fragment {
                    //next.setVisibility(View.VISIBLE);
                 } else{
                     sol.setText("Incorrect. Please Try Again.");
+
                 }
             }
         });
