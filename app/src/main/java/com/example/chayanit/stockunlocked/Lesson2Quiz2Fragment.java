@@ -290,6 +290,15 @@ public class Lesson2Quiz2Fragment extends Fragment {
                    //next.setVisibility(View.VISIBLE);
                 } else{
                     sol.setText("Incorrect. Please Try Again.");
+                    cashAccArea1.setVisibility(View.GONE);
+                    cashAccArea2.setVisibility(View.GONE);
+                    cashAccArea3.setVisibility(View.GONE);
+                    creditBalArea1.setVisibility(View.GONE);
+                    creditBalArea2.setVisibility(View.GONE);
+                    creditBalArea3.setVisibility(View.GONE);
+                    cashBalArea1.setVisibility(View.GONE);
+                    cashBalArea2.setVisibility(View.GONE);
+                    cashBalArea3.setVisibility(View.GONE);
                 }
             }
         });
