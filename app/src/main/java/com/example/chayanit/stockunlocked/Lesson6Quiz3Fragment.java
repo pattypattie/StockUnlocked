@@ -107,10 +107,10 @@ public class Lesson6Quiz3Fragment extends Fragment {
 
         if(randomTrend==0){
             uptrendImg.setVisibility(View.VISIBLE);
-            explainAnsText.setText("During uptrend, the demand of the share is high, so the stock price will keep increasing. The circled points, which are the high points, will keep rising, thus early buying is recommended.");
+            explainAnsText.setText("During uptrend, the demand of the share is high, so the stock price will keep increasing. The circled points, which are the low points, will keep rising, so early buying is recommended.");
         } else {
             downtrendImg.setVisibility(View.VISIBLE);
-            explainAnsText.setText("During downtrend, there is an oversupply for the share, so the stock price will keep decreasing. The circled points, which are the low points, will keep falling, thus early selling is recommended.");
+            explainAnsText.setText("During downtrend, there is an oversupply for the share, so the stock price will keep decreasing. The circled points, which are the high points, will keep falling, so early selling is recommended.");
 
         }
 
