@@ -38,7 +38,7 @@ public class SpecialQuizActivity extends AppCompatActivity {
             "\n\nInvestment Period : 13 Nov 19 - 29 Nov 19\n"};
     String[] explanation = {"With this news, investors are hoping that the income of the hospital will increase since the hospital accepts social security patients, and 33% of the hospital's income is from these type of patients." +
             "If the income of the hospital increases, it is expected that the profit will increase as well. Thus, investors are starting to buy the company's shares. Once there is a high demand for the stock, its price will increase accordingly." +
-            "This is an example of sentiment analysis. Moreover, an analysis of on the news itself (an increased DRG rate will result in more profit to the company which leads to the increased of stock price) can also suggest buying the stock as well." +
+            " This is an example of sentiment analysis. Moreover, an analysis of on the news itself (an increased DRG rate will result in more profit to the company which leads to the increased of stock price) can also suggest buying the stock as well." +
             "\n\nThe current share unit price has increased to ฿16.8\n\nThe picture below shows the line chart of the stock price from 15 Oct - 7 Nov.\n",
             "It can be seen that the price from 24/10 until 6/11 is during an uptrend period. The PSAR indicator, which is shown as dotted lines, confirms this trend by positioning below the candlestick chart that is going upwards." +
             " However, on 6/11, the PSAR graph almost reached the candlestick chart from the bottom. This can be predicted that the PSAR might flip soon, and position above the candlestick chart instead." +

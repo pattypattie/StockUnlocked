@@ -178,8 +178,9 @@
             tools:layout_editor_absoluteY="393dp"
             android:background="@drawable/button_style_6"
             app:layout_constraintTop_toBottomOf="@id/ans_area_3"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toRightOf="@id/moredemandChoice"
+            android:layout_marginLeft="5dp"/>
 
         <Button
             android:id="@+id/moredemandChoice"
@@ -190,8 +191,10 @@
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="393dp"
             android:background="@drawable/button_style_6"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@id/ans_area_3"
-            app:layout_constraintRight_toLeftOf="@id/buyChoice"/>
+            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"/>
 
         <Button
             android:id="@+id/sellChoice"
@@ -202,8 +205,10 @@
             android:text="Sell"
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="393dp"
-            app:layout_constraintTop_toBottomOf="@id/ans_area_3"
-            app:layout_constraintLeft_toRightOf="@id/buyChoice"/>
+            app:layout_constraintTop_toBottomOf="@id/buyChoice"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="5dp"/>
 
         <Button
             android:id="@+id/moreSupplyChoice"
@@ -215,8 +220,9 @@
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="393dp"
             app:layout_constraintTop_toBottomOf="@id/sellChoice"
+            android:layout_marginTop="5dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            android:layout_marginLeft="5dp"/>
 
         <Button
             android:id="@+id/uptrendChoice"
@@ -227,8 +233,10 @@
             android:text="Uptrend"
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="393dp"
-            app:layout_constraintTop_toBottomOf="@id/sellChoice"
-            app:layout_constraintRight_toLeftOf="@id/moreSupplyChoice"/>
+            app:layout_constraintTop_toBottomOf="@id/buyChoice"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toRightOf="@id/sellChoice"
+            android:layout_marginLeft="5dp"/>
 
         <Button
             android:id="@+id/downtrendChoice"
@@ -240,7 +248,9 @@
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="393dp"
             app:layout_constraintTop_toBottomOf="@id/sellChoice"
-            app:layout_constraintLeft_toRightOf="@id/moreSupplyChoice"/>
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toRightOf="@id/moreSupplyChoice"
+            android:layout_marginLeft="5dp"/>
 
         <Button
             android:id="@+id/submitButton"
@@ -250,6 +260,7 @@
             android:foreground="?android:attr/selectableItemBackground"
             tools:layout_editor_absoluteX="139dp"
             tools:layout_editor_absoluteY="393dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintTop_toBottomOf="@id/downtrendChoice"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"/>
@@ -275,7 +286,7 @@
             app:layout_constraintTop_toBottomOf="@id/checkAns"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            android:visibility="invisible"/>
+            android:visibility="gone"/>
 
 
     </android.support.constraint.ConstraintLayout>

@@ -17,8 +17,8 @@ import java.util.Arrays;
 
 public class ExamActivity extends AppCompatActivity {
 
-    public Button b1, b2, b3, b4, nextQbtn;
-    public TextView questionText, scoreText, checkCorrectText, explainText;
+    public Button b1, b2, b3, b4, nextQbtn, letsgobtn;
+    public TextView questionText, scoreText, checkCorrectText, explainText, instructionexamText;
     public ImageView questionImage;
     public int random_question = 0;
     public int random_answer_order = 0;
@@ -118,11 +118,26 @@ public class ExamActivity extends AppCompatActivity {
         explainText = findViewById(R.id.examExplainText);
         nextQbtn = findViewById(R.id.nextExam);
         checkCorrectText = findViewById(R.id.correctText);
+        instructionexamText  = findViewById(R.id.instructionexam);
+        letsgobtn = findViewById(R.id.letsgo);
 
         btn_none.setVisibility(View.INVISIBLE);
         nextQbtn.setVisibility(View.INVISIBLE);
 
         createNewQuestion(1);
+
+        letsgobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                b1.setVisibility(View.VISIBLE);
+                b2.setVisibility(View.VISIBLE);
+                b3.setVisibility(View.VISIBLE);
+                b4.setVisibility(View.VISIBLE);
+                questionText.setVisibility(View.VISIBLE);
+                instructionexamText.setVisibility(View.GONE);
+                letsgobtn.setVisibility(View.GONE);
+            }
+        });
 
         nextQbtn.setOnClickListener(new View.OnClickListener() {
             @Override
