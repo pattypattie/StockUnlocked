@@ -76,8 +76,7 @@
         app:layout_constraintTop_toBottomOf="@id/textView18"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="30dp"
         />
 
     <ImageView
@@ -336,6 +335,7 @@ If you put money in an Asset Play company that invests in profitable businesses 
         tools:layout_editor_absoluteY="101dp"
         android:textColor="#000"
         android:textSize="20dp"
+        android:layout_marginLeft="20dp"
         app:layout_constraintLeft_toLeftOf="@id/textView25"
         app:layout_constraintTop_toBottomOf="@id/imageView27"/>
 
