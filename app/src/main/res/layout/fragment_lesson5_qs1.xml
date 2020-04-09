@@ -7,7 +7,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.example.chayanit.stockunlocked.Lesson5Qs1Fragment">
+    tools:context="com.npappdev.chayanit.stockunlocked.Lesson5Qs1Fragment">
 
     <!--<TextView-->
         <!--android:layout_width="match_parent"-->

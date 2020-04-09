@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chayanit.stockunlocked.LessonActivity">
+    tools:context="com.npappdev.chayanit.stockunlocked.LessonActivity">
 
     <ImageButton
         android:id="@+id/lessonback"

@@ -7,7 +7,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     android:orientation="vertical"
-    tools:context="com.example.chayanit.stockunlocked.Lesson5Qs2Fragment">
+    tools:context="com.npappdev.chayanit.stockunlocked.Lesson5Qs2Fragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

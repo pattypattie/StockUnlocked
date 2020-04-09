@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chayanit.stockunlocked.QuizResultActivity">
+    tools:context="com.npappdev.chayanit.stockunlocked.QuizResultActivity">
 
     <TextView
         android:id="@+id/textView33"

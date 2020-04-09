@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context="com.example.chayanit.stockunlocked.TitleActivity">
+    tools:context="com.npappdev.chayanit.stockunlocked.TitleActivity">
 
     <!--<ImageView-->
         <!--android:id="@+id/imageView2"-->

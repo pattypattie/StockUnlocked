@@ -11,7 +11,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.chayanit.stockunlocked.Lesson6Activity">
+    tools:context="com.npappdev.chayanit.stockunlocked.Lesson6Activity">
 
     <ImageButton
         android:id="@+id/lesson6back"

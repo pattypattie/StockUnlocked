@@ -17,7 +17,7 @@
     android:paddingTop="0dp"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context="com.example.chayanit.stockunlocked.Quiz1Activity">
+    tools:context="com.npappdev.chayanit.stockunlocked.Quiz1Activity">
 <!--<android.support.constraint.ConstraintLayout -->
 
 

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.example.chayanit.stockunlocked.Lesson4Quiz1Fragment">
+    tools:context="com.npappdev.chayanit.stockunlocked.Lesson4Quiz1Fragment">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
