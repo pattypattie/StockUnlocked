@@ -77,8 +77,8 @@ public class SpecialQuizActivity extends AppCompatActivity {
         nameText.setText(Html.fromHtml("<h1>How much can you get?</h1>"));
         instructionText = findViewById(R.id.instructionspecial);
         instructionText.setText(Html.fromHtml("&emsp Welcome to the trading simulation game!" +
-                "Now you have <b>฿1000</b> and you have a starting amount of stock of <b>1000 stocks</b> of HappyHospital company which you bought at Friday 18 Oct at unit price of ฿15.9." +
-                "You will be given some scenarios, and you have to choose your action. Once you have selected an action, you will have to maintain the same portfolio status until the end of the given investment period." +
+                " Now you have <b>฿10000</b> and you have a starting amount of stock of <b>1000 stocks</b> of HappyHospital company which you bought at Friday 18 Oct at unit price of ฿15.9." +
+                " You will be given some scenarios, and you have to choose your action. Once you have selected an action, you will have to maintain the same portfolio status until the end of the given investment period." +
                 "<br><br>Let's see how much profit you can gain at the end :) <br>"));
         letsgobtn = findViewById(R.id.letsgo);
         scenarioText = findViewById(R.id.scenarioView);
@@ -170,14 +170,15 @@ public class SpecialQuizActivity extends AppCompatActivity {
                     explainImage.setVisibility(View.GONE);
                     performanceBaht = (currentCashHave+(currentStockHave*unitPrice[3]))-(10000+(1000*15.9));
                     performancePercent = (performanceBaht/(10000+(1000*15.9)))*100;
+                    double roundPercent = (double) Math.round(performancePercent*100)/100;
                     if(performanceBaht>0){
                         performanceStatus = "profit";
                         congratsImg.setVisibility(View.VISIBLE);
-                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+Math.round(performanceBaht)+", or about "+Math.round(performancePercent)+"%\n\nCongratulations!!! You profit from this game!!! Great job!!!");
+                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+performanceBaht+", or approximately "+roundPercent+"%\n\nCongratulations!!! You profit from this game!!! Great job!!!");
                     } else if(performanceBaht<0){
                         performanceStatus = "loss";
                         comfortImg.setVisibility(View.VISIBLE);
-                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+Math.round(performanceBaht)+", or about "+Math.round(performancePercent)+"%\n\nYou did not profit from this game. It's alright, you can try harder next time.");
+                        finalText.setText("You have reached the end of the game. \nYour performance : "+performanceStatus+" ฿"+performanceBaht+", or approximately "+roundPercent+"%\n\nYou did not profit from this game. It's alright, you can try harder next time.");
                     } else{
                         performanceStatus = "no loss or profit";
                         comfortImg.setVisibility(View.VISIBLE);

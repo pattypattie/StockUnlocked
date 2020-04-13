@@ -17,7 +17,7 @@ public class ExamResultActivity extends AppCompatActivity {
         TextView scoreReport = findViewById(R.id.textView33);
         Intent intent = getIntent();
         String finalScore = intent.getStringExtra("finalScore");
-        scoreReport.setText("Your score is : "+finalScore);
+        scoreReport.setText("Your score is : "+finalScore +"/34");
 
         Button examResult_back = findViewById(R.id.resultBack);
         examResult_back.setOnClickListener(new View.OnClickListener() {

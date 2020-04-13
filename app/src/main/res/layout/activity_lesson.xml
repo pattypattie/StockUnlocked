@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,6 +23,8 @@
         app:srcCompat="@drawable/backicon2"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="3dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:foreground="?android:attr/selectableItemBackground"
         />
     <!--<Button-->
@@ -31,67 +40,79 @@
 
     <Button
         android:id="@+id/lesson1"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="25dp"
         android:background="@drawable/button_style_2"
         android:fontFamily="@font/vt323"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="Lesson 1"
+        android:text="Lesson 1 \nWhat is the Stock Trading?"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lessonback" />
+        app:layout_constraintTop_toBottomOf="@id/lessonback"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="20dp"/>
 
     <Button
         android:id="@+id/lesson2"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="25dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_style_2"
         android:fontFamily="@font/vt323"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="Lesson 2"
+        android:text="Lesson 2 \nGetting Started"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lesson1" />
+        app:layout_constraintTop_toBottomOf="@id/lesson1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="20dp"/>
 
     <Button
         android:id="@+id/lesson3"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="25dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_style_2"
         android:fontFamily="@font/vt323"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="Lesson 3"
+        android:text="Lesson 3 \nUnderstanding Stock Market"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lesson2" />
+        app:layout_constraintTop_toBottomOf="@id/lesson2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="20dp"/>
 
     <Button
         android:id="@+id/lesson4"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="25dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/button_style_2"
         android:fontFamily="@font/vt323"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="Lesson 4"
+        android:text="Lesson 4 \nStock Types"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lesson3" />
+        app:layout_constraintTop_toBottomOf="@id/lesson3"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="20dp"/>
 
     <Button
         android:id="@+id/lesson5"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="25dp"
         android:background="@drawable/button_style_2"
         android:layout_marginTop="10dp"
-        android:text="Lesson 5"
+        android:text="Lesson 5 \nFundamental and Sentiment Analysis"
         android:fontFamily="@font/vt323"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="379dp"
@@ -99,22 +120,30 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lesson4"
         android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="20dp"
         />
 
     <Button
         android:id="@+id/lesson6"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:textSize="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:textSize="25dp"
         android:fontFamily="@font/vt323"
         android:background="@drawable/button_style_2"
         android:layout_marginTop="10dp"
-        android:text="Lesson 6"
+        android:text="Lesson 6 \nTechnical Analysis"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="379dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lesson5"
         android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="20dp"
         />
 </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

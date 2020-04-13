@@ -23,14 +23,16 @@
         app:srcCompat="@drawable/backicon2"
         android:foreground="?android:attr/selectableItemBackground"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="3dp" />
+        tools:layout_editor_absoluteY="3dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Lesson 3 : Understand Stock Market"
+        android:text="Lesson 3 : Understanding Stock Market"
         android:textColor="#000"
         android:textSize="18dp"
         app:layout_constraintHorizontal_bias="0.505"
