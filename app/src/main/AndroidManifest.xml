@@ -9,38 +9,40 @@
         android:roundIcon="@drawable/logoooo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.npappdev.chayanit.stockunlocked.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.npappdev.chayanit.stockunlocked.LessonActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.QuizActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.ExamActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson1Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson2Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson3Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson4Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson5Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.SettingActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Quiz1Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Quiz2Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Quiz3Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Quiz4Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Quiz5Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.ExamResultActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson6Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Quiz6Activity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.QuizResultActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.Lesson5QsActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.SpecialQuizActivity" />
-        <activity android:name="com.npappdev.chayanit.stockunlocked.TitleActivity"></activity>
+        <activity android:name=".LessonActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".ExamActivity" />
+        <activity android:name=".Lesson1Activity" />
+        <activity android:name=".Lesson2Activity" />
+        <activity android:name=".Lesson3Activity" />
+        <activity android:name=".Lesson4Activity" />
+        <activity android:name=".Lesson5Activity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".Quiz1Activity" />
+        <activity android:name=".Quiz2Activity" />
+        <activity android:name=".Quiz3Activity" />
+        <activity android:name=".Quiz4Activity" />
+        <activity android:name=".Quiz5Activity" />
+        <activity android:name=".ExamResultActivity" />
+        <activity android:name=".Lesson6Activity" />
+        <activity android:name=".Quiz6Activity" />
+        <activity android:name=".QuizResultActivity" />
+        <activity android:name=".Lesson5QsActivity" />
+        <activity android:name=".SpecialQuizActivity" />
+        <activity android:name=".TitleActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".IntroActivity"></activity>
     </application>
 
 </manifest>
