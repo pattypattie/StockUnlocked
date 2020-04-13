@@ -30,7 +30,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="You will learn about all the knowledge in Lesson section. Next lesson will be unlock after you have finished the previous one"
+            android:text="You will learn about all the knowledge in Lesson section. Next lesson will be unlocked after you have finished the previous one."
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />

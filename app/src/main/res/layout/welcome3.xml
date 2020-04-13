@@ -31,7 +31,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="At the end of each lesson, there is a quiz that you can test your understanding"
+            android:text="At the end of each lesson, there is a quiz that you can test your understanding."
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />

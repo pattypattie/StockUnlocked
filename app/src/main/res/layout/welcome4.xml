@@ -30,7 +30,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="You can test all your knowledge from all the lesson in the Exam section. Let's go!!"
+            android:text="You can test all your knowledge from all the lessons in the Exam section. Are you ready?? Let's go!!"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="@dimen/slide_desc" />
