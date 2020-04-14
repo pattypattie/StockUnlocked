@@ -16,6 +16,7 @@
         android:textColor="@android:color/black"
         android:textSize="20sp"
         android:padding="8dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/question"/>
 
@@ -23,25 +24,28 @@
         android:id="@+id/submitbtn"
         android:layout_width="150dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/Ans3"
-        android:layout_marginTop="200dp"
+        android:layout_below="@+id/ans"
+        android:layout_marginTop="280dp"
         android:foreground="?android:attr/selectableItemBackground"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/submit"
-        android:layout_marginLeft="110dp" />
+      />
 
     <EditText
         android:id="@+id/ans"
         android:layout_width="wrap_content"
+        android:layout_below="@+id/question"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginLeft="80dp"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
         android:ems="10"
         android:inputType="number" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:layout_marginTop="260dp"
+        android:layout_below="@+id/submitbtn"
+        android:layout_marginTop="350dp"
         android:layout_marginLeft="30dp"
         android:id="@+id/result"/>
 

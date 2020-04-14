@@ -1026,11 +1026,13 @@ predict future price of the stock and identify trading opportunities. The 2 main
 
     <TextView
         android:id="@+id/textView81"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="\n These are just some examples of technical analysis techniques and indicators that you should know in the beginning. You may study more about other techniques and patterns once you have mastered the basics, but you should be able to understand the main idea by now. Lastly, here are some more definitions that you need to know.\n"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="345dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:textSize="20dp"
         android:textColor="#000"
         app:layout_constraintLeft_toLeftOf="parent"

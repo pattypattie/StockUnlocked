@@ -27,9 +27,11 @@
 
         <TextView
             android:id="@+id/instructionl4q2"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:textColor="@android:color/black"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -38,11 +40,13 @@
 
     <TextView
         android:id="@+id/textView78"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/instructionl4q2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
         android:textColor="@android:color/black"
         android:textSize="20dp"
         android:text="Select the appropriate stock type for the following company." />
@@ -86,9 +90,11 @@
 
         <TextView
             android:id="@+id/questionText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:textColor="@android:color/black"
             android:textSize="20dp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -243,10 +249,12 @@
 
         <TextView
             android:id="@+id/checkAnsText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:textColor="@android:color/black"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -256,11 +264,13 @@
 
         <TextView
             android:id="@+id/explainAnsText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="@android:color/black"
             android:textSize="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/checkAnsText"

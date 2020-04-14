@@ -30,7 +30,7 @@
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:id="@+id/instructionl2q1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Match account type with the description by dragging the account and dropping it onto the correct area."
         app:layout_constraintLeft_toLeftOf="parent"
