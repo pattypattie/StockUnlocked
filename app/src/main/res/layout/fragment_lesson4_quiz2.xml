@@ -160,7 +160,7 @@
 
         <Button
             android:id="@+id/stocktype1"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Slow Growers"
             android:foreground="?android:attr/selectableItemBackground"
@@ -168,73 +168,72 @@
             tools:layout_editor_absoluteY="239dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:background="@drawable/button_style_3"
-            app:layout_constraintRight_toLeftOf="@id/stocktype2"
             app:layout_constraintTop_toBottomOf="@id/randomImgBtn"
             android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"/>
 
         <Button
             android:id="@+id/stocktype2"
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Stalwarts"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="239dp"
             android:background="@drawable/button_style_3"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/randomImgBtn"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"/>
 
         <Button
             android:id="@+id/stocktype3"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Fast Growers"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="239dp"
-            app:layout_constraintRight_toRightOf="parent"
             android:background="@drawable/button_style_3"
-            app:layout_constraintLeft_toRightOf="@id/stocktype2"
-            app:layout_constraintTop_toBottomOf="@id/randomImgBtn"
-            android:layout_marginLeft="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stocktype4"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"/>
 
         <Button
             android:id="@+id/stocktype4"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Cyclical"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="239dp"
             android:background="@drawable/button_style_3"
-            app:layout_constraintRight_toLeftOf="@id/stocktype5"
             app:layout_constraintTop_toBottomOf="@id/stocktype1"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"/>
 
         <Button
             android:id="@+id/stocktype5"
-            android:layout_width="120dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Turnaround"
             tools:layout_editor_absoluteX="82dp"
             tools:layout_editor_absoluteY="239dp"
             android:background="@drawable/button_style_3"
-            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@id/stocktype1"
             android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
             />
 
         <Button
             android:id="@+id/stocktype6"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:foreground="?android:attr/selectableItemBackground"
             android:text="Asset Play"
@@ -242,9 +241,9 @@
             tools:layout_editor_absoluteY="239dp"
             android:background="@drawable/button_style_3"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/stocktype5"
-            app:layout_constraintTop_toBottomOf="@id/stocktype1"
+            app:layout_constraintTop_toBottomOf="@id/stocktype5"
             android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"/>
 
         <TextView
