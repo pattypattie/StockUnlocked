@@ -49,7 +49,6 @@ public class IntroActivity extends AppCompatActivity {
         }
 
 
-
         setContentView(R.layout.activity_intro);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
