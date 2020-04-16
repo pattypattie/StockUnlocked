@@ -3,6 +3,7 @@ package com.npappdev.chayanit.stockunlocked;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -79,29 +81,56 @@ public class Lesson6Quiz2Fragment extends Fragment {
         final RadioButton buybtn = myFragmentView.findViewById(R.id.buy);
         final RadioButton sellbtn = myFragmentView.findViewById(R.id.sell);
         final RadioGroup buysellgroup = myFragmentView.findViewById(R.id.buysell);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentl6, new Lesson6Quiz3Fragment());
+                fragmentTransaction.commit();
+            }
+        });
 
         submitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (sellbtn.isChecked()) {
                     ansText.setText("Correct!");
+                    ansText.setVisibility(View.VISIBLE);
+                    ansImg.setVisibility(View.VISIBLE);
+                    ansExplain.setVisibility(View.VISIBLE);
+
+                    String texttext = "&emsp In the question, the chart is rising to the resistance level. Normally, a resistance level prevents the price from going higher, but it is still possible for the graph to break through. However, " +
+                            "it is shown in the graph that the price is dropping a little once it hits the resistance level. This indicates that the price tends to respect the resistance level and is likely to continue falling below the level to remain " +
+                            "within the same support and resistance area. Thus, <b>SELLING</b> at this point " +
+                            "is the best solution to get a high price for the stock. The graph below reveals what happens later.";
+                    ansExplain.setText(Html.fromHtml(texttext));
+
+                    submitBtn.setEnabled(false);
+                    buysellgroup.setEnabled(false);
+                    buybtn.setEnabled(false);
+                    sellbtn.setEnabled(false);
+                    next.setVisibility(View.VISIBLE);
                 }else{
-                    ansText.setText("Incorrect.");
+                    //ansText.setText("Incorrect.");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                 }
-                ansText.setVisibility(View.VISIBLE);
-                ansImg.setVisibility(View.VISIBLE);
-                ansExplain.setVisibility(View.VISIBLE);
-
-                String texttext = "&emsp In the question, the chart is rising to the resistance level. Normally, a resistance level prevents the price from going higher, but it is still possible for the graph to break through. However, " +
-                        "it is shown in the graph that the price is dropping a little once it hits the resistance level. This indicates that the price tends to respect the resistance level and is likely to continue falling below the level to remain " +
-                        "within the same support and resistance area. Thus, <b>SELLING</b> at this point " +
-                        "is the best solution to get a high price for the stock. The graph below reveals what happens later.";
-                ansExplain.setText(Html.fromHtml(texttext));
-
-                submitBtn.setEnabled(false);
-                buysellgroup.setEnabled(false);
-                buybtn.setEnabled(false);
-                sellbtn.setEnabled(false);
+//                ansText.setVisibility(View.VISIBLE);
+//                ansImg.setVisibility(View.VISIBLE);
+//                ansExplain.setVisibility(View.VISIBLE);
+//
+//                String texttext = "&emsp In the question, the chart is rising to the resistance level. Normally, a resistance level prevents the price from going higher, but it is still possible for the graph to break through. However, " +
+//                        "it is shown in the graph that the price is dropping a little once it hits the resistance level. This indicates that the price tends to respect the resistance level and is likely to continue falling below the level to remain " +
+//                        "within the same support and resistance area. Thus, <b>SELLING</b> at this point " +
+//                        "is the best solution to get a high price for the stock. The graph below reveals what happens later.";
+//                ansExplain.setText(Html.fromHtml(texttext));
+//
+//                submitBtn.setEnabled(false);
+//                buysellgroup.setEnabled(false);
+//                buybtn.setEnabled(false);
+//                sellbtn.setEnabled(false);
 
             }
         });

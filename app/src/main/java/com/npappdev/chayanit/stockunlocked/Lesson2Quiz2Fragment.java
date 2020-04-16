@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -81,7 +83,7 @@ public class Lesson2Quiz2Fragment extends Fragment {
 
         View myFragmentView = inflater.inflate(R.layout.fragment_lesson2_quiz2, container, false);
 
-        //final Button next = myFragmentView.findViewById(R.id.nextQ);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
         dropArea1 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_1);
         dropArea2 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_2);
         dropArea3 = (LinearLayout) myFragmentView.findViewById(R.id.drop_area_3);
@@ -100,7 +102,16 @@ public class Lesson2Quiz2Fragment extends Fragment {
         cashBalArea3 = (ImageView) myFragmentView.findViewById(R.id.cashBalOnArea3);
         creditBalArea3 = (ImageView) myFragmentView.findViewById(R.id.creditBalOnArea3);
 
-        //next.setVisibility(View.INVISIBLE);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                            .getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.fragmentl2, new Lesson2Quiz1Fragment());
+                    fragmentTransaction.commit();
+            }
+        });
 
         dropArea1.setOnDragListener(new View.OnDragListener() {
             @Override
@@ -284,10 +295,10 @@ public class Lesson2Quiz2Fragment extends Fragment {
                         }
                     });
                     submitButton.setEnabled(false);
-                   //next.setVisibility(View.VISIBLE);
+                   next.setVisibility(View.VISIBLE);
                 } else{
-                    sol.setText("Incorrect. Please Try Again.");
-
+                    //sol.setText("Incorrect. Please Try Again.");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                     cashAccArea1.setVisibility(View.GONE);
                     cashAccArea2.setVisibility(View.GONE);
                     cashAccArea3.setVisibility(View.GONE);
@@ -297,6 +308,11 @@ public class Lesson2Quiz2Fragment extends Fragment {
                     cashBalArea1.setVisibility(View.GONE);
                     cashBalArea2.setVisibility(View.GONE);
                     cashBalArea3.setVisibility(View.GONE);
+//                    FragmentTransaction fragmentTransaction = getActivity()
+//                            .getSupportFragmentManager().beginTransaction();
+//                    fragmentTransaction.replace(R.id.fragmentl2, new Lesson2Quiz1Fragment());
+//                    fragmentTransaction.commit();
+
                 }
             }
         });

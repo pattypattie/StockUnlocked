@@ -1,14 +1,17 @@
 package com.npappdev.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -75,7 +78,20 @@ public class Lesson3Quiz3Fragment extends Fragment {
         final Button mButtonChoice1 = myFragmentView.findViewById(R.id.choice1);
         final Button mButtonChoice2 = myFragmentView.findViewById(R.id.choice2);
         final TextView resultq3 = myFragmentView.findViewById(R.id.resultq3);
-
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("finalScore", 3);
+                bundle.putInt("QsNum", 3);
+                i.putExtras(bundle);
+                getActivity().finish();
+                startActivity(i);
+            }
+        });
 
         final String mAnswer;
         int mQuestionNumber;
@@ -97,8 +113,11 @@ public class Lesson3Quiz3Fragment extends Fragment {
                                                       mButtonChoice2.setEnabled(false);
                                                       mButtonChoice1.setEnabled(false);
                                                       resultq3.setText("Correct!\n"+mresult);
+                                                      next.setVisibility(View.VISIBLE);
                                                   } else {
-                                                      resultq3.setText("Incorrect Try again");
+                                                      //resultq3.setText("Incorrect Try again");
+                                                      Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
+
                                                   }
                                               }
                                           }
@@ -113,8 +132,10 @@ public class Lesson3Quiz3Fragment extends Fragment {
                                                       mButtonChoice1.setEnabled(false);
                                                       mButtonChoice2.setEnabled(false);
                                                       resultq3.setText("Correct!\n"+mresult);
+                                                      next.setVisibility(View.VISIBLE);
                                                   } else {
-                                                      resultq3.setText("Incorrect Try again");
+                                                      //resultq3.setText("Incorrect Try again");
+                                                      Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                                                   }
                                               }
                                           }

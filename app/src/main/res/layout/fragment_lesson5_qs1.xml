@@ -96,10 +96,27 @@
         android:id="@+id/choice3"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:textColor="@android:color/black"
         android:padding="8dp"
         android:layout_marginBottom="40dp"
         android:id="@+id/result"/>
+    <Button
+        android:id="@+id/nextQ"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/next"
+        android:layout_gravity="center_horizontal"
+        />
+    <Button
+        android:id="@+id/btn_spin"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/spin"
+        android:layout_gravity="center_horizontal"
+        />
 
 </LinearLayout>

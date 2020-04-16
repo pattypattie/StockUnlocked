@@ -60,6 +60,14 @@
         android:textColor="@android:color/black"
         android:layout_marginBottom="40dp"
         android:id="@+id/result"/>
+    <Button
+        android:id="@+id/nextQ"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/next"
+        android:layout_gravity="center_horizontal"
+        />
 
 
 </LinearLayout>

@@ -23,7 +23,7 @@ public class Quiz6Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz6);
 
-        nextQbtn = findViewById(R.id.nextQ);
+        //nextQbtn = findViewById(R.id.nextQ);
         Button backMenu = findViewById(R.id.backMenu);
         backMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,19 +36,21 @@ public class Quiz6Activity extends AppCompatActivity {
         lesson6Quiz2Fragment = new Lesson6Quiz2Fragment();
         lesson6Quiz3Fragment = new Lesson6Quiz3Fragment();
 
-        randomFragment = -1;
-        fragments = new ArrayList<Fragment>(3);
-        fragments.addAll(Arrays.asList(lesson6Quiz1Fragment, lesson6Quiz2Fragment, lesson6Quiz3Fragment));
+//        randomFragment = -1;
+//        fragments = new ArrayList<Fragment>(3);
+//        fragments.addAll(Arrays.asList(lesson6Quiz1Fragment, lesson6Quiz2Fragment, lesson6Quiz3Fragment));
+        getSupportFragmentManager().beginTransaction().add(R.id.fragmentl6, lesson6Quiz1Fragment).commit();
 
-        randomPart();
 
-        nextQbtn = findViewById(R.id.nextQ);
-        nextQbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                randomPart();
-            }
-        });
+        //randomPart();
+
+//        nextQbtn = findViewById(R.id.nextQ);
+//        nextQbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                randomPart();
+//            }
+//        });
 
     }
 

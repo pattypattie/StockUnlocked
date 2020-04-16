@@ -3,12 +3,14 @@ package com.npappdev.chayanit.stockunlocked;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,7 +32,7 @@ public class Lesson4Quiz1Fragment extends Fragment {
 
     TextView question, checkAns, explainAns;
     ArrayList<String> questionList, answerList, explainList;
-    Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay, nextbtn;
+    Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay, nextbtn, next;
     String correctAns;
     int randomQuestion;
 
@@ -88,6 +90,19 @@ public class Lesson4Quiz1Fragment extends Fragment {
         assetPlay = myFragmentView.findViewById(R.id.stocktype6);
         nextbtn = myFragmentView.findViewById(R.id.button6);
         explainAns = myFragmentView.findViewById(R.id.explainText);
+
+
+        next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentl4, new Lesson4Quiz2Fragment());
+                fragmentTransaction.commit();
+            }
+        });
 
         nextbtn.setVisibility(View.INVISIBLE);
 
@@ -233,7 +248,7 @@ public class Lesson4Quiz1Fragment extends Fragment {
     }
 
     public void nextQuestion(){
-
+        nextbtn.setVisibility(View.INVISIBLE);
         nextbtn.setEnabled(false);
 
         if(randomQuestion!=-1){
@@ -264,22 +279,36 @@ public class Lesson4Quiz1Fragment extends Fragment {
         if(correctAns.equals(buttonClickedName)){
             checkAns.setText("Correct! You should aim for "+correctAns);
             nextbtn.setVisibility(View.VISIBLE);
+            explainAns.setText(explainList.get(randomQuestion));
+            slowGrowers.setEnabled(false);
+            stalWarts.setEnabled(false);
+            fastGrowers.setEnabled(false);
+            cyclical.setEnabled(false);
+            turnaround.setEnabled(false);
+            assetPlay.setEnabled(false);
+            if(questionList.size()==1){ //last question, disable next button
+                nextbtn.setVisibility(View.INVISIBLE);
+                next.setVisibility(View.VISIBLE);
+            } else {
+                nextbtn.setEnabled(true);
+            }
         }else{
-            checkAns.setText("Incorrect. You should aim for "+correctAns);
-            nextbtn.setVisibility(View.VISIBLE);
+            //checkAns.setText("Incorrect. You should aim for "+correctAns);
+            Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
+            //nextbtn.setVisibility(View.VISIBLE);
         }
-        explainAns.setText(explainList.get(randomQuestion));
-        slowGrowers.setEnabled(false);
-        stalWarts.setEnabled(false);
-        fastGrowers.setEnabled(false);
-        cyclical.setEnabled(false);
-        turnaround.setEnabled(false);
-        assetPlay.setEnabled(false);
-        if(questionList.size()==1){ //last question, disable next button
-            nextbtn.setVisibility(View.INVISIBLE);
-        } else {
-            nextbtn.setEnabled(true);
-        }
+//        explainAns.setText(explainList.get(randomQuestion));
+//        slowGrowers.setEnabled(false);
+//        stalWarts.setEnabled(false);
+//        fastGrowers.setEnabled(false);
+//        cyclical.setEnabled(false);
+//        turnaround.setEnabled(false);
+//        assetPlay.setEnabled(false);
+//        if(questionList.size()==1){ //last question, disable next button
+//            nextbtn.setVisibility(View.INVISIBLE);
+//        } else {
+//            nextbtn.setEnabled(true);
+//        }
     }
 
 //    @Override

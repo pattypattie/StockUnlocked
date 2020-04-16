@@ -1,5 +1,6 @@
 package com.npappdev.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -72,17 +74,43 @@ public class Lesson5Qs2Fragment extends Fragment {
         final Button choice2 = myFragmentView.findViewById(R.id.choice2);
         final Button choice3 = myFragmentView.findViewById(R.id.choice3);
         final TextView result = myFragmentView.findViewById(R.id.result);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("finalScore", 3);
+                bundle.putInt("QsNum", 5);
+                i.putExtras(bundle);
+                getActivity().finish();
+                startActivity(i);
+            }
+        });
+
+        final Button spinAg = myFragmentView.findViewById(R.id.btn_spin);
+        spinAg.setVisibility(View.INVISIBLE);
+        spinAg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Quiz5Activity.class));
+            }
+        });
 
         choice2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                result.setText("Incorrect! Try again");
+                //result.setText("Incorrect! Try again");
+                Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
             }
         });
         choice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                result.setText("Incorrect! Try again");
+                //result.setText("Incorrect! Try again");
+                Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
             }
         });
         choice1.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +125,8 @@ public class Lesson5Qs2Fragment extends Fragment {
                 choice3.setEnabled(false);
                 choice1.setBackgroundColor(Color.parseColor("#66a103"));
                 choice3.setBackgroundColor(Color.GRAY);
+                next.setVisibility(View.VISIBLE);
+                spinAg.setVisibility(View.VISIBLE);
                 result.setText("Correct!"+"\nAnalysts compare P/E ratio of several companies within the same industry to see whether there's good investment opportunity.");
 
             }

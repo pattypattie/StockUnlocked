@@ -3,6 +3,7 @@ package com.npappdev.chayanit.stockunlocked;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,6 +35,8 @@ public class lesson3Quiz1Fragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
     int numClick = 0;
+    int countAll = 0;
+    boolean next_bu = false;
 
     String img_pre;
     Button bt_pre;
@@ -90,13 +93,14 @@ public class lesson3Quiz1Fragment extends Fragment {
                     tv_pre.setVisibility(View.GONE);
                     tv.setVisibility(View.GONE);
                     numClick = 0;
+                    countAll++;
                 } else {
                     int image_resid = getResources().getIdentifier(img, "drawable", getActivity().getPackageName());
                     bt.setBackgroundResource(image_resid);
                     int imgpre = getResources().getIdentifier(img_pre,"drawable",getActivity().getPackageName());
                     bt_pre.setBackgroundResource(imgpre);
                     numClick = 0;
-                    Toast.makeText(getActivity(), "Try Again", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -130,6 +134,8 @@ public class lesson3Quiz1Fragment extends Fragment {
         View myFragmentView = inflater.inflate(R.layout.fragment_lesson3_quiz1, container, false);
 
 
+
+
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
         }
@@ -142,6 +148,18 @@ public class lesson3Quiz1Fragment extends Fragment {
         final Button button4 = myFragmentView.findViewById(R.id.button5);
         final Button button5 = myFragmentView.findViewById(R.id.button7);
         final Button button6 = myFragmentView.findViewById(R.id.button8);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentl3, new lesson3Quiz2Fragment());
+                fragmentTransaction.commit();
+            }
+        });
 
         final TextView bt1 = myFragmentView.findViewById(R.id.bt1);
         final TextView bt2 = myFragmentView.findViewById(R.id.bt2);
@@ -194,6 +212,9 @@ public class lesson3Quiz1Fragment extends Fragment {
                 button1.setBackgroundResource(imagebg);
                 numClick++;
                 checkCount(img,button1,bt1);
+                if(countAll==3){
+                    next.setVisibility(View.VISIBLE);
+                }
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
@@ -204,6 +225,9 @@ public class lesson3Quiz1Fragment extends Fragment {
                 button2.setBackgroundResource(imagebg2);
                 numClick++;
                 checkCount(img2,button2,bt2);
+                if(countAll==3){
+                    next.setVisibility(View.VISIBLE);
+                }
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
@@ -214,6 +238,9 @@ public class lesson3Quiz1Fragment extends Fragment {
                 button3.setBackgroundResource(imagebg3);
                 numClick++;
                 checkCount(img3,button3,bt3);
+                if(countAll==3){
+                    next.setVisibility(View.VISIBLE);
+                }
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
@@ -224,6 +251,9 @@ public class lesson3Quiz1Fragment extends Fragment {
                 button4.setBackgroundResource(imagebg4);
                 numClick++;
                 checkCount(img4,button4,bt4);
+                if(countAll==3){
+                    next.setVisibility(View.VISIBLE);
+                }
             }
         });
         button5.setOnClickListener(new View.OnClickListener() {
@@ -234,6 +264,9 @@ public class lesson3Quiz1Fragment extends Fragment {
                 button5.setBackgroundResource(imagebg5);
                 numClick++;
                 checkCount(img5,button5,bt5);
+                if(countAll==3){
+                    next.setVisibility(View.VISIBLE);
+                }
             }
         });
         button6.setOnClickListener(new View.OnClickListener() {
@@ -244,6 +277,9 @@ public class lesson3Quiz1Fragment extends Fragment {
                 button6.setBackgroundResource(imagebg6);
                 numClick++;
                 checkCount(img6,button6,bt6);
+                if(countAll==3){
+                    next.setVisibility(View.VISIBLE);
+                }
             }
         });
 
@@ -265,7 +301,7 @@ public class lesson3Quiz1Fragment extends Fragment {
             case "wood" : bt.setText("Floor");break;
             case "sell" : bt.setText("Offer");break;
             case "stock" : bt.setText("Bid");break;
-            default: bt.setText("testtttt");
+            default: bt.setText("");
         }
 
     }

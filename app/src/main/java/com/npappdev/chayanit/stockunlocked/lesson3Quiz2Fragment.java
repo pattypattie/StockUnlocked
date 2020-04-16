@@ -4,11 +4,13 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -87,6 +89,18 @@ public class lesson3Quiz2Fragment extends Fragment {
         final Button mButtonChoice3 = myFragmentView.findViewById(R.id.choice3);
         final TextView result = myFragmentView.findViewById(R.id.result);
 
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentl3, new Lesson3Quiz3Fragment());
+                fragmentTransaction.commit();
+            }
+        });
+
 
         final String mAnswer;
         int mQuestionNumber;
@@ -112,8 +126,11 @@ public class lesson3Quiz2Fragment extends Fragment {
                                                       mButtonChoice2.setEnabled(false);
                                                       mButtonChoice3.setEnabled(false);
                                                       result.setText("Correct!\n"+explain);
+                                                      next.setVisibility(View.VISIBLE);
                                                   } else {
-                                                      result.setText("Incorrect Try again");
+                                                      //result.setText("Incorrect Try again");
+                                                      Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
+
                                                   }
                                               }
                                           }
@@ -133,9 +150,11 @@ public class lesson3Quiz2Fragment extends Fragment {
 //                    mButtonChoice1.setVisibility(View.GONE);
 //                    mButtonChoice3.setVisibility(View.GONE);
 //                    mButtonChoice2.setEnabled(false);
+                    next.setVisibility(View.VISIBLE);
                     result.setText("Correct!\n"+explain);
                 } else {
-                    result.setText("Incorrect Try again");
+                    //result.setText("Incorrect Try again");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                 }
             }
         }
@@ -154,8 +173,10 @@ public class lesson3Quiz2Fragment extends Fragment {
                                                       mButtonChoice2.setEnabled(false);
                                                       mButtonChoice3.setEnabled(false);
                                                       result.setText("Correct!\n"+explain);
+                                                      next.setVisibility(View.VISIBLE);
                                                   } else {
-                                                      result.setText("Incorrect Try again");
+                                                      //result.setText("Incorrect Try again");
+                                                      Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                                                   }
                                               }
                                           }

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.util.Arrays;
@@ -133,8 +134,10 @@ public class Quiz1Activity extends AppCompatActivity {
 ////                        Quiz1Activity.this.finish();
 ////                        startActivity(i);
 //                    } else {
-                        result.setText("Incorrect Try again!");
-                        //updateQuestion();
+                        //result.setText("Incorrect Try again!");
+                        Toast.makeText(Quiz1Activity.this, "Try again!", Toast.LENGTH_SHORT).show();
+
+                    //updateQuestion();
                     //}
                 }
             }
@@ -199,8 +202,9 @@ public class Quiz1Activity extends AppCompatActivity {
 ////                        Quiz1Activity.this.finish();
 ////                        startActivity(i);
 //                    } else {
-                        result.setText("Incorrect Try again!");
-                        //updateQuestion();
+//                        result.setText("Incorrect Try again!");
+                    Toast.makeText(Quiz1Activity.this, "Try again!", Toast.LENGTH_SHORT).show();
+                    //updateQuestion();
                    // }
                 }
             }
@@ -263,8 +267,10 @@ public class Quiz1Activity extends AppCompatActivity {
 ////                        Quiz1Activity.this.finish();
 ////                        startActivity(i);
 //                    } else {
-                        result.setText("Incorrect Try again!");
-                        //updateQuestion();
+//                        result.setText("Incorrect Try again!");
+                    Toast.makeText(Quiz1Activity.this, "Try again!", Toast.LENGTH_SHORT).show();
+
+                    //updateQuestion();
                    // }
                 }
             }

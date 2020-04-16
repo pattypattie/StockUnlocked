@@ -35,29 +35,29 @@ public class Quiz4Activity extends AppCompatActivity {
 //        }
 
 
-        final Button nextQbtn = findViewById(R.id.nextQ);
-        nextQbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(currentQuiz==1){
-                    getSupportFragmentManager().beginTransaction().remove(lesson4Quiz1Fragment).commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl4, lesson4Quiz2Fragment).commit();
-                    currentQuiz++;
-                }else if (currentQuiz==2){
-//                    getSupportFragmentManager().beginTransaction().remove(lesson4Quiz2Fragment).commit();
-//                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl4, lesson4Quiz1Fragment).commit();
-                    Intent i = new Intent(Quiz4Activity.this, QuizResultActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("finalScore", 2);
-                    bundle.putInt("QsNum", 4);
-                    i.putExtras(bundle);
-                    Quiz4Activity.this.finish();
-                    startActivity(i);
-                }
-                //nextQbtn.setEnabled(false);
-            }
-        });
+//        final Button nextQbtn = findViewById(R.id.nextQ);
+//        nextQbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if(currentQuiz==1){
+//                    getSupportFragmentManager().beginTransaction().remove(lesson4Quiz1Fragment).commit();
+//                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl4, lesson4Quiz2Fragment).commit();
+//                    currentQuiz++;
+//                }else if (currentQuiz==2){
+////                    getSupportFragmentManager().beginTransaction().remove(lesson4Quiz2Fragment).commit();
+////                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl4, lesson4Quiz1Fragment).commit();
+//                    Intent i = new Intent(Quiz4Activity.this, QuizResultActivity.class);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putInt("finalScore", 2);
+//                    bundle.putInt("QsNum", 4);
+//                    i.putExtras(bundle);
+//                    Quiz4Activity.this.finish();
+//                    startActivity(i);
+//                }
+//                //nextQbtn.setEnabled(false);
+//            }
+//        });
 
 
     }

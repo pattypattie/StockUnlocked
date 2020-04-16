@@ -35,7 +35,7 @@
         android:text="Welcome to exam!!!\n\n This exam tests your basic knowledge about stock trading that you have learned from all the lessons in StockUnlocked. The difficulty of the next questions increases if you have answered the previous question correctly, and
 decreases if you have answered incorrectly, and this also reflects in your score as well.\n\n There are 10 questions in this exam. \n\nAre you ready? Good luck!"
         android:textColor="#000"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="189dp"

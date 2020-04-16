@@ -30,33 +30,33 @@ public class Quiz3Activity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentl3, lesson3Quiz1Fragment).commit();
         currentQuiz = 1;
 
-        final Button nextQbtn = findViewById(R.id.nextQ);
-        nextQbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                if(currentQuiz==1){
-                    getSupportFragmentManager().beginTransaction().remove(lesson3Quiz1Fragment).commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl3, lesson3Quiz2Fragment).commit();
-                    currentQuiz = 2;
-                }else if(currentQuiz==2){
-                    getSupportFragmentManager().beginTransaction().remove(lesson3Quiz2Fragment).commit();
-                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl3, lesson3Quiz3Fragment).commit();
-                    //nextQbtn.setText("Result");
-                    currentQuiz = 3;
-                } else if(currentQuiz ==3){
-                    //startActivity(new Intent(Quiz3Activity.this, QuizResultActivity.class));
-                    Intent i = new Intent(Quiz3Activity.this, QuizResultActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("finalScore", 3);
-                    bundle.putInt("QsNum", 3);
-                    i.putExtras(bundle);
-                    Quiz3Activity.this.finish();
-                    startActivity(i);
-
-                }
-            }
-        });
+//        final Button nextQbtn = findViewById(R.id.nextQ);
+//        nextQbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                if(currentQuiz==1){
+//                    getSupportFragmentManager().beginTransaction().remove(lesson3Quiz1Fragment).commit();
+//                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl3, lesson3Quiz2Fragment).commit();
+//                    currentQuiz = 2;
+//                }else if(currentQuiz==2){
+//                    getSupportFragmentManager().beginTransaction().remove(lesson3Quiz2Fragment).commit();
+//                    getSupportFragmentManager().beginTransaction().add(R.id.fragmentl3, lesson3Quiz3Fragment).commit();
+//                    //nextQbtn.setText("Result");
+//                    currentQuiz = 3;
+//                } else if(currentQuiz ==3){
+//                    //startActivity(new Intent(Quiz3Activity.this, QuizResultActivity.class));
+//                    Intent i = new Intent(Quiz3Activity.this, QuizResultActivity.class);
+//                    Bundle bundle = new Bundle();
+//                    bundle.putInt("finalScore", 3);
+//                    bundle.putInt("QsNum", 3);
+//                    i.putExtras(bundle);
+//                    Quiz3Activity.this.finish();
+//                    startActivity(i);
+//
+//                }
+//            }
+//        });
 
 
 

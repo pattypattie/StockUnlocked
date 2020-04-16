@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        SharedPreferences shared = getSharedPreferences(MY_PREFS, Context.MODE_PRIVATE);
-        final boolean firsttimer = shared.getBoolean("first_time", true);
+        //SharedPreferences shared = getSharedPreferences(MY_PREFS, Context.MODE_PRIVATE);
+        //final boolean firsttimer = shared.getBoolean("first_time", true);
 
-        if(firsttimer==true) {
+//        if(firsttimer==true) {
             new Handler().postDelayed(new Runnable() {
 
                 @Override
@@ -37,25 +37,25 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             }, SPLASH_TIME_OUT);
-            SharedPreferences.Editor editor = shared.edit();
-            editor.putBoolean("first_time",false);
-            editor.commit();
+//            SharedPreferences.Editor editor = shared.edit();
+//            editor.putBoolean("first_time",false);
+//            editor.commit();
 
-        } else {
-            new Handler().postDelayed(new Runnable() {
-
-                @Override
-                public void run() {
-
-                    //Intent i = new Intent(MainActivity.this, IntroActivity.class);//Start Another Activity
-
-                    Intent i=new Intent(MainActivity.this,TitleActivity.class);//Start Another Activity
-
-                    startActivity(i);
-                    finish();
-                }
-            }, SPLASH_TIME_OUT);
-        }
+//        } else {
+//            new Handler().postDelayed(new Runnable() {
+//
+//                @Override
+//                public void run() {
+//
+//                    //Intent i = new Intent(MainActivity.this, IntroActivity.class);//Start Another Activity
+//
+//                    Intent i=new Intent(MainActivity.this,TitleActivity.class);//Start Another Activity
+//
+//                    startActivity(i);
+//                    finish();
+//                }
+//            }, SPLASH_TIME_OUT);
+//        }
 
 
 

@@ -1,5 +1,6 @@
 package com.npappdev.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -71,14 +73,41 @@ public class Lesson5Qs4Fragment extends Fragment {
         final EditText ans = myFragmentView.findViewById(R.id.ans);
         Button submit = myFragmentView.findViewById(R.id.submitbtn);
         final TextView result = myFragmentView.findViewById(R.id.result);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("finalScore", 3);
+                bundle.putInt("QsNum", 5);
+                i.putExtras(bundle);
+                getActivity().finish();
+                startActivity(i);
+            }
+        });
+
+        final Button spinAg = myFragmentView.findViewById(R.id.btn_spin);
+        spinAg.setVisibility(View.INVISIBLE);
+        spinAg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Quiz5Activity.class));
+            }
+        });
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(ans.getText().toString().equals("75")){
+                    next.setVisibility(View.VISIBLE);
+                    spinAg.setVisibility(View.VISIBLE);
                     result.setText("Correct!"+"\n EPS = net income divided by the number of outstanding shares = 150 millions/ 2 millions = 75 baht per share");
                 } else {
-                    result.setText("Try again!");
+                    //result.setText("Try again!");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                     ans.getText().clear();
                 }
             }

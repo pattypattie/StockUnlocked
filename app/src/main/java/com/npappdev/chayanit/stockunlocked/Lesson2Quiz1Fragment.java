@@ -1,14 +1,17 @@
 package com.npappdev.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -72,7 +75,7 @@ public class Lesson2Quiz1Fragment extends Fragment {
 
         View myFragmentView = inflater.inflate(R.layout.fragment_lesson2_quiz1, container, false);
         final Button confirmbtn = (Button) myFragmentView.findViewById(R.id.buttonConfirm);
-        //final Button next = myFragmentView.findViewById(R.id.nextQ);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
         final CheckBox chb1 = (CheckBox) myFragmentView.findViewById(R.id.checkBox1);
         final CheckBox chb2 = (CheckBox) myFragmentView.findViewById(R.id.checkBox2);
         final CheckBox chb3 = (CheckBox) myFragmentView.findViewById(R.id.checkBox3);
@@ -83,7 +86,23 @@ public class Lesson2Quiz1Fragment extends Fragment {
         final TextView l2q1anstext = (TextView) myFragmentView.findViewById(R.id.l2q1ans);
         l2q1anstext.setVisibility(View.INVISIBLE);
 
-        //next.setVisibility(View.INVISIBLE);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                FragmentTransaction fragmentTransaction = getActivity()
+//                        .getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.fragmentl2, new Lesson2Quiz1Fragment());
+//                fragmentTransaction.commit();
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("finalScore", 2);
+                bundle.putInt("QsNum", 2);
+                i.putExtras(bundle);
+                getActivity().finish();
+                startActivity(i);
+            }
+        });
 
 
 
@@ -111,7 +130,7 @@ public class Lesson2Quiz1Fragment extends Fragment {
                 if(chb1.isChecked()&&chb3.isChecked()&&chb4.isChecked()&&chb6.isChecked()&&(chb2.isChecked()==false)&&(chb5.isChecked()==false)){
                     l2q1anstext.setText("Correct! \n The documents required for the broker to open your brokerage account consists of \n1.ID card \n2.Bank Book \n3.House Registration \n4.Bank Statement.");
                     confirmbtn.setVisibility(View.INVISIBLE);
-                    //next.setVisibility(View.VISIBLE);
+                    next.setVisibility(View.VISIBLE);
                     chb1.setEnabled(false);
                     chb2.setEnabled(false);
                     chb3.setEnabled(false);
@@ -120,13 +139,19 @@ public class Lesson2Quiz1Fragment extends Fragment {
                     chb6.setEnabled(false);
 
                 } else{
-                    l2q1anstext.setText("Incorrect. Try again.");
+                    //l2q1anstext.setText("Incorrect. Try again.");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                     chb1.setChecked(false);
                     chb2.setChecked(false);
                     chb3.setChecked(false);
                     chb4.setChecked(false);
                     chb5.setChecked(false);
                     chb6.setChecked(false);
+//                    FragmentTransaction fragmentTransaction = getActivity()
+//                            .getSupportFragmentManager().beginTransaction();
+//                    fragmentTransaction.replace(R.id.fragmentl2, new Lesson2Quiz2Fragment());
+//                    fragmentTransaction.commit();
+
 
 
                 }

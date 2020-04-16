@@ -3,6 +3,7 @@ package com.npappdev.chayanit.stockunlocked;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -81,6 +83,17 @@ public class Lesson6Quiz1Fragment extends Fragment {
         final EditText text2 = myFragmentView.findViewById(R.id.editText2);
         final EditText text3 = myFragmentView.findViewById(R.id.editText3);
         final EditText text4 = myFragmentView.findViewById(R.id.editText4);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction fragmentTransaction = getActivity()
+                        .getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentl6, new Lesson6Quiz2Fragment());
+                fragmentTransaction.commit();
+            }
+        });
         result  = myFragmentView.findViewById(R.id.textView42);
         candleName = myFragmentView.findViewById(R.id.textView35);
         bullPic = myFragmentView.findViewById(R.id.imageView33);
@@ -114,19 +127,35 @@ public class Lesson6Quiz1Fragment extends Fragment {
                 }else{
                     if((randomCandle==0&&text1.getText().toString().equalsIgnoreCase("close")&&text2.getText().toString().equalsIgnoreCase("low")&&text3.getText().toString().equalsIgnoreCase("high")&&text4.getText().toString().equalsIgnoreCase("open"))||(randomCandle==1&&text1.getText().toString().equalsIgnoreCase("open")&&text2.getText().toString().equalsIgnoreCase("low")&&text3.getText().toString().equalsIgnoreCase("high")&&text4.getText().toString().equalsIgnoreCase("close"))){
                         result.setText("Correct!");
-                    } else{
-                        result.setText("Incorrect. The correct answer is given below.");
+                        next.setVisibility(View.VISIBLE);
                         if(randomCandle==0){
                             bullAns.setVisibility(View.VISIBLE);
                         } else{
                             bearAns.setVisibility(View.VISIBLE);
                         }
+                        text1.setEnabled(false);
+                        text2.setEnabled(false);
+                        text3.setEnabled(false);
+                        text4.setEnabled(false);
+                        openHint.setEnabled(false);
+                    } else{
+                        //result.setText("Incorrect. The correct answer is given below.");
+                        Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
+                        text1.setText("");
+                        text2.setText("");
+                        text3.setText("");
+                        text4.getText().clear();
+//                        if(randomCandle==0){
+//                            bullAns.setVisibility(View.VISIBLE);
+//                        } else{
+//                            bearAns.setVisibility(View.VISIBLE);
+//                        }
                     }
-                    text1.setEnabled(false);
-                    text2.setEnabled(false);
-                    text3.setEnabled(false);
-                    text4.setEnabled(false);
-                    openHint.setEnabled(false);
+//                    text1.setEnabled(false);
+//                    text2.setEnabled(false);
+//                    text3.setEnabled(false);
+//                    text4.setEnabled(false);
+//                    openHint.setEnabled(false);
                 }
 
             }

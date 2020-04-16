@@ -32,8 +32,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/backMenu"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Spin the wheel"
+        android:layout_marginTop="18dp"
+        android:gravity="center_horizontal"
+        android:text="Spin the wheel and enter question"
         android:textSize="32dp" />
     <!--android:layout_alignParentTop="true"-->
 
@@ -59,10 +60,10 @@
 
     <Button
         android:id="@+id/btn_qs"
-        android:layout_width="150dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:foreground="?android:attr/selectableItemBackground"
-        android:background="@drawable/submit"
+        android:background="@drawable/enterqsss"
         android:layout_below="@+id/imRoulette"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"

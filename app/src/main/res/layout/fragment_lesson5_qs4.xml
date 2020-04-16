@@ -39,6 +39,7 @@
         android:layout_marginTop="200dp"
         android:layout_gravity="center_horizontal"
         android:ems="10"
+        android:textColor="@android:color/black"
         android:inputType="number" />
     <TextView
         android:layout_width="match_parent"
@@ -48,6 +49,25 @@
         android:layout_marginTop="350dp"
         android:layout_marginLeft="30dp"
         android:id="@+id/result"/>
+    <Button
+        android:id="@+id/nextQ"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/next"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="600dp"
+        />
+    <Button
+        android:id="@+id/btn_spin"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@drawable/spin"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="650dp"
+        />
+
 
 
 </FrameLayout>

@@ -138,9 +138,9 @@
 
     <Button
         android:id="@+id/takequiz2"
-        android:layout_width="150dp"
+        android:layout_width="230dp"
         android:layout_height="50dp"
-        android:background="@drawable/take"
+        android:background="@drawable/take2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/unlockls3"

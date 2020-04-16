@@ -1,5 +1,6 @@
 package com.npappdev.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -74,6 +76,31 @@ public class Lesson5Qs3Fragment extends Fragment {
         Button submit = myFragmentView.findViewById(R.id.submitbtn);
         final TextView result = myFragmentView.findViewById(R.id.result);
 
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("finalScore", 3);
+                bundle.putInt("QsNum", 5);
+                i.putExtras(bundle);
+                getActivity().finish();
+                startActivity(i);
+            }
+        });
+
+        final Button spinAg = myFragmentView.findViewById(R.id.btn_spin);
+        spinAg.setVisibility(View.INVISIBLE);
+        spinAg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), Quiz5Activity.class));
+            }
+        });
+
 //        final String input1 = ans1.getText().toString();
 //        final String input2 = ans2.getText().toString();
 //        final String input3 = ans3.getText().toString();
@@ -89,8 +116,11 @@ public class Lesson5Qs3Fragment extends Fragment {
                 if (ans1.getText().toString().equals("economic")&&ans2.getText().toString().equals("industry")&&ans3.getText().toString().equals("company")){
 //                if (input1.equals("economic")&&input2.equals("industry")&&input3.equals("company")){
                     result.setText("Correct!");
+                    next.setVisibility(View.VISIBLE);
+                    spinAg.setVisibility(View.VISIBLE);
                 } else {
-                    result.setText("Try again!");
+                    //result.setText("Try again!");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                     ans1.getText().clear();
                     ans2.getText().clear();
                     ans3.getText().clear();

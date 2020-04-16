@@ -23,14 +23,14 @@ public class Lesson5QsActivity extends AppCompatActivity {
                 startActivity(new Intent(Lesson5QsActivity.this, TitleActivity.class));
             }
         });
-
-        Button spinAg = findViewById(R.id.btn_spin);
-        spinAg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Lesson5QsActivity.this, Quiz5Activity.class));
-            }
-        });
+//
+//        Button spinAg = findViewById(R.id.btn_spin);
+//        spinAg.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Lesson5QsActivity.this, Quiz5Activity.class));
+//            }
+//        });
 
         final Lesson5Qs1Fragment Lesson5Qs1Fragment = new Lesson5Qs1Fragment();
         final Lesson5Qs2Fragment Lesson5Qs2Fragment = new Lesson5Qs2Fragment();

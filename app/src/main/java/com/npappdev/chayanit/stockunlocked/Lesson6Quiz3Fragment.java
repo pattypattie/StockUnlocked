@@ -1,10 +1,12 @@
 package com.npappdev.chayanit.stockunlocked;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -14,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 /**
@@ -98,6 +101,20 @@ public class Lesson6Quiz3Fragment extends Fragment {
         selAns2 = myFragmentView.findViewById(R.id.selectedAns2);
         selAns3 = myFragmentView.findViewById(R.id.selectedAns3);
         explainAnsText = myFragmentView.findViewById(R.id.explainAns);
+        final Button next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putInt("finalScore", 2);
+                bundle.putInt("QsNum", 6);
+                i.putExtras(bundle);
+                getActivity().finish();
+                startActivity(i);
+            }
+        });
 
         moredemandbtn.setText("Demand > Supply");
         moresupplybtn.setText("Supply > Demand");
@@ -347,8 +364,10 @@ public class Lesson6Quiz3Fragment extends Fragment {
                         }
                     });
                     submitbtn.setEnabled(false);
+                    next.setVisibility(View.VISIBLE);
                 } else{
-                    checkAnsText.setText("Incorrect. Please Try Again.");
+                    //checkAnsText.setText("Incorrect. Please Try Again.");
+                    Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
                     selAns1.setText("");
                     selAns2.setText("");
                     selAns3.setText("");

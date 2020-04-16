@@ -42,6 +42,7 @@ public class Lesson2Activity extends AppCompatActivity {
                 SharedPreferences shared = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = shared.edit();
                 editor.putBoolean("qz2_enable",true);
+                editor.putBoolean("ls3_enable",true);
                 editor.commit();
                 startActivity(new Intent(Lesson2Activity.this,Quiz2Activity.class));
 

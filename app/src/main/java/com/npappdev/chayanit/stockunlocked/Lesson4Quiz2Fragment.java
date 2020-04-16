@@ -1,9 +1,11 @@
 package com.npappdev.chayanit.stockunlocked;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +14,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -36,7 +40,7 @@ public class Lesson4Quiz2Fragment extends Fragment {
     ArrayList<String> questionList, answerList, explainList;
     ImageView turnaroundImg, fastGrowerImg, assetPlayImg;
     ImageButton randomCompany, randomCompanyFade;
-    Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay;
+    Button slowGrowers, stalWarts, fastGrowers, cyclical, turnaround, assetPlay, next;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -96,6 +100,21 @@ public class Lesson4Quiz2Fragment extends Fragment {
         cyclical = myFragmentView.findViewById(R.id.stocktype4);
         turnaround = myFragmentView.findViewById(R.id.stocktype5);
         assetPlay = myFragmentView.findViewById(R.id.stocktype6);
+
+        next = myFragmentView.findViewById(R.id.nextQ);
+        next.setVisibility(View.INVISIBLE);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getActivity(), QuizResultActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("finalScore", 2);
+                    bundle.putInt("QsNum", 4);
+                    i.putExtras(bundle);
+                    getActivity().finish();
+                    startActivity(i);
+            }
+        });
 
         instructionText = myFragmentView.findViewById(R.id.instructionl4q2);
         quizName = "<h1>What type am I?</h1>";
@@ -249,23 +268,39 @@ public class Lesson4Quiz2Fragment extends Fragment {
     public void showSolution(String buttonClickedName){
         if(correctAns.equals(buttonClickedName)){
             checkAns.setText("Correct! My stock is "+correctAns);
+            explainAns.setText(explainList.get(randomQuestion));
+            slowGrowers.setEnabled(false);
+            stalWarts.setEnabled(false);
+            fastGrowers.setEnabled(false);
+            cyclical.setEnabled(false);
+            turnaround.setEnabled(false);
+            assetPlay.setEnabled(false);
+            if(questionList.size()==1){ //last question, disable next button
+                randomCompany.setVisibility(View.INVISIBLE);
+                randomCompanyFade.setVisibility(View.VISIBLE);
+                next.setVisibility(View.VISIBLE);
+            } else {
+                randomCompany.setVisibility(View.VISIBLE);
+                randomCompanyFade.setVisibility(View.INVISIBLE);
+            }
         }else{
-            checkAns.setText("Incorrect. My stock is "+correctAns);
+            //checkAns.setText("Incorrect. My stock is "+correctAns);
+            Toast.makeText(getActivity(), "Try again!", Toast.LENGTH_SHORT).show();
         }
-        explainAns.setText(explainList.get(randomQuestion));
-        slowGrowers.setEnabled(false);
-        stalWarts.setEnabled(false);
-        fastGrowers.setEnabled(false);
-        cyclical.setEnabled(false);
-        turnaround.setEnabled(false);
-        assetPlay.setEnabled(false);
-        if(questionList.size()==1){ //last question, disable next button
-            randomCompany.setVisibility(View.INVISIBLE);
-            randomCompanyFade.setVisibility(View.VISIBLE);
-        } else {
-            randomCompany.setVisibility(View.VISIBLE);
-            randomCompanyFade.setVisibility(View.INVISIBLE);
-        }
+//        explainAns.setText(explainList.get(randomQuestion));
+//        slowGrowers.setEnabled(false);
+//        stalWarts.setEnabled(false);
+//        fastGrowers.setEnabled(false);
+//        cyclical.setEnabled(false);
+//        turnaround.setEnabled(false);
+//        assetPlay.setEnabled(false);
+//        if(questionList.size()==1){ //last question, disable next button
+//            randomCompany.setVisibility(View.INVISIBLE);
+//            randomCompanyFade.setVisibility(View.VISIBLE);
+//        } else {
+//            randomCompany.setVisibility(View.VISIBLE);
+//            randomCompanyFade.setVisibility(View.INVISIBLE);
+//        }
     }
 
 //    @Override
